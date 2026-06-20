@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Local 1C project settings",
+  "type": "object",
+  "required": ["projectName", "platformVersion", "v8Path", "infobase", "source"],
+  "properties": {
+    "projectName": { "type": "string" },
+    "platformVersion": { "type": "string" },
+    "v8Path": { "type": "string" },
+    "infobase": {
+      "type": "object",
+      "required": ["type", "path", "connectionString"],
+      "properties": {
+        "type": { "const": "file" },
+        "path": { "type": "string" },
+        "connectionString": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "configuration": { "type": "string" },
+        "extensions": { "type": "string" },
+        "externalProcessors": { "type": "string" },
+        "externalReports": { "type": "string" },
+        "dist": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "designer": {
+      "type": "object",
+      "properties": {
+        "user": { "type": "string" },
+        "password": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

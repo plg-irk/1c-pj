@@ -1,0 +1,40 @@
+# 1C infobase dumps and binaries
+*.dt
+*.cf
+*.cfe
+*.epf
+*.erf
+!dist/**/*.cf
+!dist/**/*.cfe
+!dist/**/*.epf
+!dist/**/*.erf
+
+# Local secrets and machine-specific files
+.env
+.env.*
+!.env.example
+.v8-project.json
+.v8-project.local.json
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+.cache/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/.ropeproject/
+
+# Node/Python local dependencies for MCP helpers
+node_modules/
+.venv/
+venv/
+__pycache__/
+tools/mcp/
+
+# Keep directory placeholders
+!.gitkeep
+!**/.gitkeep

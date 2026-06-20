@@ -1,0 +1,92 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["AGENTS.md"],
+  "skills": {
+    "paths": [".claude/skills"]
+  },
+  "references": {
+    "onec-docs": {
+      "path": ".claude/docs",
+      "description": "Use for 1C XML formats, JSON DSL specifications, and toolkit documentation."
+    },
+    "1c-ai-development-kit": {
+      "repository": "Arman-Kudaibergenov/1c-ai-development-kit",
+      "branch": "master",
+      "description": "Use as upstream reference for 1C AI skills, MCP setup, and workflow patterns.",
+      "hidden": true
+    }
+  },
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@playwright/mcp"],
+      "enabled": false,
+      "timeout": 30000
+    },
+    "bsl-lsp-bridge": {
+      "type": "remote",
+      "url": "http://localhost:5007/mcp",
+      "enabled": false,
+      "timeout": 30000
+    },
+    "rlm-toolkit": {
+      "type": "remote",
+      "url": "http://localhost:8200/mcp",
+      "enabled": false,
+      "timeout": 30000
+    },
+    "edt-mcp": {
+      "type": "remote",
+      "url": "http://localhost:8765/mcp",
+      "enabled": false,
+      "timeout": 30000
+    },
+    "1c-help": {
+      "type": "remote",
+      "url": "http://localhost:8003/mcp",
+      "enabled": false,
+      "timeout": 30000
+    },
+    "1c-ssl": {
+      "type": "remote",
+      "url": "http://localhost:8008/mcp",
+      "enabled": false,
+      "timeout": 30000
+    },
+    "1c-templates": {
+      "type": "remote",
+      "url": "http://localhost:8004/mcp",
+      "enabled": false,
+      "timeout": 30000
+    },
+    "1c-syntax-checker": {
+      "type": "remote",
+      "url": "http://localhost:8002/mcp",
+      "enabled": false,
+      "timeout": 30000
+    },
+    "1c-code-checker": {
+      "type": "remote",
+      "url": "http://localhost:8007/mcp",
+      "enabled": false,
+      "timeout": 30000
+    },
+    "1c-forms": {
+      "type": "remote",
+      "url": "http://localhost:8011/mcp",
+      "enabled": false,
+      "timeout": 30000
+    }
+  },
+  "watcher": {
+    "ignore": ["tmp/**", "dist/**", "node_modules/**", ".venv/**"]
+  },
+  "tool_output": {
+    "max_lines": 2000,
+    "max_bytes": 51200
+  },
+  "compaction": {
+    "auto": true,
+    "tail_turns": 6
+  }
+}
