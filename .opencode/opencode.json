@@ -20,13 +20,13 @@
     "playwright": {
       "type": "local",
       "command": ["npx", "-y", "@playwright/mcp"],
-      "enabled": false,
+      "enabled": true,
       "timeout": 30000
     },
     "bsl-lsp-bridge": {
-      "type": "remote",
-      "url": "http://localhost:5007/mcp",
-      "enabled": false,
+      "type": "local",
+      "command": ["docker", "exec", "-i", "mcp-lsp-pj", "mcp-lsp-bridge"],
+      "enabled": true,
       "timeout": 30000
     },
     "rlm-toolkit": {
@@ -39,6 +39,12 @@
       "type": "remote",
       "url": "http://localhost:8765/mcp",
       "enabled": false,
+      "timeout": 30000
+    },
+    "1c-rag": {
+      "type": "remote",
+      "url": "http://localhost:9000/mcp",
+      "enabled": true,
       "timeout": 30000
     },
     "1c-help": {
