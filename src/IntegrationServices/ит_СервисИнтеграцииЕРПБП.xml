@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<IntegrationService uuid="78ed8c8b-e474-4430-bec6-9b22c37869ec">
+		<InternalInfo>
+			<xr:GeneratedType name="IntegrationServiceManager.ит_СервисИнтеграцииЕРПБП" category="Manager">
+				<xr:TypeId>a54b5885-7dac-4838-b3b8-a965631b3776</xr:TypeId>
+				<xr:ValueId>fd38b46c-9c17-49c8-a219-3fde421cb4e7</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ит_СервисИнтеграцииЕРПБП</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интеграции ЕРП - БП (ИТ 1С:Шина)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<ExternalIntegrationServiceAddress/>
+		</Properties>
+		<ChildObjects>
+			<IntegrationServiceChannel uuid="ab181796-34a7-497d-88e9-e80746b523d6">
+				<InternalInfo>
+					<xr:GeneratedType name="IntegrationServiceChannelManager.ит_СервисИнтеграцииЕРПБП.ВходящиеСообщенияИзЕРП" category="Manager">
+						<xr:TypeId>cb2f87e4-f471-4228-8601-f61f2fb529a3</xr:TypeId>
+						<xr:ValueId>71c37c50-c873-47e6-856c-d3188cfc8733</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ВходящиеСообщенияИзЕРП</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие сообщения из ЕРП</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<ExternalIntegrationServiceChannelName>MR::ERPBUHf::Основной::ERP_BUH.Destination_ch</ExternalIntegrationServiceChannelName>
+					<MessageDirection>Receive</MessageDirection>
+					<ReceiveMessageProcessing>ERP_BUH_Destination_chОбработкаПолученияСообщения</ReceiveMessageProcessing>
+					<Transactioned>false</Transactioned>
+				</Properties>
+			</IntegrationServiceChannel>
+			<IntegrationServiceChannel uuid="98a5801e-4c5c-4acf-b84c-a10093d3f66c">
+				<InternalInfo>
+					<xr:GeneratedType name="IntegrationServiceChannelManager.ит_СервисИнтеграцииЕРПБП.Канал1СИсточник" category="Manager">
+						<xr:TypeId>64affa20-0e41-4a59-a358-0f47013074a3</xr:TypeId>
+						<xr:ValueId>ab2a32a3-45c0-487f-9d36-7fdc4255aab2</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Канал1СИсточник</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Канал для отправки параметров запроса</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<ExternalIntegrationServiceChannelName>MR::ERPBUHf::Основной::ERP_BUH.Канал1СИсточник</ExternalIntegrationServiceChannelName>
+					<MessageDirection>Send</MessageDirection>
+					<ReceiveMessageProcessing/>
+					<Transactioned>true</Transactioned>
+				</Properties>
+			</IntegrationServiceChannel>
+		</ChildObjects>
+	</IntegrationService>
+</MetaDataObject>

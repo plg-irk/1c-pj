@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Subsystem uuid="9e39b05b-906b-4d8e-bab9-2f3e0354f63e">
+		<Properties>
+			<Name>ит_ДополнительныйФункционал</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительный функционал (ИТ)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.ЛоготипМР</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ит_ОписаниеДоработок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ит_ГрупповоеСозданиеПНиРННаОснованииБанковскихВыписок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ит_НастройкаСтатейДДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ит_СсылкиНаОбъекты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ит_ЗаполнитьДокументРасчетовВСписанииСРасчетногоСчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ит_КассоваяКнигаСПустымиЛистами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ит_НастройкиРабочихМест</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ит_ГрупповаяПечатьДопСоглашенияПоБухУслугамФММР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ит_СоздатьНеДостающиеВидыОплатПоСчету</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЛоготипМР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ит_КлассификаторДляФЭС</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>ит_ЗагрузкаДанных</Subsystem>
+			<Subsystem>ит_ОповещениеПользователей</Subsystem>
+			<Subsystem>ит_ВыпискаДоверенностей</Subsystem>
+			<Subsystem>ит_НалоговыеПлатежи</Subsystem>
+			<Subsystem>ит_Отчеты</Subsystem>
+			<Subsystem>ит_КассовыеДокументы</Subsystem>
+			<Subsystem>ит_ОбменСКУБами</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

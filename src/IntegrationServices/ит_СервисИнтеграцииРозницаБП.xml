@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<IntegrationService uuid="46bdf3d0-70a0-4c17-8ea3-e9b3f5213d24">
+		<InternalInfo>
+			<xr:GeneratedType name="IntegrationServiceManager.ит_СервисИнтеграцииРозницаБП" category="Manager">
+				<xr:TypeId>217b8c14-0b89-4a15-b58b-34df4a74bb26</xr:TypeId>
+				<xr:ValueId>ceb370ca-5771-4074-8fcc-9d3675d4c9b2</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ит_СервисИнтеграцииРозницаБП</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервис интеграции Розница БП</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<ExternalIntegrationServiceAddress/>
+		</Properties>
+		<ChildObjects>
+			<IntegrationServiceChannel uuid="d5280648-959e-423f-96ad-f3668edea4c8">
+				<InternalInfo>
+					<xr:GeneratedType name="IntegrationServiceChannelManager.ит_СервисИнтеграцииРозницаБП.ВходящиеСообщенияИзРозницы" category="Manager">
+						<xr:TypeId>63f562c4-a618-4095-86ff-b1365c1b2cfb</xr:TypeId>
+						<xr:ValueId>a0d7c555-674d-4119-b41c-51cf811030d4</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ВходящиеСообщенияИзРозницы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие сообщения из розницы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<ExternalIntegrationServiceChannelName>MR::RetailBUH::Основной::RetailBUH.ToBUH</ExternalIntegrationServiceChannelName>
+					<MessageDirection>Receive</MessageDirection>
+					<ReceiveMessageProcessing>ОбработкаПолученияСообщенияИзРозницы</ReceiveMessageProcessing>
+					<Transactioned>false</Transactioned>
+				</Properties>
+			</IntegrationServiceChannel>
+			<IntegrationServiceChannel uuid="47e487e8-30fc-4f23-88ca-83846927a04d">
+				<InternalInfo>
+					<xr:GeneratedType name="IntegrationServiceChannelManager.ит_СервисИнтеграцииРозницаБП.ИсходящиеСообщенияВРозницу" category="Manager">
+						<xr:TypeId>2fa58578-2d19-44b5-b45d-c63d85f3c9e5</xr:TypeId>
+						<xr:ValueId>eb9766e5-b9da-4225-9da7-479f7513a306</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ИсходящиеСообщенияВРозницу</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исходящие сообщения в розницу</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<ExternalIntegrationServiceChannelName>MR::RetailBUH::Основной::RetailBUH.ToHTTP</ExternalIntegrationServiceChannelName>
+					<MessageDirection>Send</MessageDirection>
+					<ReceiveMessageProcessing/>
+					<Transactioned>true</Transactioned>
+				</Properties>
+			</IntegrationServiceChannel>
+		</ChildObjects>
+	</IntegrationService>
+</MetaDataObject>
