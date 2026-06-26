@@ -1,0 +1,902 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаУпрПоступленияФактическая</dataPath>
+			<field>СуммаУпрПоступленияФактическая</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма фактической поставки</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаУпрЗаказанное</dataPath>
+			<field>СуммаУпрЗаказанное</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма заказа</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЗаказанное</dataPath>
+			<field>КоличествоЗаказанное</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество по заказу</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеКомпании</dataPath>
+			<field>ПодразделениеКомпании</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение компании</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорВзаиморасчетов</dataPath>
+			<field>ДоговорВзаиморасчетов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор взаиморасчетов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПоступления</dataPath>
+			<field>КоличествоПоступления</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество фактически поставлено</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПоступленияВЦенахДоговора</dataPath>
+			<field>СуммаПоступленияВЦенахДоговора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма поступления в ценах договора</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ЗаказыПоставщикамОбороты.Регистратор.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	ЗаказыПоставщикамОбороты.Контрагент КАК Контрагент,
+	ЗаказыПоставщикамОбороты.ЗаказПоставщику.ДоговорВзаиморасчетов КАК ЗаказПоставщикуДоговорВзаиморасчетов,
+	ЗаказыПоставщикамОбороты.ЗаказПоставщику КАК ЗаказПоставщику,
+	ЗаказыПоставщикамОбороты.Номенклатура КАК Номенклатура,
+	ЗаказыПоставщикамОбороты.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+	ЗаказыПоставщикамОбороты.ЗаказаноРасход КАК КоличествоЗаказанное,
+	ЗаказыПоставщикамОбороты.СуммаУпрРасход КАК СуммаУпрЗаказанное,
+	ПартииТоваровКомпанииОбороты.КоличествоПриход КАК КоличествоПоступления,
+	ПартииТоваровКомпанииОбороты.СуммаУпрПриход КАК СуммаУпрПоступленияФактическая,
+	ВЫБОР
+		КОГДА ЗаказыПоставщикамОбороты.ЗаказаноРасход = 0
+			ТОГДА 0
+		ИНАЧЕ ЗаказыПоставщикамОбороты.СуммаУпрРасход / ЗаказыПоставщикамОбороты.ЗаказаноРасход
+	КОНЕЦ КАК ЦенаПоДоговору,
+	ВЫБОР
+		КОГДА ЗаказыПоставщикамОбороты.ЗаказаноРасход = 0
+			ТОГДА 0
+		ИНАЧЕ ЗаказыПоставщикамОбороты.СуммаУпрРасход / ЗаказыПоставщикамОбороты.ЗаказаноРасход
+	КОНЕЦ КАК ЦенаФактическая,
+	ВЫБОР
+		КОГДА ЗаказыПоставщикамОбороты.ЗаказаноРасход = 0
+			ТОГДА 0
+		ИНАЧЕ ЗаказыПоставщикамОбороты.СуммаУпрРасход / ЗаказыПоставщикамОбороты.ЗаказаноРасход * ПартииТоваровКомпанииОбороты.КоличествоПриход
+	КОНЕЦ КАК СуммаПоступленияВЦенахДоговора
+ПОМЕСТИТЬ втДетальная
+ИЗ
+	РегистрНакопления.ЗаказыПоставщикам.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, {(Контрагент).* КАК Контрагент, (ЗаказПоставщику).* КАК Заказ, (Номенклатура).* КАК Номенклатура, (ХарактеристикаНоменклатуры).* КАК ХарактеристикаНоменклатуры}) КАК ЗаказыПоставщикамОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ПартииТоваровКомпании.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, {(Номенклатура).* КАК Номенклатура}) КАК ПартииТоваровКомпанииОбороты
+		ПО ЗаказыПоставщикамОбороты.Номенклатура = ПартииТоваровКомпанииОбороты.Номенклатура
+			И ЗаказыПоставщикамОбороты.Регистратор = ПартииТоваровКомпанииОбороты.Регистратор
+ГДЕ
+	(ЗаказыПоставщикамОбороты.ЗаказПоставщику.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+				И ЗаказыПоставщикамОбороты.ЗаказПоставщику.СрокПоставки = &amp;ПустаяДата
+			ИЛИ ЗаказыПоставщикамОбороты.ЗаказПоставщику.СрокПоставки МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втДетальная.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	втДетальная.Контрагент КАК Контрагент,
+	втДетальная.ЗаказПоставщикуДоговорВзаиморасчетов КАК ЗаказПоставщикуДоговорВзаиморасчетов,
+	втДетальная.ЗаказПоставщику КАК ЗаказПоставщику,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ втДетальная.Номенклатура) КАК Номенклатура,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ втДетальная.ХарактеристикаНоменклатуры) КАК ХарактеристикаНоменклатуры,
+	СУММА(втДетальная.КоличествоЗаказанное) КАК КоличествоЗаказанное,
+	СУММА(втДетальная.СуммаУпрЗаказанное) КАК СуммаУпрЗаказанное,
+	СУММА(втДетальная.КоличествоПоступления) КАК КоличествоПоступления,
+	СУММА(втДетальная.СуммаУпрПоступленияФактическая) КАК СуммаУпрПоступленияФактическая,
+	СУММА(втДетальная.СуммаПоступленияВЦенахДоговора) КАК СуммаПоступленияВЦенахДоговора
+ПОМЕСТИТЬ втИтогиПоЗаказам
+ИЗ
+	втДетальная КАК втДетальная
+
+СГРУППИРОВАТЬ ПО
+	втДетальная.ПодразделениеКомпании,
+	втДетальная.Контрагент,
+	втДетальная.ЗаказПоставщикуДоговорВзаиморасчетов,
+	втДетальная.ЗаказПоставщику
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втИтогиПоЗаказам.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	втИтогиПоЗаказам.Контрагент КАК Контрагент,
+	втИтогиПоЗаказам.ЗаказПоставщикуДоговорВзаиморасчетов КАК ЗаказПоставщикуДоговорВзаиморасчетов,
+	втИтогиПоЗаказам.ЗаказПоставщику КАК ЗаказПоставщику,
+	втИтогиПоЗаказам.КоличествоЗаказанное КАК КоличествоЗаказанное,
+	втИтогиПоЗаказам.СуммаУпрЗаказанное КАК СуммаУпрЗаказанное,
+	втИтогиПоЗаказам.КоличествоПоступления КАК КоличествоПоступления,
+	втИтогиПоЗаказам.СуммаУпрПоступленияФактическая КАК СуммаУпрПоступленияФактическая,
+	втИтогиПоЗаказам.СуммаПоступленияВЦенахДоговора КАК СуммаПоступленияВЦенахДоговора,
+	ВЫБОР
+		КОГДА втИтогиПоЗаказам.КоличествоЗаказанное = 0
+			ТОГДА 0
+		ИНАЧЕ втИтогиПоЗаказам.КоличествоПоступления / втИтогиПоЗаказам.КоличествоЗаказанное
+	КОНЕЦ КАК СТВЗо,
+	втИтогиПоЗаказам.КоличествоПоступления - втИтогиПоЗаказам.КоличествоЗаказанное КАК СТВЗа,
+	ВЫБОР
+		КОГДА втИтогиПоЗаказам.СуммаУпрЗаказанное = 0
+			ТОГДА 0
+		ИНАЧЕ втИтогиПоЗаказам.СуммаУпрПоступленияФактическая / втИтогиПоЗаказам.СуммаУпрЗаказанное
+	КОНЕЦ КАК УСПо,
+	ВЫБОР
+		КОГДА втИтогиПоЗаказам.СуммаУпрЗаказанное = 0
+			ТОГДА 0
+		ИНАЧЕ втИтогиПоЗаказам.СуммаПоступленияВЦенахДоговора / втИтогиПоЗаказам.СуммаУпрЗаказанное
+	КОНЕЦ КАК СтВЗио,
+	втИтогиПоЗаказам.СуммаПоступленияВЦенахДоговора - втИтогиПоЗаказам.СуммаУпрЗаказанное КАК СтВЗиа,
+	втИтогиПоЗаказам.СуммаУпрПоступленияФактическая - втИтогиПоЗаказам.СуммаПоступленияВЦенахДоговора КАК СтВЗца,
+	ВЫБОР
+		КОГДА втИтогиПоЗаказам.КоличествоПоступления * втИтогиПоЗаказам.СуммаПоступленияВЦенахДоговора = 0
+			ТОГДА 0
+		ИНАЧЕ втИтогиПоЗаказам.КоличествоПоступления * втИтогиПоЗаказам.СуммаУпрЗаказанное / (втИтогиПоЗаказам.КоличествоЗаказанное * втИтогиПоЗаказам.СуммаПоступленияВЦенахДоговора)
+	КОНЕЦ КАК АСо,
+	(втИтогиПоЗаказам.СуммаПоступленияВЦенахДоговора - втИтогиПоЗаказам.СуммаУпрЗаказанное) * втИтогиПоЗаказам.КоличествоПоступления / 100 КАК АСа,
+	ВЫБОР
+		КОГДА втИтогиПоЗаказам.КоличествоЗаказанное &gt; втИтогиПоЗаказам.КоличествоПоступления
+			ТОГДА втИтогиПоЗаказам.КоличествоЗаказанное - втИтогиПоЗаказам.КоличествоПоступления
+		ИНАЧЕ втИтогиПоЗаказам.КоличествоПоступления - втИтогиПоЗаказам.КоличествоЗаказанное
+	КОНЕЦ КАК АЛОПа
+{ВЫБРАТЬ
+	ПодразделениеКомпании.*,
+	Контрагент.*,
+	ЗаказПоставщикуДоговорВзаиморасчетов.* КАК ДоговорВзаиморасчетов,
+	ЗаказПоставщику.* КАК Заказ,
+	КоличествоЗаказанное,
+	СуммаУпрЗаказанное,
+	КоличествоПоступления,
+	СуммаУпрПоступленияФактическая,
+	СуммаПоступленияВЦенахДоговора}
+ИЗ
+	втИтогиПоЗаказам КАК втИтогиПоЗаказам
+{ГДЕ
+	втИтогиПоЗаказам.ПодразделениеКомпании.*,
+	втИтогиПоЗаказам.Контрагент.*,
+	втИтогиПоЗаказам.ЗаказПоставщикуДоговорВзаиморасчетов.* КАК ДоговорВзаиморасчетов,
+	втИтогиПоЗаказам.ЗаказПоставщику.* КАК Заказ}</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<calculatedField>
+		<dataPath>СтВЗо</dataPath>
+		<expression>ВЫБОР
+		КОГДА КоличествоЗаказанное = 0
+			ТОГДА 0
+ИНАЧЕ КоличествоПоступления / КоличествоЗаказанное
+	КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Степень выполнения заказа (СтВЗо), %</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=5; ЧДЦ=2; ЧН=</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>СтВЗа</dataPath>
+		<expression>КоличествоПоступления - КоличествоЗаказанное</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Степень выполнения заказа абсолютная (СтВЗа), ед</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=3; ЧН=</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>УСПо</dataPath>
+		<expression>ВЫБОР
+		КОГДА СуммаУпрЗаказанное = 0
+			ТОГДА 0
+		ИНАЧЕ СуммаУпрПоступленияФактическая / СуммаУпрЗаказанное
+	КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Относительный уровень соответствия поставки договорным условиям (УСПо), %</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=5; ЧДЦ=2; ЧН=</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>СтВЗио</dataPath>
+		<expression>ВЫБОР
+		КОГДА СуммаУпрЗаказанное = 0
+			ТОГДА 0
+		ИНАЧЕ СуммаПоступленияВЦенахДоговора / СуммаУпрЗаказанное
+	КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Уровень выполнения договорных обязательств по индексной формуле (СтВЗио), %</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=5; ЧДЦ=2; ЧН=</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>УСПа</dataPath>
+		<expression>СуммаУпрПоступленияФактическая - СуммаУпрЗаказанное</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Абсолютный размер соответствия поставки договорным условиям (УСПа)</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>СтВЗиа</dataPath>
+		<expression>СуммаПоступленияВЦенахДоговора - СуммаУпрЗаказанное</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Абсолютный уровень выполнения договорных обязательств (СтВЗиа)</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>СтВЗца</dataPath>
+		<expression>СуммаУпрПоступленияФактическая - СуммаПоступленияВЦенахДоговора</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Абсолютный показатель отклонения стоимости поставки за счет ценностного фактора (СтВЗца)</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>АСо</dataPath>
+		<expression>ВЫБОР
+		КОГДА КоличествоПоступления * СуммаПоступленияВЦенахДоговора = 0
+			ТОГДА 0
+		ИНАЧЕ КоличествоПоступления * СуммаУпрЗаказанное / (КоличествоЗаказанное * СуммаПоступленияВЦенахДоговора)
+	КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Индекс структурных/ассортиментных сдвигов (АСо), %</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=5; ЧДЦ=2; ЧН=</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>АСа</dataPath>
+		<expression>(СуммаПоступленияВЦенахДоговора - СуммаУпрЗаказанное) * КоличествоПоступления / 100</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Абсолютное отклонение средней стоимости поставки за счет ассортиментных различий (АСа)</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>АЛОПа</dataPath>
+		<expression>ВЫБОР
+		КОГДА КоличествоЗаказанное &gt; КоличествоПоступления
+			ТОГДА КоличествоЗаказанное - КоличествоПоступления
+		ИНАЧЕ КоличествоПоступления - КоличествоЗаказанное
+	КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ассортиментное линейное отклонение поставки абсолютное (АЛОПа), ед.</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=3; ЧН=</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>АЛОПа</dataPath>
+		<expression>Сумма(АЛОПа)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АСа</dataPath>
+		<expression>Сумма(АСа)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АСо</dataPath>
+		<expression>Среднее(АСо)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЗаказанное</dataPath>
+		<expression>Сумма(КоличествоЗаказанное)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПоступления</dataPath>
+		<expression>Сумма(КоличествоПоступления)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СТВЗа</dataPath>
+		<expression>Сумма(СТВЗа)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтВЗиа</dataPath>
+		<expression>Сумма(СтВЗиа)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтВЗио</dataPath>
+		<expression>Среднее(СтВЗио)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СТВЗо</dataPath>
+		<expression>Среднее(СТВЗо)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтВЗца</dataPath>
+		<expression>Сумма(СтВЗца)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПоступленияВЦенахДоговора</dataPath>
+		<expression>Сумма(СуммаПоступленияВЦенахДоговора)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаУпрЗаказанное</dataPath>
+		<expression>Сумма(СуммаУпрЗаказанное)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаУпрПоступленияФактическая</dataPath>
+		<expression>Сумма(СуммаУпрПоступленияФактическая)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>УСПа</dataPath>
+		<expression>Сумма(УСПа)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>УСПо</dataPath>
+		<expression>Среднее(УСПо)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>КОНЕЦПЕРИОДА(&amp;КонецПериода, "День")</expression>
+	</parameter>
+	<parameter>
+		<name>ПустаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пустая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказано</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоЗаказанное</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаУпрЗаказанное</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставлено</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоПоступления</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаУпрПоступленияФактическая</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Абсолютный размер отклонения поставки от условий договора</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СТВЗа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>УСПа</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Относительный уровень отклонения поставки от условий договора</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СТВЗо</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>УСПо</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответствие объема поставки (в сопоставимых ценах)</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтВЗио</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтВЗиа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтВЗца</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отклонения по позициям ассортимента</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>АСо</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>АСа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>АЛОПа</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПодразделениеКомпании</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ДоговорВзаиморасчетов</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Заказ</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ПодразделениеКомпании</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ДоговорВзаиморасчетов</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Заказ</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

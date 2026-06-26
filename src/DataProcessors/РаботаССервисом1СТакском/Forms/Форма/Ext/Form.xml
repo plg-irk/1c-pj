@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация1" id="6">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Демонстрация работы с сервисом 1С-Такском.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="8"/>
+				</LabelDecoration>
+				<Button name="Справка" id="9">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="10"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИспользованиеЗапрещено" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа использование запрещено</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИспользованиеЗапрещеноРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<PictureDecoration name="Декорация3" id="30">
+					<Picture>
+						<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация3КонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="32"/>
+				</PictureDecoration>
+				<LabelDecoration name="Декорация2" id="27">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Демо: Использование сервиса 1С-Такском недоступно в текущем режиме работы в связи с ограничениями прав доступа или режима работы. </v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Center</VerticalAlign>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="29"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРаботаССервисом1СТакском" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа работа с сервисом1С-Такском</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРаботаССервисом1СТакскомРасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПолучениеИдентификатораИЛичныйКабинет" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получение идентификатора абонента и переход в личный кабинет</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Collapsible</Behavior>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<ExtendedTooltip name="ГруппаПолучениеИдентификатораИЛичныйКабинетРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="37">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа2</v8:content>
+								</v8:item>
+							</Title>
+							<Width>65</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="38"/>
+							<ChildItems>
+								<InputField name="СертификатЭП" id="1">
+									<DataPath>СертификатЭП</DataPath>
+									<Width>35</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<ContextMenu name="СертификатЭПКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="СертификатЭПРасширеннаяПодсказка" id="3"/>
+								</InputField>
+								<InputField name="Организация" id="22">
+									<DataPath>Организация</DataPath>
+									<Width>35</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<Button name="ПолучитьУникальныйИдентификаторАбонента" id="16">
+									<Type>UsualButton</Type>
+									<Width>32</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<CommandName>Form.Command.ПолучитьУникальныйИдентификаторАбонента</CommandName>
+									<ExtendedTooltip name="ПолучитьУникальныйИдентификаторАбонентаРасширеннаяПодсказка" id="17"/>
+								</Button>
+								<Button name="ОткрытьЛичныйКабинетАбонента" id="20">
+									<Type>UsualButton</Type>
+									<Width>32</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<CommandName>Form.Command.ОткрытьЛичныйКабинетАбонента</CommandName>
+									<ExtendedTooltip name="ОткрытьЛичныйКабинетАбонентаРасширеннаяПодсказка" id="21"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Декорация6" id="54">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Демонстрируется получение уникального идентификатора абонента 1С-Такском и открытие личного кабинета.
+После успешно получения идентификатора абонента полученный идентификатор заполняется в поле "Уникальный идентификатор абонента".</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<ContextMenu name="Декорация6КонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="56"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="Декорация5" id="51">
+					<ContextMenu name="Декорация5КонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="53"/>
+				</LabelDecoration>
+				<InputField name="УникальныйИдентификаторАбонента" id="11">
+					<DataPath>УникальныйИдентификаторАбонента</DataPath>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<TitleLocation>Top</TitleLocation>
+					<Width>57</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="УникальныйИдентификаторАбонентаКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="УникальныйИдентификаторАбонентаРасширеннаяПодсказка" id="13"/>
+				</InputField>
+				<LabelDecoration name="Декорация4" id="43">
+					<ContextMenu name="Декорация4КонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="45"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаРегистрацияНовогоСертификата" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрация нового сертификата абонента</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Behavior>Collapsible</Behavior>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<ExtendedTooltip name="ГруппаРегистрацияНовогоСертификатаРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="57">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа1</v8:content>
+								</v8:item>
+							</Title>
+							<Width>65</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="58"/>
+							<ChildItems>
+								<InputField name="НовыйСертификат" id="48">
+									<DataPath>НовыйСертификатЭП</DataPath>
+									<Width>35</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<ContextMenu name="НовыйСертификатКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="НовыйСертификатРасширеннаяПодсказка" id="50"/>
+								</InputField>
+								<InputField name="ОрганизацияНовыйСертификат" id="62">
+									<DataPath>ОрганизацияНовыйСертификат</DataPath>
+									<Width>35</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ОрганизацияНовыйСертификатКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ОрганизацияНовыйСертификатРасширеннаяПодсказка" id="64"/>
+								</InputField>
+								<Button name="ЗарегистрироватьСертификатАбонента" id="18">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗарегистрироватьСертификатАбонента</CommandName>
+									<ExtendedTooltip name="ЗарегистрироватьСертификатАбонентаРасширеннаяПодсказка" id="19"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Декорация7" id="59">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Демонстрируется регистрация нового сертификата для существующего абонента сервиса 1С-Такском.</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<ContextMenu name="Декорация7КонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="61"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РаботаССервисом1СТакском</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СертификатЭП" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сертификат электронной подписи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СертификатыКлючейЭлектроннойПодписиИШифрования</v8:Type>
+			</Type>
+			<Save>
+				<Field>СертификатЭП</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Организация" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>Организация</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="УникальныйИдентификаторАбонента" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уникальный идентификатор абонента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НовыйСертификатЭП" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сертификат электронной подписи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СертификатыКлючейЭлектроннойПодписиИШифрования</v8:Type>
+			</Type>
+			<Save>
+				<Field>НовыйСертификатЭП</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОрганизацияНовыйСертификат" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ОрганизацияНовыйСертификат</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПолучитьУникальныйИдентификаторАбонента" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить уникальный идентификатор абонента</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить уникальный идентификатор абонента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьУникальныйИдентификаторАбонента</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗарегистрироватьСертификатАбонента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать сертификат абонента</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать сертификат абонента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗарегистрироватьСертификатАбонента</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьЛичныйКабинетАбонента" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть личный кабинет абонента</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть личный кабинет абонента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьЛичныйКабинетАбонента</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

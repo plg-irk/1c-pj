@@ -1,0 +1,34 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:ns1="http://api.vetrf.ru/schema/cdm/application" xmlns:ns2="http://api.vetrf.ru/schema/cdm/base" xmlns:tns="http://api.vetrf.ru/schema/cdm/application/ws-definitions" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://api.vetrf.ru/schema/cdm/application/ws-definitions" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/application"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/base"/>
+	<xs:element name="receiveApplicationResultResponse" type="tns:receiveApplicationResultResponse"/>
+	<xs:element name="submitApplicationRequest" type="tns:submitApplicationRequest"/>
+	<xs:element name="unknownServiceIdFault" type="ns2:FaultInfo"/>
+	<xs:element name="receiveApplicationResultRequest" type="tns:receiveApplicationResultRequest"/>
+	<xs:element name="unsupportedApplicationDataTypeFault" type="ns2:FaultInfo"/>
+	<xs:element name="submitApplicationResponse" type="tns:submitApplicationResponse"/>
+	<xs:complexType name="receiveApplicationResultRequest">
+		<xs:sequence>
+			<xs:element name="apiKey" type="ns1:APIKey"/>
+			<xs:element name="issuerId" type="ns2:UUID"/>
+			<xs:element name="applicationId" type="ns2:UUID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="receiveApplicationResultResponse">
+		<xs:sequence>
+			<xs:element ref="ns1:application"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="submitApplicationRequest">
+		<xs:sequence>
+			<xs:element name="apiKey" type="ns1:APIKey"/>
+			<xs:element ref="ns1:application"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="submitApplicationResponse">
+		<xs:sequence>
+			<xs:element ref="ns1:application"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Width>80</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="Ссылка" id="142">
+			<DataPath>Объект.Ref</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<ContextMenu name="СсылкаКонтекстноеМеню" id="143"/>
+			<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="144"/>
+		</LabelField>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<Wrap>false</Wrap>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="96"/>
+		</InputField>
+		<InputField name="Родитель" id="94">
+			<DataPath>Объект.Parent</DataPath>
+			<ContextMenu name="РодительКонтекстноеМеню" id="95"/>
+			<ExtendedTooltip name="РодительExtendedTooltip" id="97"/>
+		</InputField>
+		<Table name="ДополнительныеРеквизиты" id="72">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ДополнительныеРеквизиты</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДополнительныеРеквизитыКонтекстноеМеню" id="73"/>
+			<AutoCommandBar name="ДополнительныеРеквизитыКоманднаяПанель" id="74">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ДополнительныеРеквизитыПодборДопРеквизитов" id="122">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПодборДопРеквизитов</CommandName>
+						<ExtendedTooltip name="ДополнительныеРеквизитыПодборДопРеквизитовРасширеннаяПодсказка" id="123"/>
+					</Button>
+					<Button name="ДополнительныеРеквизитыУдалить" id="134">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.ДополнительныеРеквизиты.StandardCommand.Delete</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ДополнительныеРеквизитыУдалитьРасширеннаяПодсказка" id="135"/>
+					</Button>
+					<ButtonGroup name="ДополнительныеРеквизитыГруппаПереместить" id="136">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дополнительные сведения группа переместить</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дополнительные сведения группа переместить</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ДополнительныеРеквизитыГруппаПереместитьРасширеннаяПодсказка" id="137"/>
+						<ChildItems>
+							<Button name="ДополнительныеРеквизитыПереместитьВверх" id="138">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ДополнительныеРеквизиты.StandardCommand.MoveUp</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ДополнительныеРеквизитыПереместитьВверхРасширеннаяПодсказка" id="139"/>
+							</Button>
+							<Button name="ДополнительныеРеквизитыПереместитьВниз" id="140">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ДополнительныеРеквизиты.StandardCommand.MoveDown</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ДополнительныеРеквизитыПереместитьВнизРасширеннаяПодсказка" id="141"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДополнительныеРеквизитыExtendedTooltip" id="98"/>
+			<SearchStringAddition name="ДополнительныеРеквизитыСтрокаПоиска" id="104">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыСтрокаПоискаКонтекстноеМеню" id="105"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыСтрокаПоискаРасширеннаяПодсказка" id="106"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДополнительныеРеквизитыСостояниеПросмотра" id="107">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыСостояниеПросмотраКонтекстноеМеню" id="108"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыСостояниеПросмотраРасширеннаяПодсказка" id="109"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДополнительныеРеквизитыУправлениеПоиском" id="110">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыУправлениеПоискомКонтекстноеМеню" id="111"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыУправлениеПоискомРасширеннаяПодсказка" id="112"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="ChoiceProcessing">ДополнительныеРеквизитыОбработкаВыбора</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ДополнительныеРеквизитыСвойство" id="77">
+					<DataPath>Объект.ДополнительныеРеквизиты.Свойство</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДополнительныеРеквизитыСвойствоКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыСвойствоExtendedTooltip" id="99"/>
+				</InputField>
+				<CheckBoxField name="ДополнительныеРеквизитыПометкаУдаления" id="81">
+					<DataPath>Объект.ДополнительныеРеквизиты.ПометкаУдаления</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДополнительныеРеквизитыПометкаУдаленияКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыПометкаУдаленияExtendedTooltip" id="100"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<Table name="ДополнительныеСведения" id="85">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ДополнительныеСведения</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДополнительныеСведенияКонтекстноеМеню" id="86"/>
+			<AutoCommandBar name="ДополнительныеСведенияКоманднаяПанель" id="87">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ДополнительныеСведенияПодборДопСведений" id="124">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПодборДопСведений</CommandName>
+						<ExtendedTooltip name="ДополнительныеСведенияПодборДопСведенийРасширеннаяПодсказка" id="125"/>
+					</Button>
+					<Button name="ДополнительныеСведенияУдалить" id="132">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.ДополнительныеСведения.StandardCommand.Delete</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ДополнительныеСведенияУдалитьРасширеннаяПодсказка" id="133"/>
+					</Button>
+					<ButtonGroup name="ДополнительныеСведенияГруппаПереместить" id="126">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дополнительные сведения группа переместить</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дополнительные сведения группа переместить</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ДополнительныеСведенияГруппаПереместитьРасширеннаяПодсказка" id="127"/>
+						<ChildItems>
+							<Button name="ДополнительныеСведенияПереместитьВверх" id="128">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ДополнительныеСведения.StandardCommand.MoveUp</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ДополнительныеСведенияПереместитьВверхРасширеннаяПодсказка" id="129"/>
+							</Button>
+							<Button name="ДополнительныеСведенияПереместитьВниз" id="130">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ДополнительныеСведения.StandardCommand.MoveDown</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ДополнительныеСведенияПереместитьВнизРасширеннаяПодсказка" id="131"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДополнительныеСведенияExtendedTooltip" id="101"/>
+			<SearchStringAddition name="ДополнительныеСведенияСтрокаПоиска" id="113">
+				<AdditionSource>
+					<Item>ДополнительныеСведения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеСведенияСтрокаПоискаКонтекстноеМеню" id="114"/>
+				<ExtendedTooltip name="ДополнительныеСведенияСтрокаПоискаРасширеннаяПодсказка" id="115"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДополнительныеСведенияСостояниеПросмотра" id="116">
+				<AdditionSource>
+					<Item>ДополнительныеСведения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеСведенияСостояниеПросмотраКонтекстноеМеню" id="117"/>
+				<ExtendedTooltip name="ДополнительныеСведенияСостояниеПросмотраРасширеннаяПодсказка" id="118"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДополнительныеСведенияУправлениеПоиском" id="119">
+				<AdditionSource>
+					<Item>ДополнительныеСведения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеСведенияУправлениеПоискомКонтекстноеМеню" id="120"/>
+				<ExtendedTooltip name="ДополнительныеСведенияУправлениеПоискомРасширеннаяПодсказка" id="121"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="ChoiceProcessing">ДополнительныеСведенияОбработкаВыбора</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ДополнительныеСведенияСвойство" id="90">
+					<DataPath>Объект.ДополнительныеСведения.Свойство</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДополнительныеСведенияСвойствоКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ДополнительныеСведенияСвойствоExtendedTooltip" id="102"/>
+				</InputField>
+				<CheckBoxField name="ДополнительныеСведенияПометкаУдаления" id="92">
+					<DataPath>Объект.ДополнительныеСведения.ПометкаУдаления</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДополнительныеСведенияПометкаУдаленияКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="ДополнительныеСведенияПометкаУдаленияExtendedTooltip" id="103"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НаборыДополнительныхРеквизитовИСведений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодборДопРеквизитов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор доп реквизитов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборДопРеквизитов</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодборДопСведений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор доп сведений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборДопСведений</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="СкрытьДополнительныеРеквизиты">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="СкрытьДополнительныеСведения">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

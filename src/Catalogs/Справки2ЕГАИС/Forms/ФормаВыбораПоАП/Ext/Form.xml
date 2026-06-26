@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<GroupList>5:02023637-7868-4a5f-8576-835a76e0c9ba</GroupList>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ОсновныеДействия" id="83">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Основные действия</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ОсновныеДействияРасширеннаяПодсказка" id="84"/>
+			</ButtonGroup>
+			<ButtonGroup name="ГлобальныеКоманды" id="85">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Глобальные команды</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ГлобальныеКомандыРасширеннаяПодсказка" id="86"/>
+			</ButtonGroup>
+			<ButtonGroup name="ДополнительныеДействия" id="87">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дополнительные действия</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ДополнительныеДействияРасширеннаяПодсказка" id="88"/>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnSaveDataInSettingsAtServer">ПриСохраненииДанныхВНастройкахНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="NewWriteProcessing">ОбработкаЗаписиНового</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="ActivationProcessing">ОбработкаАктивизации</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="92">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="93"/>
+		</UsualGroup>
+		<Table name="Список" id="14">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<Width>75</Width>
+			<Height>12</Height>
+			<ChoiceMode>true</ChoiceMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>true</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>false</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="15"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="16">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="17"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="74">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Строка поиска</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="75"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="77">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="78"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="80">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Управление поиском</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="81"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="82"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="DragCheck">СписокПроверкаПеретаскивания</Event>
+				<Event name="Selection">СписокВыбор</Event>
+				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
+				<Event name="OnCurrentParentChange">СписокПриСменеТекущегоРодителя</Event>
+				<Event name="OnLoadUserSettingsAtServer">СписокПриЗагрузкеПользовательскихНастроекНаСервере</Event>
+				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+				<Event name="Drag">СписокПеретаскивание</Event>
+				<Event name="OnGetDataAtServer">СписокПриПолученииДанныхНаСервере</Event>
+				<Event name="OnSaveUserSettingsAtServer">СписокПриСохраненииПользовательскихНастроекНаСервере</Event>
+				<Event name="BeforeRowChange">СписокПередНачаломИзменения</Event>
+				<Event name="AfterDeleteRow">СписокПослеУдаления</Event>
+				<Event name="OnUpdateUserSettingSetAtServer">СписокПриОбновленииСоставаПользовательскихНастроекНаСервере</Event>
+				<Event name="OnActivateCell">СписокПриАктивизацииЯчейки</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Грузополучатель" id="124">
+					<DataPath>Список.Грузополучатель</DataPath>
+					<ContextMenu name="ГрузополучательКонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="ГрузополучательРасширеннаяПодсказка" id="126"/>
+				</LabelField>
+				<LabelField name="АлкогольнаяПродукция" id="94">
+					<DataPath>Список.АлкогольнаяПродукция</DataPath>
+					<ContextMenu name="АлкогольнаяПродукцияКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="АлкогольнаяПродукцияРасширеннаяПодсказка" id="96"/>
+				</LabelField>
+				<LabelField name="Количество" id="118">
+					<DataPath>Список.Количество</DataPath>
+					<ContextMenu name="КоличествоКонтекстноеМеню" id="119"/>
+					<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="120"/>
+				</LabelField>
+				<LabelField name="ПеремещеноВЗал" id="127">
+					<DataPath>Список.ПеремещеноВЗал</DataPath>
+					<ContextMenu name="ПеремещеноВЗалКонтекстноеМеню" id="128"/>
+					<ExtendedTooltip name="ПеремещеноВЗалРасширеннаяПодсказка" id="129"/>
+				</LabelField>
+				<LabelField name="Номер" id="100">
+					<DataPath>Список.Номер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="102"/>
+				</LabelField>
+				<CheckBoxField name="ПоштучныйУчет" id="109">
+					<DataPath>Список.ПоштучныйУчет</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоштучныйУчетКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="ПоштучныйУчетРасширеннаяПодсказка" id="111"/>
+				</CheckBoxField>
+				<LabelField name="НомерТТН" id="115">
+					<DataPath>Список.НомерТТН</DataPath>
+					<ContextMenu name="НомерТТНКонтекстноеМеню" id="116"/>
+					<ExtendedTooltip name="НомерТТНРасширеннаяПодсказка" id="117"/>
+				</LabelField>
+				<LabelField name="ДатаТТН" id="112">
+					<DataPath>Список.ДатаТТН</DataPath>
+					<ContextMenu name="ДатаТТНКонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="ДатаТТНРасширеннаяПодсказка" id="114"/>
+				</LabelField>
+				<LabelField name="Справка1" id="106">
+					<DataPath>Список.Справка1</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="Справка1КонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="Справка1РасширеннаяПодсказка" id="108"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="97">
+					<DataPath>Список.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="99"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникСправки2ЕГАИС.Ссылка КАК Ссылка,
+	СправочникСправки2ЕГАИС.Наименование КАК Наименование,
+	СправочникСправки2ЕГАИС.Номер КАК Номер,
+	СправочникСправки2ЕГАИС.Грузоотправитель КАК Грузоотправитель,
+	СправочникСправки2ЕГАИС.Грузополучатель КАК Грузополучатель,
+	СправочникСправки2ЕГАИС.ДатаОтгрузки КАК ДатаОтгрузки,
+	СправочникСправки2ЕГАИС.АлкогольнаяПродукция КАК АлкогольнаяПродукция,
+	СправочникСправки2ЕГАИС.ИдентификаторТТН КАК ИдентификаторТТН,
+	СправочникСправки2ЕГАИС.НомерТТН КАК НомерТТН,
+	СправочникСправки2ЕГАИС.ДатаТТН КАК ДатаТТН,
+	СправочникСправки2ЕГАИС.Справка1 КАК Справка1,
+	СправочникСправки2ЕГАИС.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникСправки2ЕГАИС.ПоштучныйУчет КАК ПоштучныйУчет,
+	СправочникСправки2ЕГАИС.НомерФиксацииТТН КАК НомерФиксацииТТН,
+	СправочникСправки2ЕГАИС.ДатаФиксацииТТН КАК ДатаФиксацииТТН,
+	ЕСТЬNULL(ОстаткиАлкогольнойПродукцииЕГАИС.КоличествоОстаток, 0) КАК Количество
+ПОМЕСТИТЬ
+	ВремТаб
+ИЗ
+	Справочник.Справки2ЕГАИС КАК СправочникСправки2ЕГАИС
+ЛЕВОЕ СОЕДИНЕНИЕ
+	РегистрНакопления.ОстаткиАлкогольнойПродукцииЕГАИС.Остатки({(&amp;НаДату)},
+			Справка2 &lt;&gt; ЗНАЧЕНИЕ(Справочник.Справки2ЕГАИС.ПустаяСсылка) И ОрганизацияЕГАИС = &amp;Грузополучатель
+			И АлкогольнаяПродукция В (&amp;АлкогольнаяПродукция)) КАК ОстаткиАлкогольнойПродукцииЕГАИС
+ПО
+	СправочникСправки2ЕГАИС.Ссылка = ОстаткиАлкогольнойПродукцииЕГАИС.Справка2 И 
+	СправочникСправки2ЕГАИС.Грузополучатель = ОстаткиАлкогольнойПродукцииЕГАИС.ОрганизацияЕГАИС
+ГДЕ
+	СправочникСправки2ЕГАИС.АлкогольнаяПродукция В (&amp;АлкогольнаяПродукция)
+;
+
+ВЫБРАТЬ
+	СправочникСправки2ЕГАИС.Ссылка КАК Ссылка,
+	СправочникСправки2ЕГАИС.Наименование КАК Наименование,
+	СправочникСправки2ЕГАИС.Номер КАК Номер,
+	СправочникСправки2ЕГАИС.Грузоотправитель КАК Грузоотправитель,
+	СправочникСправки2ЕГАИС.Грузополучатель КАК Грузополучатель,
+	СправочникСправки2ЕГАИС.ДатаОтгрузки КАК ДатаОтгрузки,
+	СправочникСправки2ЕГАИС.АлкогольнаяПродукция КАК АлкогольнаяПродукция,
+	СправочникСправки2ЕГАИС.ИдентификаторТТН КАК ИдентификаторТТН,
+	СправочникСправки2ЕГАИС.НомерТТН КАК НомерТТН,
+	СправочникСправки2ЕГАИС.ДатаТТН КАК ДатаТТН,
+	СправочникСправки2ЕГАИС.Справка1 КАК Справка1,
+	СправочникСправки2ЕГАИС.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникСправки2ЕГАИС.ПоштучныйУчет КАК ПоштучныйУчет,
+	СправочникСправки2ЕГАИС.НомерФиксацииТТН КАК НомерФиксацииТТН,
+	СправочникСправки2ЕГАИС.ДатаФиксацииТТН КАК ДатаФиксацииТТН,
+	МАКСИМУМ(СправочникСправки2ЕГАИС.Количество) КАК Количество,
+	СУММА(СправочникСправки2ЕГАИС.ПеремещеноВЗал) КАК ПеремещеноВЗал
+ИЗ
+	(ВЫБРАТЬ
+		СправочникСправки2ЕГАИС.Ссылка КАК Ссылка,
+		СправочникСправки2ЕГАИС.Наименование КАК Наименование,
+		СправочникСправки2ЕГАИС.Номер КАК Номер,
+		СправочникСправки2ЕГАИС.Грузоотправитель КАК Грузоотправитель,
+		СправочникСправки2ЕГАИС.Грузополучатель КАК Грузополучатель,
+		СправочникСправки2ЕГАИС.ДатаОтгрузки КАК ДатаОтгрузки,
+		СправочникСправки2ЕГАИС.АлкогольнаяПродукция КАК АлкогольнаяПродукция,
+		СправочникСправки2ЕГАИС.ИдентификаторТТН КАК ИдентификаторТТН,
+		СправочникСправки2ЕГАИС.НомерТТН КАК НомерТТН,
+		СправочникСправки2ЕГАИС.ДатаТТН КАК ДатаТТН,
+		СправочникСправки2ЕГАИС.Справка1 КАК Справка1,
+		СправочникСправки2ЕГАИС.ПометкаУдаления КАК ПометкаУдаления,
+		СправочникСправки2ЕГАИС.ПоштучныйУчет КАК ПоштучныйУчет,
+		СправочникСправки2ЕГАИС.НомерФиксацииТТН КАК НомерФиксацииТТН,
+		СправочникСправки2ЕГАИС.ДатаФиксацииТТН КАК ДатаФиксацииТТН,
+		СправочникСправки2ЕГАИС.Количество КАК Количество,
+		ЕСТЬNULL(ПеремещениеВТЗ.Количество, 0) КАК ПеремещеноВЗал
+	ИЗ
+		ВремТаб КАК СправочникСправки2ЕГАИС
+	ЛЕВОЕ СОЕДИНЕНИЕ
+		РегистрНакопления.ОстаткиАлкогольнойПродукцииЕГАИС КАК ПеремещениеВТЗ
+	ПО
+		СправочникСправки2ЕГАИС.Ссылка = ПеремещениеВТЗ.Справка2 И 
+		СправочникСправки2ЕГАИС.Грузополучатель = ПеремещениеВТЗ.ОрганизацияЕГАИС И 
+		ПеремещениеВТЗ.ХозОперация = ЗНАЧЕНИЕ(Справочник.ХозОперации.ПеремещениеВТорговыйЗалЕГАИС) И 
+		ПеремещениеВТЗ.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		СправочникСправки2ЕГАИС.Ссылка КАК Ссылка,
+		СправочникСправки2ЕГАИС.Наименование КАК Наименование,
+		СправочникСправки2ЕГАИС.Номер КАК Номер,
+		СправочникСправки2ЕГАИС.Грузоотправитель КАК Грузоотправитель,
+		СправочникСправки2ЕГАИС.Грузополучатель КАК Грузополучатель,
+		СправочникСправки2ЕГАИС.ДатаОтгрузки КАК ДатаОтгрузки,
+		СправочникСправки2ЕГАИС.АлкогольнаяПродукция КАК АлкогольнаяПродукция,
+		СправочникСправки2ЕГАИС.ИдентификаторТТН КАК ИдентификаторТТН,
+		СправочникСправки2ЕГАИС.НомерТТН КАК НомерТТН,
+		СправочникСправки2ЕГАИС.ДатаТТН КАК ДатаТТН,
+		СправочникСправки2ЕГАИС.Справка1 КАК Справка1,
+		СправочникСправки2ЕГАИС.ПометкаУдаления КАК ПометкаУдаления,
+		СправочникСправки2ЕГАИС.ПоштучныйУчет КАК ПоштучныйУчет,
+		СправочникСправки2ЕГАИС.НомерФиксацииТТН КАК НомерФиксацииТТН,
+		СправочникСправки2ЕГАИС.ДатаФиксацииТТН КАК ДатаФиксацииТТН,
+		СправочникСправки2ЕГАИС.Количество КАК Количество,
+		-ЕСТЬNULL(ПеремещениеИзТЗ.Количество, 0) КАК ПеремещеноВЗал
+	ИЗ
+		ВремТаб КАК СправочникСправки2ЕГАИС
+	ЛЕВОЕ СОЕДИНЕНИЕ
+		РегистрНакопления.ОстаткиАлкогольнойПродукцииЕГАИС КАК ПеремещениеИзТЗ
+	ПО
+		СправочникСправки2ЕГАИС.Ссылка = ПеремещениеИзТЗ.Справка2 И 
+		СправочникСправки2ЕГАИС.Грузополучатель = ПеремещениеИзТЗ.ОрганизацияЕГАИС И 
+		ПеремещениеИзТЗ.ХозОперация = ЗНАЧЕНИЕ(Справочник.ХозОперации.ПеремещениеИзТорговогоЗалаЕГАИС) И 
+		ПеремещениеИзТЗ.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)) КАК СправочникСправки2ЕГАИС
+СГРУППИРОВАТЬ ПО
+	СправочникСправки2ЕГАИС.Ссылка,
+	СправочникСправки2ЕГАИС.Наименование,
+	СправочникСправки2ЕГАИС.Номер,
+	СправочникСправки2ЕГАИС.Грузоотправитель,
+	СправочникСправки2ЕГАИС.Грузополучатель,
+	СправочникСправки2ЕГАИС.ДатаОтгрузки,
+	СправочникСправки2ЕГАИС.АлкогольнаяПродукция,
+	СправочникСправки2ЕГАИС.ИдентификаторТТН,
+	СправочникСправки2ЕГАИС.НомерТТН,
+	СправочникСправки2ЕГАИС.ДатаТТН,
+	СправочникСправки2ЕГАИС.Справка1,
+	СправочникСправки2ЕГАИС.ПометкаУдаления,
+	СправочникСправки2ЕГАИС.ПоштучныйУчет,
+	СправочникСправки2ЕГАИС.НомерФиксацииТТН,
+	СправочникСправки2ЕГАИС.ДатаФиксацииТТН</QueryText>
+				<KeyField>Ссылка</KeyField>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаТТН</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="НомерТТН" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер ТТН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Грузополучатель</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>АлкогольнаяПродукция</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>Номер</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДатаТТН</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДатаТТН</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НомерТТН</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string"/>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.НомерТТН</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">НомерТТН</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>Catalog.Справки2ЕГАИС.Command.ЗапроситьСправку</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

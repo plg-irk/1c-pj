@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.17">
+	<Item id="4020ebd9-ba2a-491b-b016-caa0b5d94986">
+		<Name>ВидНалога</Name>
+		<Code>00130</Code>
+		<Description>Вид налога</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыНалогов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="3856bb74-a7f5-4578-b190-8e69c3d10c82">
+		<Name>ВыводитьФактическиеДанныеПартий</Name>
+		<Code>00180</Code>
+		<Description>Выводить фактические данные партий</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="1c576049-de9a-4c9b-b1c0-885c233fe908">
+		<Name>ДопустимоеОтклонениеКоличестваВесовогоТовараПроцентов</Name>
+		<Code>00163</Code>
+		<Description>Допустимое отклонение количества весового товара (%)</Description>
+		<Type>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>15</v8:Digits>
+				<v8:FractionDigits>2</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b9b50d55-2b71-44ad-ba2c-e1f08ef10181">
+		<Name>ДопустимоеОтклонениеКоличестваВесовогоТовараГрамм</Name>
+		<Code>00162</Code>
+		<Description>Допустимое отклонение количества весового товара (грамм)</Description>
+		<Type>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>12</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="313b6594-471d-4752-b5c3-cc74eeb46450">
+		<Name>ДопустимоеОтклонениеЦеныОтСогласованной</Name>
+		<Code>00164</Code>
+		<Description>Допустимое отклонение цены от согласованной (копейки)</Description>
+		<Type>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>4</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="f0cb1935-273a-4f0e-a0c3-c33f0e89814e">
+		<Name>ЗакрыватьНераспределенныеЗаказыПокупателей</Name>
+		<Code>00010</Code>
+		<Description>Закрывать нераспределенные заказы покупателей</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="bc1e5798-b15c-4958-b625-f9b40b94f35d">
+		<Name>ЗакрытиеЗаказовПоОрганизации</Name>
+		<Code>00100</Code>
+		<Description>Закрытие заказов по организации</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="aadf10b2-a939-4578-8f18-94657109b8ce">
+		<Name>ЗакрытиеЗаказовПоПодразделению</Name>
+		<Code>00020</Code>
+		<Description>Закрытие заказов по подразделению</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="47e2672f-e81a-4ccc-9d27-502d8d25d4ad">
+		<Name>итКоличествоДнейРасчетМаксКоличестваЗаказа</Name>
+		<Code>00320</Code>
+		<Description>Количество дней расчет макс. количества заказа</Description>
+		<Type>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>3</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="7921abee-fc96-4201-9f5c-cfb974748302">
+		<Name>КонтролироватьПодразделениеРецептурПриВложенномВыпуске</Name>
+		<Code>00150</Code>
+		<Description>Контролировать подразделение рецептур при вложенном выпуске</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2f99569d-35a1-41d5-bece-f4bf1ffbc301">
+		<Name>МагазинИспользуетОтдельнуюКассуПодразделения</Name>
+		<Code>00170</Code>
+		<Description>Магазин использует отдельную кассу подразделения</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2095a456-075d-412e-8c4b-41ebdc71215f">
+		<Name>НеИспользоватьПодразделениеПриУстановкеЦен</Name>
+		<Code>00167</Code>
+		<Description>Не использовать подразделение при установке цен</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="7548b295-a1de-44d5-8632-2bff45612b3e">
+		<Name>ОбъектНалогообложения</Name>
+		<Code>00120</Code>
+		<Description>Объект налогообложения</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыОбъектовНалогообложения</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="db3d91cb-822a-4705-9d34-5ec870309981">
+		<Name>ОтменаКонтроляСуммыКредита</Name>
+		<Code>00080</Code>
+		<Description>Отмена контроля суммы кредита</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="f02b51d3-5750-43f0-8dc2-ae9a9d665537">
+		<Name>ПередачаВОборудованиеПослеПечати</Name>
+		<Code>00169</Code>
+		<Description>Передача в оборудование после печати</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="1249104e-b124-48b3-b8db-83fcc65a3e19">
+		<Name>ПечататьОтчетПроизводстваЗаСменуВСуммахСебестоимости</Name>
+		<Code>00160</Code>
+		<Description>Печатать отчет производства за смену в суммах себестоимости</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a7c45d8a-6815-4100-b637-df0ab8c74711">
+		<Name>ПечататьОтчетПроизводстваЗаСменуВСуммахСебестоимостиБезНДС</Name>
+		<Code>00161</Code>
+		<Description>Печатать отчет производства за смену в суммах себестоимости без НДС</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b8c3146d-b16c-40c3-b76c-c39de230b639">
+		<Name>ПорядокПроверкиСебестоимостиТовараПриПродаже</Name>
+		<Code>00070</Code>
+		<Description>Порядок проверки себестоимости товара при продаже</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ПорядокПроверкиСебестоимостиПриПродаже</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="45402b26-13d1-40de-8348-c682c6345aac">
+		<Name>ПравилоПроверкиУценкиПоСпособуВычисления</Name>
+		<Code>00061</Code>
+		<Description>Правило проверки уценки по способу вычисления</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ПравилоПроверкиУценкиПоСпособуВычисления</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="80d2ae78-ce76-41a8-a5cb-8453c4e700c1">
+		<Name>ПравилоПроверкиХарактеристики</Name>
+		<Code>00165</Code>
+		<Description>Правило проверки характеристики</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="0e4a4bd8-91b8-41f7-98c2-694f70db7340">
+		<Name>ПредельныйРазмерНаличныхРасчетов</Name>
+		<Code>00140</Code>
+		<Description>Предельный размер наличных расчетов</Description>
+		<Type>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>10</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e998a29b-b9ff-42a3-b2cb-2d15924f3f8c">
+		<Name>итПроцентКонтроляСоответствияТТНЗаказу</Name>
+		<Code>00300</Code>
+		<Description>Процент контроля соответствия ТТН Заказу</Description>
+		<Type>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>15</v8:Digits>
+				<v8:FractionDigits>2</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="5941d311-5e20-4409-9d3f-eacad8e2ac94">
+		<Name>итПроцентКоридораСоответствияЦенАналоговНоменклатуры</Name>
+		<Code>00310</Code>
+		<Description>Процент коридора соответствия цен аналогов номенклатуры</Description>
+		<Type>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>15</v8:Digits>
+				<v8:FractionDigits>2</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6a7a058a-d350-4a72-8cd0-bac0904d5872">
+		<Name>РежимСписанияСуммовыхРазниц</Name>
+		<Code>00030</Code>
+		<Description>Режим списания суммовых разниц</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.РежимыРегламентныхОпераций</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="02230832-a96f-4a90-8947-6a285680af42">
+		<Name>СистемаНалогообложения</Name>
+		<Code>00110</Code>
+		<Description>Система налогообложения</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СистемыНалогообложения</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="85f2933b-9c9b-46bd-890c-851e175fd6bc">
+		<Name>СкладEcomm</Name>
+		<Code>00211</Code>
+		<Description>Склад ecomm</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СкладыКомпании</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="dd0b554b-0395-4b16-a2cf-d084dcd7920f">
+		<Name>СкладПикинга</Name>
+		<Code>00199</Code>
+		<Description>Склад пикинга</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СкладыКомпании</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="cb14b137-ee45-4fbe-afa0-dfc450c42939">
+		<Name>СкладПодбораТоваров</Name>
+		<Code>00200</Code>
+		<Description>Склад подбора товаров</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СкладыКомпании</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a91d0a83-5ffc-4a43-9273-2b6558b6e98e">
+		<Name>СписыватьВМинусПоЗакупочнойЦене</Name>
+		<Code>00181</Code>
+		<Description>Списывать товары в минус по партиям по закупочной/согласованной цене</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="168cf5e3-135f-4295-853e-cb5c259c3d8f">
+		<Name>СпособВеденияБаланса</Name>
+		<Code>00040</Code>
+		<Description>Способ ведения баланса</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СпособВеденияБаланса</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="81116017-86c3-4206-aa2d-cd709a2db1d5">
+		<Name>СтатьяРасходовДСОплатаПоставщику</Name>
+		<Code>00171</Code>
+		<Description>Статья расходов ДС оплата поставщику</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтатьиДоходовИРасходов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="066b87c2-7322-409e-acb4-47f6b32498c3">
+		<Name>итСтатьяСписанияАвтоСписаниеХозМатериаллов</Name>
+		<Code>00210</Code>
+		<Description>Статья списания авто списание хоз. материаллов</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтатьиДоходовИРасходов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="15f06046-ba63-4ed1-97c8-873af76f73a4">
+		<Name>СтратегияСписанияПартийТоваровПоДатам</Name>
+		<Code>00050</Code>
+		<Description>Стратегия списания партий товаров по датам</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтратегияСписанияПартийТоваровПоДатам</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="1fcb6535-68d5-4d69-af60-f50cad023849">
+		<Name>СтратегияСписанияПартийТоваровПоСтатусам</Name>
+		<Code>00060</Code>
+		<Description>Стратегия списания партий товаров по статусам</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтратегияСписанияПартийТоваровПоСтатусам</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="29f0ee58-1acc-4b3c-863c-7f8d5c9f610c">
+		<Name>УровеньКатегорииНоменклатуры</Name>
+		<Code>00168</Code>
+		<Description>Уровень категории номенклатуры</Description>
+		<Type>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>2</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

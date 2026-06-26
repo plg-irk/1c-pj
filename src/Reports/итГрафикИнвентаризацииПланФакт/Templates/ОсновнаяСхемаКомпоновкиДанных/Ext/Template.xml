@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеКомпании</dataPath>
+			<field>ПодразделениеКомпании</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СБ</dataPath>
+			<field>СБ</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Локальная</dataPath>
+			<field>Локальная</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КРО</dataPath>
+			<field>КРО</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГруппаТоваров</dataPath>
+			<field>ГруппаТоваров</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПлан</dataPath>
+			<field>ДатаПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата план</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛинейныйМенеджер</dataPath>
+			<field>ЛинейныйМенеджер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Линейный менеджер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РуководительНаправления</dataPath>
+			<field>РуководительНаправления</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Руководитель направления</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТорговаяТочка</dataPath>
+			<field>ТорговаяТочка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРозничная</dataPath>
+			<field>СуммаРозничная</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Инвентаризация</dataPath>
+			<field>Инвентаризация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	итГрафикИнвентаризации.Период КАК ДатаПлан,
+	итГрафикИнвентаризации.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	итГрафикИнвентаризации.Локальная КАК Локальная,
+	итГрафикИнвентаризации.СБ КАК СБ,
+	итГрафикИнвентаризации.КРО КАК КРО,
+	итГрафикИнвентаризации.ГруппаТоваров КАК ГруппаТоваров
+ПОМЕСТИТЬ втДанныеГрафиков
+ИЗ
+	РегистрСведений.итГрафикИнвентаризации КАК итГрафикИнвентаризации
+ГДЕ
+	итГрафикИнвентаризации.Установлен
+	И итГрафикИнвентаризации.Период МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИнвентаризацияТовары.Ссылка КАК Ссылка,
+	СУММА(ИнвентаризацияТовары.СуммаРозничная) КАК СуммаРозничная,
+	ИнвентаризацияТовары.Ссылка.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	ИнвентаризацияТовары.Ссылка.итЛокальнаяИнвентаризация КАК итЛокальнаяИнвентаризация,
+	ИнвентаризацияТовары.Ссылка.итКонтрольКРО КАК итКонтрольКРО,
+	ИнвентаризацияТовары.Ссылка.итКонтрольСБ КАК итКонтрольСБ,
+	ИнвентаризацияТовары.Ссылка.Дата КАК Дата,
+	ИнвентаризацияТовары.Ссылка.Номер КАК Номер
+ПОМЕСТИТЬ втДанныеИнвентаризации
+ИЗ
+	Документ.Инвентаризация.Товары КАК ИнвентаризацияТовары
+ГДЕ
+	ИнвентаризацияТовары.Ссылка.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И ИнвентаризацияТовары.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И ИнвентаризацияТовары.Ссылка.Проведен = ИСТИНА
+	И ИнвентаризацияТовары.Ссылка.ХозОперация = &amp;ХозОперация
+
+СГРУППИРОВАТЬ ПО
+	ИнвентаризацияТовары.Ссылка,
+	ИнвентаризацияТовары.Ссылка.итЛокальнаяИнвентаризация,
+	ИнвентаризацияТовары.Ссылка.ПодразделениеКомпании,
+	ИнвентаризацияТовары.Ссылка.итКонтрольКРО,
+	ИнвентаризацияТовары.Ссылка.итКонтрольСБ,
+	ИнвентаризацияТовары.Ссылка.Дата,
+	ИнвентаризацияТовары.Ссылка.Номер
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втДанныеИнвентаризации.Ссылка КАК Ссылка,
+	втДанныеИнвентаризации.СуммаРозничная КАК СуммаРозничная,
+	втДанныеИнвентаризации.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	втДанныеИнвентаризации.итЛокальнаяИнвентаризация КАК итЛокальнаяИнвентаризация,
+	втДанныеИнвентаризации.итКонтрольКРО КАК итКонтрольКРО,
+	втДанныеИнвентаризации.итКонтрольСБ КАК итКонтрольСБ,
+	втДанныеИнвентаризации.Дата КАК Дата,
+	втДанныеИнвентаризации.Номер КАК Номер,
+	ЕСТЬNULL(ИнвентаризацияитФильтрыЛИ.Группа, НЕОПРЕДЕЛЕНО) КАК Группа
+ПОМЕСТИТЬ втИнвентаризацияСГруппами
+ИЗ
+	втДанныеИнвентаризации КАК втДанныеИнвентаризации
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.Инвентаризация.итФильтрыЛИ КАК ИнвентаризацияитФильтрыЛИ
+		ПО втДанныеИнвентаризации.Ссылка = ИнвентаризацияитФильтрыЛИ.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втДанныеГрафиков.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	втДанныеГрафиков.Локальная КАК Локальная,
+	втДанныеГрафиков.СБ КАК СБ,
+	втДанныеГрафиков.КРО КАК КРО,
+	втДанныеГрафиков.ГруппаТоваров КАК ГруппаТоваров,
+	втИнвентаризацияСГруппами.Дата КАК Дата,
+	втИнвентаризацияСГруппами.Номер КАК Номер,
+	втДанныеГрафиков.ДатаПлан КАК ДатаПлан,
+	ит_ТорговыеТочки_ОтветственныеСрезПоследних.Менеджер КАК ЛинейныйМенеджер,
+	втИнвентаризацияСГруппами.СуммаРозничная КАК СуммаРозничная,
+	ит_ТорговыеТочки_ОтветственныеСрезПоследних.РуководительНаправления КАК РуководительНаправления,
+	втИнвентаризацияСГруппами.Ссылка КАК Инвентаризация
+ИЗ
+	втДанныеГрафиков КАК втДанныеГрафиков
+		ЛЕВОЕ СОЕДИНЕНИЕ втИнвентаризацияСГруппами КАК втИнвентаризацияСГруппами
+		ПО втДанныеГрафиков.ПодразделениеКомпании = втИнвентаризацияСГруппами.ПодразделениеКомпании
+			И втДанныеГрафиков.Локальная = втИнвентаризацияСГруппами.итЛокальнаяИнвентаризация
+			И втДанныеГрафиков.ГруппаТоваров = втИнвентаризацияСГруппами.Группа
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ит_ТорговыеТочки_Ответственные.СрезПоследних КАК ит_ТорговыеТочки_ОтветственныеСрезПоследних
+		ПО втДанныеГрафиков.ПодразделениеКомпании = ит_ТорговыеТочки_ОтветственныеСрезПоследних.ТорговаяТочка</query>
+	</dataSet>
+	<totalField>
+		<dataPath>СуммаРозничная</dataPath>
+		<expression>Сумма(СуммаРозничная)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ХозОперация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Хоз операция</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ХозОперации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ХозОперации.ИнвентаризацияТоваров</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПодразделениеКомпании</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЛинейныйМенеджер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РуководительНаправления</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СБ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КРО</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Локальная</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГруппаТоваров</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПлан</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата план</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дата</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата факт.</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Инвентаризация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаРозничная</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>b3056baf-605a-452c-ad47-c15cedf2876b</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">МакетОтчетаКомпоновкиДанныхОсновной</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>График инвентаризации (план/факт)</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:use>false</dcsset:use>
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ПодразделениеКомпании</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Группа" id="1">
+			<DataPath>Группа</DataPath>
+			<ContextMenu name="ГруппаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ГруппаРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ГруппаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="ДанныеСортировки" id="4">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ДанныеСортировки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДанныеСортировкиКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="ДанныеСортировкиКоманднаяПанель" id="6">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ДанныеСортировкиПереместитьВверх" id="23">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ДанныеСортировки.StandardCommand.MoveUp</CommandName>
+						<ExtendedTooltip name="ДанныеСортировкиПереместитьВверхРасширеннаяПодсказка" id="24"/>
+					</Button>
+					<Button name="ДанныеСортировкиПереместитьВниз" id="25">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ДанныеСортировки.StandardCommand.MoveDown</CommandName>
+						<ExtendedTooltip name="ДанныеСортировкиПереместитьВнизРасширеннаяПодсказка" id="26"/>
+					</Button>
+					<Button name="ДанныеСортировкиСортироватьСписокПоВозрастанию" id="27">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ДанныеСортировки.StandardCommand.SortListAsc</CommandName>
+						<ExtendedTooltip name="ДанныеСортировкиСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="28"/>
+					</Button>
+					<Button name="ДанныеСортировкиСортироватьСписокПоУбыванию" id="29">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ДанныеСортировки.StandardCommand.SortListDesc</CommandName>
+						<ExtendedTooltip name="ДанныеСортировкиСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="30"/>
+					</Button>
+					<Button name="ДанныеСортировкиОбновить" id="31">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Обновить</CommandName>
+						<ExtendedTooltip name="ДанныеСортировкиОбновитьРасширеннаяПодсказка" id="32"/>
+					</Button>
+					<Button name="ДанныеСортировкиСохранитьНастройки" id="33">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СохранитьНастройки</CommandName>
+						<ExtendedTooltip name="ДанныеСортировкиСохранитьНастройкиРасширеннаяПодсказка" id="34"/>
+					</Button>
+					<Button name="ДанныеСортировкиВывестиСписок" id="35">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ДанныеСортировки.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="ДанныеСортировкиВывестиСписокРасширеннаяПодсказка" id="36"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДанныеСортировкиРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="ДанныеСортировкиСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>ДанныеСортировки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеСортировкиСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ДанныеСортировкиСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДанныеСортировкиСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>ДанныеСортировки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеСортировкиСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ДанныеСортировкиСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДанныеСортировкиУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>ДанныеСортировки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеСортировкиУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ДанныеСортировкиУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДанныеСортировкиНомерСтроки" id="17">
+					<DataPath>Объект.ДанныеСортировки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеСортировкиНомерСтрокиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ДанныеСортировкиНомерСтрокиРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<InputField name="ДанныеСортировкиНоменклатура" id="20">
+					<DataPath>Объект.ДанныеСортировки.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеСортировкиНоменклатураКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДанныеСортировкиНоменклатураРасширеннаяПодсказка" id="22"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОбменСОфлайнОборудованием</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Группа" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.итГруппыНоменклатурыКСО</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="СохранитьНастройки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьНастройки</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

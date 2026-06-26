@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Enum uuid="10ef8928-e449-46c9-8e5f-173fa3b3f36b">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ТипыСвязейВЕТИС" category="Ref">
+				<xr:TypeId>984edd08-5615-4607-8256-1008b10e6b66</xr:TypeId>
+				<xr:ValueId>d0720977-9b78-4412-afd3-8b9151cc065a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ТипыСвязейВЕТИС" category="Manager">
+				<xr:TypeId>ce40f3db-8d64-4d7b-afdf-1b6d7b809b13</xr:TypeId>
+				<xr:ValueId>92c7f1bf-2c14-4928-9ca6-1ce532432e36</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ТипыСвязейВЕТИС" category="List">
+				<xr:TypeId>92aa3625-0fc2-48a0-a0fe-2ee29b896c80</xr:TypeId>
+				<xr:ValueId>f8571b3f-3f45-4246-9537-ee44676016e2</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ТипыСвязейВЕТИС</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы связей ВетИС</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="ade887ba-9442-476d-915a-9f2503669346">
+				<Properties>
+					<Name>СопроводительныйДокумент</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сопроводительный документ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>1</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="0fa64aa6-75da-4722-861a-f5f32bdd684e">
+				<Properties>
+					<Name>ПредшествующийДокумент</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предшествующий документ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>2</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="28e3c5c7-8e50-4ef3-8a1b-cc2cb63d9a5f">
+				<Properties>
+					<Name>СледующийДокумент</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Следующий документ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>3</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a965b3e9-9597-4b4e-b9d0-206ccf0a68e7">
+				<Properties>
+					<Name>ДокументВзаменКоторогоВыданТекущийДокумент</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ, взамен которого выдан текущий документ.</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>4</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fc1fc955-21a3-4c80-b511-791f47fe5b03">
+				<Properties>
+					<Name>ДокументЗаменяющийТекущий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ, заменяющий текущий документ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>5</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a40c7633-1c5f-4ccc-b312-7f47d2541d25">
+				<Properties>
+					<Name>СвязанныйДокумент</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Связанный документ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>6</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d81f1077-3f5e-43fa-bf3f-72bb4a81cb67">
+				<Properties>
+					<Name>ДокументПодтверждающийПроисхождениеПартииПродукции</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ, подтверждающий происхождение партии продукции</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>7</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ОсновныеДействия" id="13">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Основные действия</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ОсновныеДействияРасширеннаяПодсказка" id="14"/>
+			</ButtonGroup>
+			<ButtonGroup name="ГлобальныеКоманды" id="15">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Глобальные команды</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ГлобальныеКомандыРасширеннаяПодсказка" id="16"/>
+			</ButtonGroup>
+			<ButtonGroup name="ДополнительныеДействия" id="17">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дополнительные действия</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ДополнительныеДействияРасширеннаяПодсказка" id="18"/>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnSaveDataInSettingsAtServer">ПриСохраненииДанныхВНастройкахНаСервере</Event>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="НаименованиеКод" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование и код</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НаименованиеКодРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ВидЛицензии" id="7">
+			<DataPath>1/0:e1e638f4-0879-4ac3-9744-cdb1b3dddcff</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ВидЛицензииКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВидЛицензииРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<CheckBoxField name="Маркируемый" id="10">
+			<DataPath>1/0:98ae5d0c-6abe-4588-ba82-c954ed8b7056</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="МаркируемыйКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="МаркируемыйРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<Table name="ГруппыПересортаПродукции" id="21">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>1/0:15bb5cad-5128-409c-8ff0-6c1b6c254b8c</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ГруппыПересортаПродукцииКонтекстноеМеню" id="22"/>
+			<AutoCommandBar name="ГруппыПересортаПродукцииКоманднаяПанель" id="23"/>
+			<ExtendedTooltip name="ГруппыПересортаПродукцииРасширеннаяПодсказка" id="24"/>
+			<SearchStringAddition name="ГруппыПересортаПродукцииСтрокаПоиска" id="25">
+				<AdditionSource>
+					<Item>ГруппыПересортаПродукции</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ГруппыПересортаПродукцииСтрокаПоискаКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="ГруппыПересортаПродукцииСтрокаПоискаРасширеннаяПодсказка" id="27"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ГруппыПересортаПродукцииСостояниеПросмотра" id="28">
+				<AdditionSource>
+					<Item>ГруппыПересортаПродукции</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ГруппыПересортаПродукцииСостояниеПросмотраКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="ГруппыПересортаПродукцииСостояниеПросмотраРасширеннаяПодсказка" id="30"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ГруппыПересортаПродукцииУправлениеПоиском" id="31">
+				<AdditionSource>
+					<Item>ГруппыПересортаПродукции</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ГруппыПересортаПродукцииУправлениеПоискомКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="ГруппыПересортаПродукцииУправлениеПоискомРасширеннаяПодсказка" id="33"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ГруппыПересортаПродукцииНомерСтроки" id="34">
+					<DataPath>1/0:15bb5cad-5128-409c-8ff0-6c1b6c254b8c/-2</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ГруппыПересортаПродукцииНомерСтрокиКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ГруппыПересортаПродукцииНомерСтрокиРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<InputField name="ГруппыПересортаПродукцииГруппа" id="37">
+					<DataPath>1/0:15bb5cad-5128-409c-8ff0-6c1b6c254b8c/0:a2605e01-a316-4538-a063-46fd325b41ed</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ГруппыПересортаПродукцииГруппаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ГруппыПересортаПродукцииГруппаРасширеннаяПодсказка" id="39"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ШаблонИерархическогоСправочника</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

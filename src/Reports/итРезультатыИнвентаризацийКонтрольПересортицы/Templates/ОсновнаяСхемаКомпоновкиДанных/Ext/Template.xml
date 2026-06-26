@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоКнижнИтог</dataPath>
+			<field>КоличествоКнижнИтог</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество книжн итог</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоКнижн</dataPath>
+			<field>КоличествоКнижн</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоФакт</dataPath>
+			<field>КоличествоФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПересортицаПриход</dataPath>
+			<field>КоличествоПересортицаПриход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество пересортица приход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПересортицаРасход</dataPath>
+			<field>КоличествоПересортицаРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество пересортица расход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоИтог</dataPath>
+			<field>КоличествоИтог</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество итог</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоФактИтог</dataPath>
+			<field>КоличествоФактИтог</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество факт итог</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПересортицаРасход</dataPath>
+			<field>ПересортицаРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересортица расход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИнвентаризацияИтог</dataPath>
+			<field>ИнвентаризацияИтог</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризация итог</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИнвентаризацияПредварительныйИтог</dataPath>
+			<field>ИнвентаризацияПредварительныйИтог</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризация предварительный итог</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПересортицаПриход</dataPath>
+			<field>ПересортицаПриход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересортица приход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СкладКомпании</dataPath>
+			<field>СкладКомпании</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Остаток</dataPath>
+			<field>Остаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусПартии</dataPath>
+			<field>СтатусПартии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ИнвентаризацияТовары.Номенклатура КАК Номенклатура,
+	ИнвентаризацияТовары.КоличествоКнижн КАК КоличествоКнижн,
+	ИнвентаризацияТовары.КоличествоФакт КАК КоличествоФакт,
+	ИнвентаризацияТовары.Количество КАК Количество,
+	ИнвентаризацияТовары.Ссылка КАК ИнвентаризацияПредварительныйИтог
+ПОМЕСТИТЬ втИнвентаризацияПредварительныйИтог
+ИЗ
+	Документ.Инвентаризация.Товары КАК ИнвентаризацияТовары
+ГДЕ
+	ИнвентаризацияТовары.Ссылка = &amp;Инвентаризация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПересортицаТоваровТовары.Номенклатура КАК Номенклатура,
+	СУММА(ПересортицаТоваровТовары.Количество) КАК Количество,
+	ПересортицаТоваровТовары.Ссылка КАК ПересортицаРасход
+ПОМЕСТИТЬ втПересортицаРасход
+ИЗ
+	Документ.Инвентаризация КАК Инвентаризация
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ПересортицаТоваров.Товары КАК ПересортицаТоваровТовары
+		ПО Инвентаризация.итПересортицаТоваров = ПересортицаТоваровТовары.Ссылка
+			И (ПересортицаТоваровТовары.Ссылка.Проведен)
+ГДЕ
+	Инвентаризация.Ссылка = &amp;Инвентаризация
+
+СГРУППИРОВАТЬ ПО
+	ПересортицаТоваровТовары.Номенклатура,
+	ПересортицаТоваровТовары.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПересортицаТоваровТовары.НоменклатураПриход КАК НоменклатураПриход,
+	СУММА(ПересортицаТоваровТовары.КоличествоПриход) КАК КоличествоПриход,
+	ПересортицаТоваровТовары.Ссылка КАК ПересортицаПриход
+ПОМЕСТИТЬ втПересортицаПриход
+ИЗ
+	Документ.Инвентаризация КАК Инвентаризация
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ПересортицаТоваров.Товары КАК ПересортицаТоваровТовары
+		ПО Инвентаризация.итПересортицаТоваров = ПересортицаТоваровТовары.Ссылка
+			И (ПересортицаТоваровТовары.Ссылка.Проведен)
+ГДЕ
+	Инвентаризация.Ссылка = &amp;Инвентаризация
+
+СГРУППИРОВАТЬ ПО
+	ПересортицаТоваровТовары.НоменклатураПриход,
+	ПересортицаТоваровТовары.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИнвентаризацияТовары.Номенклатура КАК Номенклатура,
+	ИнвентаризацияТовары.КоличествоКнижн КАК КоличествоКнижн,
+	ИнвентаризацияТовары.КоличествоФакт КАК КоличествоФакт,
+	ИнвентаризацияТовары.Количество КАК Количество,
+	ИнвентаризацияТовары.Ссылка КАК ИнвентаризацияИтог
+ПОМЕСТИТЬ втИнвентаризацияИтог
+ИЗ
+	Документ.Инвентаризация.Товары КАК ИнвентаризацияТовары
+ГДЕ
+	ИнвентаризацияТовары.Ссылка.ДокументОснование = &amp;Инвентаризация
+	И ИнвентаризацияТовары.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И ИнвентаризацияТовары.Ссылка.Проведен = ИСТИНА
+	И ИнвентаризацияТовары.Ссылка.ХозОперация = &amp;ХозОперацияИтог
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПартииТоваровКомпанииОстатки.КоличествоОстаток КАК КоличествоОстаток,
+	ПартииТоваровКомпанииОстатки.Номенклатура КАК Номенклатура
+ПОМЕСТИТЬ втОстатки
+ИЗ
+	РегистрНакопления.ПартииТоваровКомпании.Остатки(&amp;ПериодОтчета, СкладКомпании = &amp;CкладКомпании) КАК ПартииТоваровКомпанииОстатки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втИнвентаризацияПредварительныйИтог.Номенклатура КАК Номенклатура,
+	втИнвентаризацияПредварительныйИтог.КоличествоКнижн КАК КоличествоКнижн,
+	втИнвентаризацияПредварительныйИтог.КоличествоФакт КАК КоличествоФакт,
+	втИнвентаризацияПредварительныйИтог.Количество КАК Количество,
+	втПересортицаПриход.КоличествоПриход КАК КоличествоПересортицаПриход,
+	втПересортицаРасход.Количество КАК КоличествоПересортицаРасход,
+	втИнвентаризацияИтог.КоличествоКнижн КАК КоличествоКнижнИтог,
+	втИнвентаризацияИтог.КоличествоФакт КАК КоличествоФактИтог,
+	втИнвентаризацияИтог.Количество КАК КоличествоИтог,
+	втИнвентаризацияИтог.ИнвентаризацияИтог КАК ИнвентаризацияИтог,
+	втИнвентаризацияПредварительныйИтог.ИнвентаризацияПредварительныйИтог КАК ИнвентаризацияПредварительныйИтог,
+	втПересортицаПриход.ПересортицаПриход КАК ПересортицаПриход,
+	втПересортицаРасход.ПересортицаРасход КАК ПересортицаРасход,
+	втОстатки.КоличествоОстаток КАК Остаток
+ИЗ
+	втИнвентаризацияПредварительныйИтог КАК втИнвентаризацияПредварительныйИтог
+		ЛЕВОЕ СОЕДИНЕНИЕ втИнвентаризацияИтог КАК втИнвентаризацияИтог
+		ПО втИнвентаризацияПредварительныйИтог.Номенклатура = втИнвентаризацияИтог.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ втПересортицаПриход КАК втПересортицаПриход
+		ПО втИнвентаризацияПредварительныйИтог.Номенклатура = втПересортицаПриход.НоменклатураПриход
+		ЛЕВОЕ СОЕДИНЕНИЕ втПересортицаРасход КАК втПересортицаРасход
+		ПО втИнвентаризацияПредварительныйИтог.Номенклатура = втПересортицаРасход.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ втОстатки КАК втОстатки
+		ПО втИнвентаризацияПредварительныйИтог.Номенклатура = втОстатки.Номенклатура</query>
+	</dataSet>
+	<parameter>
+		<name>Инвентаризация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Инвентаризация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.Инвентаризация</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ХозОперацияИтог</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Хоз операция итог</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ХозОперации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ХозОперации.ИнвентаризацияТоваров</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>CкладКомпании</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Cклад компании</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СкладыКомпании</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предварительный итог</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоКнижн</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Количество</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы закрытия инвентаризации</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Пересортица товаров</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоПересортицаПриход</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Приход</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоПересортицаРасход</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расход</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:placement>Auto</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Инвентаризация</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоКнижнИтог</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоФактИтог</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоИтог</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Auto</dcsset:placement>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Остаток</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ХозОперацияИтог</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">МакетОтчетаКомпоновкиДанныхОсновной</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контроль результатов инвентаризации</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

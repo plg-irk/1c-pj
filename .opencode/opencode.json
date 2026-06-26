@@ -20,14 +20,14 @@
     "playwright": {
       "type": "local",
       "command": ["npx", "-y", "@playwright/mcp"],
-      "enabled": false,
+      "enabled": true,
       "timeout": 30000
     },
     "bsl-lsp-bridge": {
-      "type": "remote",
-      "url": "http://localhost:5007/mcp",
-      "enabled": false,
-      "timeout": 30000
+      "type": "local",
+      "command": ["docker", "exec", "-i", "1c-mcp-pj", "mcp-lsp-bridge"],
+      "enabled": true,
+      "timeout": 120000
     },
     "rlm-toolkit": {
       "type": "remote",

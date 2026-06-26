@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ОсновныеДействия" id="22">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Основные действия</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ОсновныеДействияРасширеннаяПодсказка" id="23"/>
+			</ButtonGroup>
+			<ButtonGroup name="ГлобальныеКоманды" id="24">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Глобальные команды</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ГлобальныеКомандыРасширеннаяПодсказка" id="25"/>
+			</ButtonGroup>
+			<ButtonGroup name="ДополнительныеДействия" id="26">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дополнительные действия</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ДополнительныеДействияРасширеннаяПодсказка" id="27"/>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnSaveDataInSettingsAtServer">ПриСохраненииДанныхВНастройкахНаСервере</Event>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Контрагент" id="1">
+			<DataPath>Запись.Контрагент</DataPath>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ТорговаяСеть" id="4">
+			<DataPath>Запись.ТорговаяСеть</DataPath>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ТорговаяСетьКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ТорговаяСетьРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">ТорговаяСетьПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ГруппаПоставки" id="7">
+			<DataPath>Запись.ГруппаПоставки</DataPath>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ГруппаПоставкиКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ГруппаПоставкиРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ГруппаПоставкиПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Формат" id="10">
+			<DataPath>Запись.Формат</DataPath>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ФорматКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ФорматРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ФорматПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Номенклатура" id="13">
+			<DataPath>Запись.Номенклатура</DataPath>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="OnChange">НоменклатураПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="Группа1" id="28">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<InputField name="ВидУпаковки" id="16">
+					<DataPath>Запись.ВидУпаковки</DataPath>
+					<ContextMenu name="ВидУпаковкиКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ВидУпаковкиРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="OnChange">ВидУпаковкиПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Количество" id="19">
+					<DataPath>Запись.Количество</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="КоличествоКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="21"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.КвантыПоставки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

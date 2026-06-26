@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Упаковки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОК" id="38">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="39"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="40">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="41"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="ОписаниеСтроки" id="35">
+			<DataPath>ОписаниеСтроки</DataPath>
+			<Visible>false</Visible>
+			<TitleLocation>None</TitleLocation>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ОписаниеСтрокиКонтекстноеМеню" id="36"/>
+			<ExtendedTooltip name="ОписаниеСтрокиРасширеннаяПодсказка" id="37"/>
+		</LabelField>
+		<Table name="Упаковки" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Упаковки</DataPath>
+			<CommandSet>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УпаковкиКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="УпаковкиКоманднаяПанель" id="3">
+				<ChildItems>
+					<Popup name="УсловияПодменюЗаполнения" id="29">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнение</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнение табличной части</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Picture>
+							<xr:Ref>CommonPicture.ЗаполнениеДокументовПодменю</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="УсловияПодменюЗаполненияРасширеннаяПодсказка" id="30"/>
+						<ChildItems>
+							<ButtonGroup name="УсловияГруппаОчистить" id="31">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Условия группа очистить</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="УсловияГруппаОчиститьРасширеннаяПодсказка" id="32"/>
+								<ChildItems>
+									<Button name="УсловияОчистить" id="33">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОчиститьМарки</CommandName>
+										<ExtendedTooltip name="УсловияОчиститьРасширеннаяПодсказка" id="34"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</Popup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="УпаковкиРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="УпаковкиСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Упаковки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УпаковкиСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="УпаковкиСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УпаковкиСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>Упаковки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УпаковкиСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="УпаковкиСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УпаковкиУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Упаковки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УпаковкиУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="УпаковкиУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="УпаковкиУровеньУпаковки" id="44">
+					<DataPath>Упаковки.УровеньУпаковки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УпаковкиУровеньУпаковкиКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="УпаковкиУровеньУпаковкиРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="УпаковкиУпаковка" id="47">
+					<DataPath>Упаковки.Упаковка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УпаковкиУпаковкаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="УпаковкиУпаковкаРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="УпаковкиКоличествоУпаковок" id="50">
+					<DataPath>Упаковки.КоличествоУпаковок</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УпаковкиКоличествоУпаковокКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="УпаковкиКоличествоУпаковокРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="УпаковкиТипМаркировки" id="59">
+					<DataPath>Упаковки.ТипМаркировки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УпаковкиТипМаркировкиКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="УпаковкиТипМаркировкиРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="УпаковкиМаркировка" id="56">
+					<DataPath>Упаковки.Маркировка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УпаковкиМаркировкаКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="УпаковкиМаркировкаРасширеннаяПодсказка" id="58"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.МодульОбменаЕГАИС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ОписаниеСтроки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание строки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Упаковки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="УровеньУпаковки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровень упаковки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.УровниУпаковокВЕТИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Упаковка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Упаковка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УпаковкиВЕТИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КоличествоУпаковок" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество упаковок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипМаркировки" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип маркировки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыМаркировкиВЕТИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Маркировка" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маркировка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИдентификаторСтроки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор строки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОчиститьМарки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить марки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьМарки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОК" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.EndEdit</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОК</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

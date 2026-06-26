@@ -1,0 +1,1544 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеКомпании</dataPath>
+			<field>ПодразделениеКомпании</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение компании</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Норматив</dataPath>
+			<field>Норматив</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норматив</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоСписания</dataPath>
+			<field>КоличествоСписания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество списания</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Списание</dataPath>
+			<field>Списание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списание</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товарооборот</dataPath>
+			<field>Товарооборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарооборот</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШтрафУправляющего</dataPath>
+			<field>ШтрафУправляющего</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штраф управляющего</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СкладКомпании</dataPath>
+			<field>СкладКомпании</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТоварооборотПодразделение</dataPath>
+			<field>ТоварооборотПодразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарооборот подразделение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативПодразделение</dataPath>
+			<field>НормативПодразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норматив подразделение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШтрафУправляющегоПодразделение</dataPath>
+			<field>ШтрафУправляющегоПодразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штраф управляющего подразделение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоРасход</dataPath>
+			<field>КоличествоРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество расход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПриход</dataPath>
+			<field>КоличествоПриход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество приход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПриходПодразделение</dataPath>
+			<field>КоличествоПриходПодразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество приход подразделение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоРасходПодразделение</dataPath>
+			<field>КоличествоРасходПодразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество расход подразделение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТорговаяТочка</dataPath>
+			<field>ТорговаяТочка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПриходУправляющий</dataPath>
+			<field>КоличествоПриходУправляющий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество приход управляющий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоРасходУправляющий</dataPath>
+			<field>КоличествоРасходУправляющий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество расход управляющий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШтрафУправляющегоУправляющий</dataPath>
+			<field>ШтрафУправляющегоУправляющий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штраф управляющего управляющий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТоварооборотУправляющий</dataPath>
+			<field>ТоварооборотУправляющий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарооборот управляющий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативУправляющий</dataPath>
+			<field>НормативУправляющий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норматив управляющий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Управляющий</dataPath>
+			<field>Управляющий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управляющий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатьяСписания</dataPath>
+			<field>СтатьяСписания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статья списания</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОборотУправляющий</dataPath>
+			<field>СуммаОборотУправляющий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма оборот управляющий</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаСписания</dataPath>
+			<field>СуммаСписания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма списания</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТоварооборотСумма</dataPath>
+			<field>ТоварооборотСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарооборот сумма</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОборотПодразделение</dataPath>
+			<field>СуммаОборотПодразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма оборот подразделение</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПревышения</dataPath>
+			<field>СуммаПревышения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма превышения</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативСуммаПодразделение</dataPath>
+			<field>НормативСуммаПодразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норматив сумма подразделение</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативСумма</dataPath>
+			<field>НормативСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норматив сумма</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативСуммаУправляющий</dataPath>
+			<field>НормативСуммаУправляющий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норматив сумма управляющий</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИерархияАльтернативная</dataPath>
+			<field>ИерархияАльтернативная</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Иерархия альтернативная</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоРасходИерархия</dataPath>
+			<field>КоличествоРасходИерархия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество расход иерархия</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативИерархия</dataPath>
+			<field>НормативИерархия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норматив иерархия</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПриходИерархия</dataPath>
+			<field>КоличествоПриходИерархия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество приход иерархия</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШтрафУправляющегоИерархия</dataPath>
+			<field>ШтрафУправляющегоИерархия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штраф управляющего иерархия</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОборотИерархия</dataPath>
+			<field>СуммаОборотИерархия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма оборот иерархия</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТоварооборотИерархия</dataPath>
+			<field>ТоварооборотИерархия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарооборот иерархия</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативСуммаИерархия</dataPath>
+			<field>НормативСуммаИерархия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норматив сумма иерархия</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СУММА(ОстаткиТоваровКомпании.КоличествоОборот) КАК Количество,
+	ОстаткиТоваровКомпании.Регистратор.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	СУММА(ВЫБОР
+			КОГДА ОстаткиТоваровКомпании.Номенклатура.ТипНоменклатуры.Весовой
+				ТОГДА ОстаткиТоваровКомпании.КоличествоОборот
+			ИНАЧЕ ОстаткиТоваровКомпании.КоличествоОборот * ВЫБОР
+					КОГДА ОстаткиТоваровКомпании.Номенклатура.ит_СреднийВес = 0
+						ТОГДА 1
+					ИНАЧЕ ОстаткиТоваровКомпании.Номенклатура.ит_СреднийВес
+				КОНЕЦ
+		КОНЕЦ) КАК КоличествоКГ,
+	ОстаткиТоваровКомпании.Номенклатура КАК Номенклатура,
+	СУММА(ВЫБОР
+			КОГДА ОстаткиТоваровКомпании.Номенклатура.ТипНоменклатуры.Весовой
+				ТОГДА ОстаткиТоваровКомпании.КоличествоПриход
+			ИНАЧЕ ОстаткиТоваровКомпании.КоличествоПриход * ВЫБОР
+					КОГДА ОстаткиТоваровКомпании.Номенклатура.ит_СреднийВес = 0
+						ТОГДА 1
+					ИНАЧЕ ОстаткиТоваровКомпании.Номенклатура.ит_СреднийВес
+				КОНЕЦ
+		КОНЕЦ) КАК КоличествоПриход,
+	СУММА(ВЫБОР
+			КОГДА ОстаткиТоваровКомпании.Номенклатура.ТипНоменклатуры.Весовой
+				ТОГДА ОстаткиТоваровКомпании.КоличествоРасход
+			ИНАЧЕ ОстаткиТоваровКомпании.КоличествоРасход * ВЫБОР
+					КОГДА ОстаткиТоваровКомпании.Номенклатура.ит_СреднийВес = 0
+						ТОГДА 1
+					ИНАЧЕ ОстаткиТоваровКомпании.Номенклатура.ит_СреднийВес
+				КОНЕЦ
+		КОНЕЦ) КАК КоличествоРасход,
+	ит_ТорговыеТочки_ОтветственныеСрезПоследних.Менеджер КАК Управляющий,
+	СУММА(ОстаткиТоваровКомпании.СуммаРознОборот) КАК СуммаОборот,
+	ОстаткиТоваровКомпании.Номенклатура.ИерархияАльтернативная КАК ИерархияАльтернативная
+ПОМЕСТИТЬ втТоварооборот
+ИЗ
+	РегистрНакопления.ОстаткиТоваровКомпании.Обороты(&amp;НачалоОтчета, &amp;КонецОтчета, Регистратор, ) КАК ОстаткиТоваровКомпании
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ит_ТорговыеТочки_Ответственные.СрезПоследних(&amp;КонецОтчета, ) КАК ит_ТорговыеТочки_ОтветственныеСрезПоследних
+		ПО ОстаткиТоваровКомпании.СкладКомпании.ПодразделениеКомпании = ит_ТорговыеТочки_ОтветственныеСрезПоследних.ТорговаяТочка
+ГДЕ
+	НЕ ОстаткиТоваровКомпании.Регистратор ССЫЛКА Документ.СписаниеТоваров
+
+СГРУППИРОВАТЬ ПО
+	ОстаткиТоваровКомпании.Регистратор.ПодразделениеКомпании,
+	ОстаткиТоваровКомпании.Номенклатура,
+	ит_ТорговыеТочки_ОтветственныеСрезПоследних.Менеджер,
+	ОстаткиТоваровКомпании.Номенклатура.ИерархияАльтернативная
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втТоварооборот.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	СУММА(втТоварооборот.КоличествоКГ) КАК пКоличествоКГ,
+	СУММА(втТоварооборот.КоличествоПриход) КАК пКоличествоПриход,
+	СУММА(втТоварооборот.КоличествоРасход) КАК пКоличествоРасход,
+	СУММА(втТоварооборот.СуммаОборот) КАК пСуммаОборот
+ПОМЕСТИТЬ втТоварооборотПоПодразделениям
+ИЗ
+	втТоварооборот КАК втТоварооборот
+
+СГРУППИРОВАТЬ ПО
+	втТоварооборот.ПодразделениеКомпании
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втТоварооборот.Управляющий КАК Управляющий,
+	СУММА(втТоварооборот.КоличествоКГ) КАК уКоличествоКГ,
+	СУММА(втТоварооборот.КоличествоПриход) КАК уКоличествоПриход,
+	СУММА(втТоварооборот.КоличествоРасход) КАК уКоличествоРасход,
+	СУММА(втТоварооборот.СуммаОборот) КАК уСуммаОборот
+ПОМЕСТИТЬ втТоварооборотУправляющий
+ИЗ
+	втТоварооборот КАК втТоварооборот
+
+СГРУППИРОВАТЬ ПО
+	втТоварооборот.Управляющий
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втТоварооборот.ИерархияАльтернативная КАК ИерархияАльтернативная,
+	СУММА(втТоварооборот.КоличествоПриход) КАК уКоличествоПриход,
+	СУММА(втТоварооборот.КоличествоРасход) КАК уКоличествоРасход,
+	втТоварооборот.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	втТоварооборот.Управляющий КАК Управляющий,
+	СУММА(втТоварооборот.СуммаОборот) КАК уСуммаОборот,
+	втТоварооборот.КоличествоКГ КАК КоличествоКГ
+ПОМЕСТИТЬ втТоварооборотИерархия
+ИЗ
+	втТоварооборот КАК втТоварооборот
+
+СГРУППИРОВАТЬ ПО
+	втТоварооборот.ПодразделениеКомпании,
+	втТоварооборот.Управляющий,
+	втТоварооборот.ИерархияАльтернативная,
+	втТоварооборот.КоличествоКГ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СписаниеТоваровТовары.Номенклатура КАК Номенклатура,
+	СписаниеТоваровТовары.Количество КАК Количество,
+	СписаниеТоваровТовары.Ссылка.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	ВЫБОР
+		КОГДА СписаниеТоваровТовары.Номенклатура.ТипНоменклатуры.Весовой
+			ТОГДА СписаниеТоваровТовары.Количество
+		ИНАЧЕ СписаниеТоваровТовары.Количество * ВЫБОР
+				КОГДА СписаниеТоваровТовары.Номенклатура.ит_СреднийВес = 0
+					ТОГДА 1
+				ИНАЧЕ СписаниеТоваровТовары.Номенклатура.ит_СреднийВес
+			КОНЕЦ
+	КОНЕЦ КАК КоличествоКГ,
+	СписаниеТоваровТовары.Ссылка КАК Списание,
+	ит_ТорговыеТочки_ОтветственныеСрезПоследних.Менеджер КАК Управляющий,
+	СписаниеТоваровТовары.СуммаРозничная КАК Сумма
+ПОМЕСТИТЬ втСписания
+ИЗ
+	Документ.СписаниеТоваров.Товары КАК СписаниеТоваровТовары
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ит_ТорговыеТочки_Ответственные.СрезПоследних(&amp;КонецОтчета, ) КАК ит_ТорговыеТочки_ОтветственныеСрезПоследних
+		ПО СписаниеТоваровТовары.Ссылка.ПодразделениеКомпании = ит_ТорговыеТочки_ОтветственныеСрезПоследних.ТорговаяТочка
+ГДЕ
+	СписаниеТоваровТовары.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И СписаниеТоваровТовары.Ссылка.Проведен
+	И СписаниеТоваровТовары.Ссылка.Дата МЕЖДУ &amp;НачалоОтчета И &amp;КонецОтчета
+	И СписаниеТоваровТовары.Ссылка.ПодразделениеКомпании В ИЕРАРХИИ(&amp;РабочиеПодразделения)
+	И СписаниеТоваровТовары.Ссылка.ПодразделениеКомпании.ПометкаУдаления = ЛОЖЬ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втСписания.Номенклатура КАК Номенклатура,
+	втСписания.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	СУММА(втСписания.Количество) КАК Количество,
+	СУММА(втСписания.КоличествоКГ) КАК КоличествоКГ,
+	втСписания.Управляющий КАК Управляющий,
+	СУММА(втСписания.Сумма) КАК Сумма
+ПОМЕСТИТЬ втСписанияСгруппировано
+ИЗ
+	втСписания КАК втСписания
+
+СГРУППИРОВАТЬ ПО
+	втСписания.Номенклатура,
+	втСписания.ПодразделениеКомпании,
+	втСписания.Управляющий
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втСписания.Номенклатура КАК Номенклатура,
+	втСписания.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	втСписания.Списание КАК Списание,
+	СУММА(втСписания.КоличествоКГ) КАК КоличествоКГ,
+	втСписания.Управляющий КАК Управляющий,
+	втСписания.Списание.СтатьяСписанияТМЦ КАК СтатьяСписания,
+	СУММА(втСписания.Сумма) КАК Сумма
+ПОМЕСТИТЬ втСписанияСгруппированоДокумент
+ИЗ
+	втСписания КАК втСписания
+
+СГРУППИРОВАТЬ ПО
+	втСписания.Номенклатура,
+	втСписания.ПодразделениеКомпании,
+	втСписания.Списание,
+	втСписания.Управляющий,
+	втСписания.Списание.СтатьяСписанияТМЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втСписанияСгруппировано.Номенклатура КАК Номенклатура,
+	ЕСТЬNULL(втТоварооборот.КоличествоКГ, 0) КАК Товарооборот,
+	втСписанияСгруппировано.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	втСписанияСгруппировано.КоличествоКГ КАК КоличествоСписанияИтог,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(втТоварооборот.КоличествоКГ, 0) &gt; 0
+			ТОГДА ЕСТЬNULL(втТоварооборот.КоличествоКГ, 0) * &amp;Норматив / 100
+		ИНАЧЕ 0
+	КОНЕЦ КАК Норматив,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(втТоварооборот.КоличествоКГ, 0) &lt; 0
+			ТОГДА втСписанияСгруппировано.КоличествоКГ * &amp;ШтрафКГ
+		КОГДА втСписанияСгруппировано.КоличествоКГ - ЕСТЬNULL(втТоварооборот.КоличествоКГ, 0) * &amp;Норматив / 100 &gt; 0
+			ТОГДА (втСписанияСгруппировано.КоличествоКГ - ЕСТЬNULL(втТоварооборот.КоличествоКГ, 0) * &amp;Норматив / 100) * &amp;ШтрафКГ
+		ИНАЧЕ 0
+	КОНЕЦ КАК ШтрафУправляющего,
+	втТоварооборот.КоличествоПриход КАК КоличествоПриход,
+	втТоварооборот.КоличествоРасход КАК КоличествоРасход,
+	втСписанияСгруппировано.Управляющий КАК Управляющий,
+	втТоварооборот.СуммаОборот КАК ТоварооборотСумма,
+	втСписанияСгруппировано.Сумма КАК СуммаСписания,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(втТоварооборот.СуммаОборот, 0) &gt; 0
+			ТОГДА ЕСТЬNULL(втТоварооборот.СуммаОборот, 0) * &amp;Норматив / 100
+		ИНАЧЕ 0
+	КОНЕЦ КАК НормативСумма,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(втТоварооборот.СуммаОборот, 0) &lt; 0
+			ТОГДА втСписанияСгруппировано.Сумма
+		КОГДА втСписанияСгруппировано.Сумма - ЕСТЬNULL(втТоварооборот.СуммаОборот, 0) * &amp;Норматив / 100 &gt; 0
+			ТОГДА втСписанияСгруппировано.Сумма - ЕСТЬNULL(втТоварооборот.СуммаОборот, 0) * &amp;Норматив / 100
+		ИНАЧЕ 0
+	КОНЕЦ КАК СуммаПревышения,
+	втТоварооборот.Номенклатура.ИерархияАльтернативная КАК ИерархияАльтернативная
+ПОМЕСТИТЬ втПредварительная
+ИЗ
+	втСписанияСгруппировано КАК втСписанияСгруппировано
+		ЛЕВОЕ СОЕДИНЕНИЕ втТоварооборот КАК втТоварооборот
+		ПО (втТоварооборот.ПодразделениеКомпании = втСписанияСгруппировано.ПодразделениеКомпании)
+			И втСписанияСгруппировано.Номенклатура = втТоварооборот.Номенклатура
+			И (втТоварооборот.Управляющий = втСписанияСгруппировано.Управляющий)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втПредварительная.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	СУММА(втПредварительная.ШтрафУправляющего) КАК ШтрафУправляющего,
+	втПредварительная.Управляющий КАК Управляющий,
+	СУММА(втПредварительная.СуммаПревышения) КАК СуммаПревышенияПодразделение,
+	СУММА(втПредварительная.СуммаСписания) КАК СуммаСписания,
+	СУММА(втПредварительная.ТоварооборотСумма) КАК ТоварооборотСумма
+ПОМЕСТИТЬ ШтрафУправляющегоИтог
+ИЗ
+	втПредварительная КАК втПредварительная
+
+СГРУППИРОВАТЬ ПО
+	втПредварительная.ПодразделениеКомпании,
+	втПредварительная.Управляющий
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втПредварительная.Управляющий КАК Управляющий,
+	СУММА(втПредварительная.ШтрафУправляющего) КАК ШтрафУправляющего,
+	СУММА(втПредварительная.СуммаПревышения) КАК СуммаПревышенияУправляющий,
+	СУММА(втПредварительная.СуммаСписания) КАК СуммаСписания,
+	СУММА(втПредварительная.ТоварооборотСумма) КАК ТоварооборотСумма
+ПОМЕСТИТЬ втШтрафУправляющегоИтогУправляющий
+ИЗ
+	втПредварительная КАК втПредварительная
+
+СГРУППИРОВАТЬ ПО
+	втПредварительная.Управляющий
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втПредварительная.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	втПредварительная.Управляющий КАК Управляющий,
+	втПредварительная.ИерархияАльтернативная КАК ИерархияАльтернативная,
+	СУММА(втПредварительная.СуммаПревышения) КАК СуммаПревышения,
+	СУММА(втПредварительная.СуммаСписания) КАК СуммаСписания,
+	СУММА(втПредварительная.ТоварооборотСумма) КАК ТоварооборотСумма,
+	СУММА(втПредварительная.ШтрафУправляющего) КАК ШтрафУправляющего
+ПОМЕСТИТЬ втШтрафИерархия
+ИЗ
+	втПредварительная КАК втПредварительная
+
+СГРУППИРОВАТЬ ПО
+	втПредварительная.ПодразделениеКомпании,
+	втПредварительная.Управляющий,
+	втПредварительная.ИерархияАльтернативная
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втПредварительная.Номенклатура КАК Номенклатура,
+	втПредварительная.Товарооборот КАК Товарооборот,
+	втПредварительная.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	втСписанияСгруппированоДокумент.КоличествоКГ КАК КоличествоСписания,
+	втПредварительная.Норматив КАК Норматив,
+	втПредварительная.ШтрафУправляющего КАК ШтрафУправляющего,
+	втСписанияСгруппированоДокумент.Списание КАК Списание,
+	втТоварооборотПоПодразделениям.пКоличествоКГ КАК ТоварооборотПодразделение,
+	ВЫБОР
+		КОГДА втТоварооборотПоПодразделениям.пКоличествоКГ &gt; 0
+			ТОГДА втТоварооборотПоПодразделениям.пКоличествоКГ * &amp;Норматив / 100
+		ИНАЧЕ 0
+	КОНЕЦ КАК НормативПодразделение,
+	ШтрафУправляющегоИтог.ШтрафУправляющего КАК ШтрафУправляющегоПодразделение,
+	втПредварительная.КоличествоПриход КАК КоличествоПриход,
+	втПредварительная.КоличествоРасход КАК КоличествоРасход,
+	втТоварооборотПоПодразделениям.пКоличествоПриход КАК КоличествоПриходПодразделение,
+	втТоварооборотПоПодразделениям.пКоличествоРасход КАК КоличествоРасходПодразделение,
+	втТоварооборотУправляющий.уКоличествоПриход КАК КоличествоПриходУправляющий,
+	втТоварооборотУправляющий.уКоличествоРасход КАК КоличествоРасходУправляющий,
+	втШтрафУправляющегоИтогУправляющий.ШтрафУправляющего КАК ШтрафУправляющегоУправляющий,
+	втТоварооборотУправляющий.уКоличествоКГ КАК ТоварооборотУправляющий,
+	ВЫБОР
+		КОГДА втТоварооборотУправляющий.уКоличествоКГ &gt; 0
+			ТОГДА втТоварооборотУправляющий.уКоличествоКГ * &amp;Норматив / 100
+		ИНАЧЕ 0
+	КОНЕЦ КАК НормативУправляющий,
+	втПредварительная.Управляющий КАК Управляющий,
+	втСписанияСгруппированоДокумент.СтатьяСписания КАК СтатьяСписания,
+	втПредварительная.ТоварооборотСумма КАК ТоварооборотСумма,
+	втПредварительная.СуммаСписания КАК СуммаСписания,
+	втТоварооборотПоПодразделениям.пСуммаОборот КАК СуммаОборотПодразделение,
+	втТоварооборотУправляющий.уСуммаОборот КАК СуммаОборотУправляющий,
+	втПредварительная.НормативСумма КАК НормативСумма,
+	втПредварительная.СуммаПревышения КАК СуммаПревышения,
+	ВЫБОР
+		КОГДА втТоварооборотПоПодразделениям.пСуммаОборот &gt; 0
+			ТОГДА втТоварооборотПоПодразделениям.пСуммаОборот * &amp;Норматив / 100
+		ИНАЧЕ 0
+	КОНЕЦ КАК НормативСуммаПодразделение,
+	ВЫБОР
+		КОГДА втТоварооборотУправляющий.уСуммаОборот &gt; 0
+			ТОГДА втТоварооборотУправляющий.уСуммаОборот * &amp;Норматив / 100
+		ИНАЧЕ 0
+	КОНЕЦ КАК НормативСуммаУправляющий,
+	втПредварительная.ИерархияАльтернативная КАК ИерархияАльтернативная,
+	втШтрафИерархия.ШтрафУправляющего КАК ШтрафУправляющегоИерархия,
+	втТоварооборотИерархия.уКоличествоПриход КАК КоличествоПриходИерархия,
+	втТоварооборотИерархия.уКоличествоРасход КАК КоличествоРасходИерархия,
+	втТоварооборотИерархия.уСуммаОборот КАК СуммаОборотИерархия,
+	втТоварооборотИерархия.КоличествоКГ КАК ТоварооборотИерархия,
+	ВЫБОР
+		КОГДА втТоварооборотИерархия.КоличествоКГ &gt; 0
+			ТОГДА втТоварооборотИерархия.КоличествоКГ * &amp;Норматив / 100
+		ИНАЧЕ 0
+	КОНЕЦ КАК НормативИерархия,
+	ВЫБОР
+		КОГДА втТоварооборотИерархия.уСуммаОборот &gt; 0
+			ТОГДА втТоварооборотИерархия.уСуммаОборот * &amp;Норматив / 100
+		ИНАЧЕ 0
+	КОНЕЦ КАК НормативСуммаИерархия
+ИЗ
+	втПредварительная КАК втПредварительная
+		ЛЕВОЕ СОЕДИНЕНИЕ втСписанияСгруппированоДокумент КАК втСписанияСгруппированоДокумент
+		ПО втПредварительная.ПодразделениеКомпании = втСписанияСгруппированоДокумент.ПодразделениеКомпании
+			И втПредварительная.Номенклатура = втСписанияСгруппированоДокумент.Номенклатура
+			И втПредварительная.Управляющий = втСписанияСгруппированоДокумент.Управляющий
+		ЛЕВОЕ СОЕДИНЕНИЕ втТоварооборотПоПодразделениям КАК втТоварооборотПоПодразделениям
+		ПО втПредварительная.ПодразделениеКомпании = втТоварооборотПоПодразделениям.ПодразделениеКомпании
+		ЛЕВОЕ СОЕДИНЕНИЕ ШтрафУправляющегоИтог КАК ШтрафУправляющегоИтог
+		ПО втПредварительная.ПодразделениеКомпании = ШтрафУправляющегоИтог.ПодразделениеКомпании
+			И втПредварительная.Управляющий = ШтрафУправляющегоИтог.Управляющий
+		ЛЕВОЕ СОЕДИНЕНИЕ втТоварооборотУправляющий КАК втТоварооборотУправляющий
+		ПО втПредварительная.Управляющий = втТоварооборотУправляющий.Управляющий
+		ЛЕВОЕ СОЕДИНЕНИЕ втШтрафУправляющегоИтогУправляющий КАК втШтрафУправляющегоИтогУправляющий
+		ПО втПредварительная.Управляющий = втШтрафУправляющегоИтогУправляющий.Управляющий
+		ЛЕВОЕ СОЕДИНЕНИЕ втТоварооборотИерархия КАК втТоварооборотИерархия
+		ПО втПредварительная.Управляющий = втТоварооборотИерархия.Управляющий
+			И втПредварительная.ПодразделениеКомпании = втТоварооборотИерархия.ПодразделениеКомпании
+			И втПредварительная.ИерархияАльтернативная = втТоварооборотИерархия.ИерархияАльтернативная
+		ЛЕВОЕ СОЕДИНЕНИЕ втШтрафИерархия КАК втШтрафИерархия
+		ПО втПредварительная.Управляющий = втШтрафИерархия.Управляющий
+			И втПредварительная.ПодразделениеКомпании = втШтрафИерархия.ПодразделениеКомпании
+			И втПредварительная.ИерархияАльтернативная = втШтрафИерархия.ИерархияАльтернативная</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоСписания</dataPath>
+		<expression>Сумма(КоличествоСписания)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Товарооборот</dataPath>
+		<expression>Максимум(ТоварооборотПодразделение)</expression>
+		<group>ПодразделениеКомпании</group>
+	</totalField>
+	<totalField>
+		<dataPath>Норматив</dataPath>
+		<expression>Максимум(Норматив)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>ШтрафУправляющего</dataPath>
+		<expression>Максимум(ШтрафУправляющего)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>Товарооборот</dataPath>
+		<expression>Сумма(0)</expression>
+		<group>Списание</group>
+	</totalField>
+	<totalField>
+		<dataPath>ШтрафУправляющего</dataPath>
+		<expression>Сумма(0)</expression>
+		<group>Списание</group>
+	</totalField>
+	<totalField>
+		<dataPath>Норматив</dataPath>
+		<expression>Сумма(0)</expression>
+		<group>Списание</group>
+	</totalField>
+	<totalField>
+		<dataPath>Товарооборот</dataPath>
+		<expression>Максимум(Товарооборот)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>Норматив</dataPath>
+		<expression>Максимум(НормативПодразделение)</expression>
+		<group>ПодразделениеКомпании</group>
+	</totalField>
+	<totalField>
+		<dataPath>ШтрафУправляющего</dataPath>
+		<expression>Максимум(ШтрафУправляющегоПодразделение)</expression>
+		<group>ПодразделениеКомпании</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоРасход</dataPath>
+		<expression>Максимум(КоличествоРасход)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПриход</dataPath>
+		<expression>Максимум(КоличествоПриход)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоРасход</dataPath>
+		<expression>Сумма(0)</expression>
+		<group>Списание</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПриход</dataPath>
+		<expression>Сумма(0)</expression>
+		<group>Списание</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоРасход</dataPath>
+		<expression>Максимум(КоличествоРасходПодразделение)</expression>
+		<group>ПодразделениеКомпании</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПриход</dataPath>
+		<expression>Максимум(КоличествоПриходПодразделение)</expression>
+		<group>ПодразделениеКомпании</group>
+	</totalField>
+	<totalField>
+		<dataPath>ШтрафУправляющего</dataPath>
+		<expression>Максимум(ШтрафУправляющегоУправляющий)</expression>
+		<group>Управляющий</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПриход</dataPath>
+		<expression>Максимум(КоличествоПриходУправляющий)</expression>
+		<group>Управляющий</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоРасход</dataPath>
+		<expression>Максимум(КоличествоРасходУправляющий)</expression>
+		<group>Управляющий</group>
+	</totalField>
+	<totalField>
+		<dataPath>Норматив</dataPath>
+		<expression>Максимум(НормативУправляющий)</expression>
+		<group>Управляющий</group>
+	</totalField>
+	<totalField>
+		<dataPath>Товарооборот</dataPath>
+		<expression>Максимум(ТоварооборотУправляющий)</expression>
+		<group>Управляющий</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаСписания</dataPath>
+		<expression>Сумма(СуммаСписания)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ТоварооборотСумма</dataPath>
+		<expression>Сумма(0)</expression>
+		<group>Списание</group>
+	</totalField>
+	<totalField>
+		<dataPath>ТоварооборотСумма</dataPath>
+		<expression>Максимум(СуммаОборотПодразделение)</expression>
+		<group>ПодразделениеКомпании</group>
+	</totalField>
+	<totalField>
+		<dataPath>ТоварооборотСумма</dataPath>
+		<expression>Максимум(ТоварооборотСумма)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>ТоварооборотСумма</dataPath>
+		<expression>Максимум(СуммаОборотУправляющий)</expression>
+		<group>Управляющий</group>
+	</totalField>
+	<totalField>
+		<dataPath>НормативСумма</dataPath>
+		<expression>Сумма(0)</expression>
+		<group>Списание</group>
+	</totalField>
+	<totalField>
+		<dataPath>НормативСумма</dataPath>
+		<expression>Максимум(НормативСуммаПодразделение)</expression>
+		<group>ПодразделениеКомпании</group>
+	</totalField>
+	<totalField>
+		<dataPath>НормативСумма</dataPath>
+		<expression>Максимум(НормативСумма)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>НормативСумма</dataPath>
+		<expression>Максимум(НормативСуммаУправляющий)</expression>
+		<group>Управляющий</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПревышения</dataPath>
+		<expression>Сумма(0)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПревышения</dataPath>
+		<expression>Сумма(СуммаСписания) - Максимум(НормативСуммаПодразделение)</expression>
+		<group>ПодразделениеКомпании</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПревышения</dataPath>
+		<expression>Максимум(СуммаПревышения)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПревышения</dataPath>
+		<expression>Сумма(СуммаСписания) -Максимум(НормативСуммаУправляющий)</expression>
+		<group>Управляющий</group>
+	</totalField>
+	<totalField>
+		<dataPath>Товарооборот</dataPath>
+		<expression>Максимум(ТоварооборотИерархия)</expression>
+		<group>ИерархияАльтернативная</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПревышения</dataPath>
+		<expression>Сумма(СуммаСписания) - Максимум(НормативСуммаИерархия)</expression>
+		<group>ИерархияАльтернативная</group>
+	</totalField>
+	<totalField>
+		<dataPath>НормативСумма</dataPath>
+		<expression>Максимум(НормативСуммаИерархия)</expression>
+		<group>ИерархияАльтернативная</group>
+	</totalField>
+	<totalField>
+		<dataPath>ТоварооборотСумма</dataPath>
+		<expression>Максимум(СуммаОборотИерархия)</expression>
+		<group>ИерархияАльтернативная</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПриход</dataPath>
+		<expression>Максимум(КоличествоПриход)</expression>
+		<group>ИерархияАльтернативная</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоРасход</dataPath>
+		<expression>Максимум(КоличествоРасход)</expression>
+		<group>ИерархияАльтернативная</group>
+	</totalField>
+	<totalField>
+		<dataPath>ШтрафУправляющего</dataPath>
+		<expression>Максимум(ШтрафУправляющегоИерархия)</expression>
+		<group>ИерархияАльтернативная</group>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ФорматРедактирования</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ДФ=ММММ</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+	</parameter>
+	<parameter>
+		<name>Норматив</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Норматив</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+		<expression>Константы.итНормативОтТоварооборота.Получить()</expression>
+	</parameter>
+	<parameter>
+		<name>ШтрафКГ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Штраф КГ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+		<expression>Константы.итШтрафУправляющего.Получить()</expression>
+	</parameter>
+	<parameter>
+		<name>РабочиеПодразделения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Рабочие подразделения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ПодразделенияКомпании</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ПодразделенияКомпании.ОсновноеПодразделение</value>
+		<useRestriction>true</useRestriction>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ФорматРедактирования</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ДФ=ММММ</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+	</parameter>
+	<parameter>
+		<name>КонецОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>НачалоОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Списание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатьяСписания</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоСписания</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество списания (кг.)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоПриход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество приход (кг.)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоРасход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество расход (кг.)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Товарооборот</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Товарооборот (кг.)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Норматив</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ШтрафУправляющего</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаСписания</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТоварооборотСумма</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Товарооборот (сумма)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НормативСумма</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Норматив</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПревышения</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПодразделениеКомпании</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>6b2e8b07-4290-4306-b6b9-ad04d786c352</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>53b2fc06-6251-4421-8d7a-f3d27df44262</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СтатьяСписания</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>5a71cd19-16ac-41e6-ba1b-95b6fcb265d0</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>6390511f-3777-4750-829c-b17358032f92</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Управляющий</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПодразделениеКомпании</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ИерархияАльтернативная</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Номенклатура</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:item xsi:type="dcsset:StructureItemGroup">
+								<dcsset:groupItems>
+									<dcsset:item xsi:type="dcsset:GroupItemField">
+										<dcsset:field>Списание</dcsset:field>
+										<dcsset:groupType>Items</dcsset:groupType>
+										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:GroupItemField">
+										<dcsset:field>СтатьяСписания</dcsset:field>
+										<dcsset:groupType>Items</dcsset:groupType>
+										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+									</dcsset:item>
+								</dcsset:groupItems>
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								</dcsset:selection>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ТекстЗапроса</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НедостачаПоИнвентаризации</dataPath>
+			<field>НедостачаПоИнвентаризации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Недостача по инвентаризации</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=' '</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Магазин</dataPath>
+			<field>Магазин</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Магазин</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Менеджер</dataPath>
+			<field>Менеджер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Руководитель</dataPath>
+			<field>Руководитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Руководитель</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИзлишкиПоИнвентаризации</dataPath>
+			<field>ИзлишкиПоИнвентаризации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Излишки по инвентаризации</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=' '</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезультатИнвентаризации</dataPath>
+			<field>РезультатИнвентаризации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат инвентаризации</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=' '</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ОстаткиТоваровКомпании.СкладКомпании.Организация КАК Организация,
+	ОстаткиТоваровКомпании.СкладКомпании.ПодразделениеКомпании КАК Магазин,
+	ВЫРАЗИТЬ(ОстаткиТоваровКомпании.Регистратор КАК Документ.Инвентаризация) КАК Документ,
+	НАЧАЛОПЕРИОДА(ОстаткиТоваровКомпании.Период, ДЕНЬ) КАК ПериодДень,
+	СУММА(ВЫБОР
+		КОГДА ОстаткиТоваровКомпании.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход) ТОГДА
+			ОстаткиТоваровКомпании.СуммаРозн
+		ИНАЧЕ
+			-ОстаткиТоваровКомпании.СуммаРозн
+	КОНЕЦ) КАК Сумма,
+	СУММА(ВЫБОР
+		КОГДА ОстаткиТоваровКомпании.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход) ТОГДА
+			ОстаткиТоваровКомпании.Количество
+		ИНАЧЕ
+			-ОстаткиТоваровКомпании.Количество
+	КОНЕЦ) КАК Количество
+ПОМЕСТИТЬ ДанныеИнвентаризаций
+ИЗ
+	РегистрНакопления.ОстаткиТоваровКомпании КАК ОстаткиТоваровКомпании
+ГДЕ
+	ОстаткиТоваровКомпании.Период МЕЖДУ &amp;ДатаНач И &amp;ДатаКон И 
+	ОстаткиТоваровКомпании.Регистратор ССЫЛКА Документ.Инвентаризация
+{ГДЕ
+	(ВЫРАЗИТЬ(ОстаткиТоваровКомпании.Регистратор КАК Документ.Инвентаризация)).* КАК Документ,
+	ОстаткиТоваровКомпании.СкладКомпании.ПодразделениеКомпании.* КАК Магазин,
+	ОстаткиТоваровКомпании.СкладКомпании.Организация.* КАК Организация
+}
+СГРУППИРОВАТЬ ПО
+	ОстаткиТоваровКомпании.СкладКомпании.Организация,
+	ОстаткиТоваровКомпании.СкладКомпании.ПодразделениеКомпании,
+	ОстаткиТоваровКомпании.Регистратор,
+	ОстаткиТоваровКомпании.Период
+;
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ДанныеИнвентаризаций.Магазин КАК Магазин
+ПОМЕСТИТЬ
+	ТаблицаМагазинов
+ИЗ
+	ДанныеИнвентаризаций КАК ДанныеИнвентаризаций
+;
+
+ВЫБРАТЬ
+	СведенияОСотрудниках.ПодразделениеКомпании КАК Магазин,
+	СведенияОСотрудниках.Сотрудник,
+	СведенияОСотрудниках.Период
+ПОМЕСТИТЬ СведенияРуководитель
+ИЗ
+	РегистрСведений.СведенияОСотрудниках КАК СведенияОСотрудниках
+ГДЕ
+	(СведенияОСотрудниках.ПодразделениеКомпании, СведенияОСотрудниках.Должность) В
+			(ВЫБРАТЬ
+				ТаблицаМагазинов.Магазин,
+				ЗНАЧЕНИЕ(Справочник.Должности.Руководитель) КАК Должность
+			ИЗ
+				ТаблицаМагазинов КАК ТаблицаМагазинов)
+;
+
+ВЫБРАТЬ
+	СведенияОСотрудниках.ПодразделениеКомпании КАК Магазин,
+	СведенияОСотрудниках.Сотрудник,
+	СведенияОСотрудниках.Период
+ПОМЕСТИТЬ СведенияМенеджер
+ИЗ
+	РегистрСведений.СведенияОСотрудниках КАК СведенияОСотрудниках
+ГДЕ
+	(СведенияОСотрудниках.ПодразделениеКомпании, СведенияОСотрудниках.Должность) В
+			(ВЫБРАТЬ
+				ТаблицаМагазинов.Магазин,
+				ЗНАЧЕНИЕ(Справочник.Должности.Менеджер) КАК Должность
+			ИЗ
+				ТаблицаМагазинов КАК ТаблицаМагазинов)
+;
+
+ВЫБРАТЬ
+	ДанныеИнвентаризаций.Магазин,
+	МАКСИМУМ(ЕСТЬNULL(СведенияОСотрудниках.Период, ДАТАВРЕМЯ(1, 1, 1))) КАК Период,
+	ДанныеИнвентаризаций.ПериодДень
+ПОМЕСТИТЬ
+	СведенияРуководительПоследние
+ИЗ
+	ДанныеИнвентаризаций КАК ДанныеИнвентаризаций
+ВНУТРЕННЕЕ СОЕДИНЕНИЕ
+	СведенияРуководитель КАК СведенияОСотрудниках
+ПО
+	ДанныеИнвентаризаций.Магазин = СведенияОСотрудниках.Магазин
+	И ДанныеИнвентаризаций.ПериодДень &gt;= СведенияОСотрудниках.Период
+СГРУППИРОВАТЬ ПО
+	ДанныеИнвентаризаций.Магазин,
+	ДанныеИнвентаризаций.ПериодДень
+;
+
+ВЫБРАТЬ
+	ДанныеИнвентаризаций.Магазин,
+	МАКСИМУМ(ЕСТЬNULL(СведенияОСотрудниках.Период, ДАТАВРЕМЯ(1, 1, 1))) КАК Период,
+	ДанныеИнвентаризаций.ПериодДень
+ПОМЕСТИТЬ
+	СведенияМенеджерПоследние
+ИЗ
+	ДанныеИнвентаризаций КАК ДанныеИнвентаризаций
+ВНУТРЕННЕЕ СОЕДИНЕНИЕ
+	СведенияМенеджер КАК СведенияОСотрудниках
+ПО
+	ДанныеИнвентаризаций.Магазин = СведенияОСотрудниках.Магазин
+	И ДанныеИнвентаризаций.ПериодДень &gt;= СведенияОСотрудниках.Период
+СГРУППИРОВАТЬ ПО
+	ДанныеИнвентаризаций.Магазин,
+	ДанныеИнвентаризаций.ПериодДень
+;
+
+ВЫБРАТЬ
+	СведенияРуководительПоследние.ПериодДень КАК ПериодДень,
+	СведенияРуководительПоследние.Магазин КАК Магазин,
+	МАКСИМУМ(СведенияРуководитель.Сотрудник) КАК Сотрудник
+ПОМЕСТИТЬ СведенияРуководительМакс
+ИЗ
+	СведенияРуководительПоследние КАК СведенияРуководительПоследние
+ВНУТРЕННЕЕ СОЕДИНЕНИЕ
+	СведенияРуководитель КАК СведенияРуководитель
+ПО
+	СведенияРуководитель.Магазин = СведенияРуководительПоследние.Магазин И 
+	СведенияРуководитель.Период = СведенияРуководительПоследние.Период
+СГРУППИРОВАТЬ ПО
+	СведенияРуководительПоследние.ПериодДень,
+	СведенияРуководительПоследние.Магазин
+;
+
+ВЫБРАТЬ
+	СведенияМенеджерПоследние.ПериодДень КАК ПериодДень,
+	СведенияМенеджерПоследние.Магазин КАК Магазин,
+	МАКСИМУМ(СведенияМенеджер.Сотрудник) КАК Сотрудник
+ПОМЕСТИТЬ СведенияМенеджерМакс
+ИЗ
+	СведенияМенеджерПоследние КАК СведенияМенеджерПоследние
+ВНУТРЕННЕЕ СОЕДИНЕНИЕ
+	СведенияМенеджер КАК СведенияМенеджер
+ПО
+	СведенияМенеджер.Магазин = СведенияМенеджерПоследние.Магазин И 
+	СведенияМенеджер.Период = СведенияМенеджерПоследние.Период
+СГРУППИРОВАТЬ ПО
+	СведенияМенеджерПоследние.ПериодДень,
+	СведенияМенеджерПоследние.Магазин
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДанныеИнвентаризаций.Организация КАК Организация,
+	ДанныеИнвентаризаций.Магазин КАК Магазин,
+	ДанныеИнвентаризаций.Документ КАК Документ,
+	ЕСТЬNULL(СведенияРуководительМакс.Сотрудник, ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка)) КАК Руководитель,
+	ЕСТЬNULL(СведенияМенеджерМакс.Сотрудник, ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка)) КАК Менеджер,
+	ВЫБОР
+		КОГДА ДанныеИнвентаризаций.Сумма &gt; 0
+			ТОГДА ДанныеИнвентаризаций.Сумма
+		ИНАЧЕ 0
+	КОНЕЦ КАК ИзлишкиПоИнвентаризации,
+	ВЫБОР
+		КОГДА ДанныеИнвентаризаций.Сумма &lt; 0 
+			ТОГДА -ДанныеИнвентаризаций.Сумма
+		ИНАЧЕ 0
+	КОНЕЦ КАК НедостачаПоИнвентаризации,
+	//ВЫБОР
+	//	КОГДА ДанныеИнвентаризаций.Сумма &lt; ИТ_ИгнорируемаяНедостача.Значение
+	//		ТОГДА -ДанныеИнвентаризаций.Сумма
+	//	ИНАЧЕ 0
+	//КОНЕЦ КАК НедостачаСвышеПороговогоЗначенияОборот,
+	ДанныеИнвентаризаций.Сумма КАК РезультатИнвентаризации
+{ВЫБРАТЬ
+	Организация.*,
+	Магазин.*,
+	Документ.*,
+	Руководитель.*,
+	Менеджер.*,
+	ИзлишкиПоИнвентаризации,
+	НедостачаПоИнвентаризации,
+	РезультатИнвентаризации
+}
+ИЗ
+	ДанныеИнвентаризаций КАК ДанныеИнвентаризаций
+{ЛЕВОЕ СОЕДИНЕНИЕ
+	СведенияРуководительМакс КАК СведенияРуководительМакс
+ПО
+	ДанныеИнвентаризаций.Магазин = СведенияРуководительМакс.Магазин
+	И ДанныеИнвентаризаций.ПериодДень = СведенияРуководительМакс.ПериодДень}
+{ЛЕВОЕ СОЕДИНЕНИЕ
+	СведенияМенеджерМакс КАК СведенияМенеджерМакс
+ПО
+	ДанныеИнвентаризаций.Магазин = СведенияМенеджерМакс.Магазин
+	И ДанныеИнвентаризаций.ПериодДень = СведенияМенеджерМакс.ПериодДень}
+{ГДЕ
+	ДанныеИнвентаризаций.Магазин.* КАК Магазин,
+	(ЕСТЬNULL(СведенияРуководительМакс.Сотрудник, ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка))).* КАК Руководитель,
+	(ЕСТЬNULL(СведенияМенеджерМакс.Сотрудник, ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка))).* КАК Менеджер,
+	(ВЫБОР
+		КОГДА ДанныеИнвентаризаций.Сумма &gt; 0
+			ТОГДА ДанныеИнвентаризаций.Сумма
+		ИНАЧЕ 0
+	КОНЕЦ) КАК ИзлишкиПоИнвентаризации,
+	(ВЫБОР
+		КОГДА ДанныеИнвентаризаций.Сумма &lt; 0 
+			ТОГДА -ДанныеИнвентаризаций.Сумма
+		ИНАЧЕ 0
+	КОНЕЦ) КАК НедостачаПоИнвентаризации,
+	ДанныеИнвентаризаций.Сумма КАК РезультатИнвентаризации
+}</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<totalField>
+		<dataPath>ИзлишкиПоИнвентаризации</dataPath>
+		<expression>Сумма(ИзлишкиПоИнвентаризации)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НедостачаПоИнвентаризации</dataPath>
+		<expression>Сумма(НедостачаПоИнвентаризации)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РезультатИнвентаризации</dataPath>
+		<expression>Сумма(РезультатИнвентаризации)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНач</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата нач</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаКон</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата кон</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сводные результаты инвентаризаций</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИзлишкиПоИнвентаризации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НедостачаПоИнвентаризации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РезультатИнвентаризации</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Руководитель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Менеджер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Магазин</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаНач</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisWeek</v8:variant>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаКон</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Руководитель</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Менеджер</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Магазин</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:item xsi:type="dcsset:StructureItemGroup">
+								<dcsset:groupItems>
+									<dcsset:item xsi:type="dcsset:GroupItemField">
+										<dcsset:field>Документ</dcsset:field>
+										<dcsset:groupType>Items</dcsset:groupType>
+										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+									</dcsset:item>
+								</dcsset:groupItems>
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								</dcsset:selection>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

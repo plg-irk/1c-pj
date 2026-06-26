@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<CommandsVisibility>
+		<Command name="Catalog.ШаблонСправочника.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ШаблонИерархическогоСправочника.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.НСИ.Subsystem.СтруктураКомпании</Subsystem>
+		<Subsystem>Subsystem.НСИ.Subsystem.Идентификационные</Subsystem>
+		<Subsystem>Subsystem.НСИ.Subsystem.Номенклатурные</Subsystem>
+		<Subsystem>Subsystem.НСИ.Subsystem.Мерчендайзинг</Subsystem>
+		<Subsystem>Subsystem.НСИ.Subsystem.СтатьиИСвойства</Subsystem>
+		<Subsystem>Subsystem.НСИ.Subsystem.Классификаторы</Subsystem>
+		<Subsystem>Subsystem.НСИ.Subsystem.СкидкиИКарты</Subsystem>
+		<Subsystem>Subsystem.НСИ.Subsystem.Сервис</Subsystem>
+		<Subsystem>Subsystem.НСИ.Subsystem.ВЕТИС</Subsystem>
+		<Subsystem>Subsystem.НСИ.Subsystem.ЕГАИС</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>
