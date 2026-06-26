@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ОсновныеДействия" id="31">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Основные действия</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ОсновныеДействияРасширеннаяПодсказка" id="32"/>
+			</ButtonGroup>
+			<ButtonGroup name="ГлобальныеКоманды" id="33">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Глобальные команды</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ГлобальныеКомандыРасширеннаяПодсказка" id="34"/>
+			</ButtonGroup>
+			<ButtonGroup name="ДополнительныеДействия" id="35">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дополнительные действия</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ДополнительныеДействияРасширеннаяПодсказка" id="36"/>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnSaveDataInSettingsAtServer">ПриСохраненииДанныхВНастройкахНаСервере</Event>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ДатаКод" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата код</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<HorizontalSpacing>OneAndHalf</HorizontalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ДатаКодРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<InputField name="Дата" id="13">
+					<DataPath>Запись.Дата</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="Код" id="19">
+					<DataPath>Запись.Код</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>19</MaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="КодКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Пользователь" id="1">
+			<DataPath>Запись.Пользователь</DataPath>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Оборудование" id="4">
+			<DataPath>Запись.Оборудование</DataPath>
+			<ContextMenu name="ОборудованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОборудованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Источник" id="7">
+			<DataPath>Запись.Источник</DataPath>
+			<ContextMenu name="ИсточникКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИсточникРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="GUID" id="10">
+			<DataPath>Запись.GUID</DataPath>
+			<ContextMenu name="GUIDКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="GUIDРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Действие" id="16">
+			<DataPath>Запись.Действие</DataPath>
+			<ContextMenu name="ДействиеКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ДействиеРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Описание" id="22">
+			<DataPath>Запись.Описание</DataPath>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Объект" id="25">
+			<DataPath>Запись.Объект</DataPath>
+			<ContextMenu name="ОбъектКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ОбъектРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="Тип" id="28">
+			<DataPath>Запись.Тип</DataPath>
+			<ContextMenu name="ТипКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="30"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ЖурналРегистрацииДействийКассира</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Subsystem uuid="f5df234c-f813-4b9f-8ced-3076e26bc2e8">
+		<Properties>
+			<Name>ВЕТИС</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ВетИС</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>ВетИС</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПродукцияВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УпаковкиВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЕдиницыИзмеренияВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ХозяйствующиеСубъектыВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПредприятияВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НазначенияГрузаВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтраныВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТранспортныеСредства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БлагополучиеМестностиВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СвойстваЗаписейСкладскогоЖурналаВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЗаболеванияВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.РегионыВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УсловияПеремещенияВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПользователиВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.МодульОбменаВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияВЕТИСКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ВЕТИСBase</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ВЕТИСКлассификаторы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ВЕТИСDictionary</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ОбработкаОбменовДаннымиВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбработкаОбменовДаннымиВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияВЕТИСПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыСервисовВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыОперацийВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СкладскойЖурналВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СоответствиеНоменклатурыВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗапросыВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСДВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТранспортныеОперацииВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ГашениеВходящихВСДВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПроизводственныеОперацииВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.УровниУпаковокВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РезультатыИсследованияВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыДокументовВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыМаркировкиВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыВСДВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыСвязейВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыХраненияВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РолиПроизводителяВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ФормыВСДВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РезультатыСоответствияВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РешенияПринятияПартииВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИнвентаризацияВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьУчетПодконтрольныхТоваровВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РежимТестовогоКонтураВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьУчетПодконтрольныхТоваровВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НастройкиОбменаВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыЗаписейСкладскогоЖурналаВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ДанныеСинхронизацииВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СтатусыДокументовВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтатусыОбработкиВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыСтатусовОбработкиВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ДальнейшиеДействияВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыОбработкиСообщенийВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыТранспортаВЕТИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПричиныСоставленияАктаНесоответствияВЕТИС</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

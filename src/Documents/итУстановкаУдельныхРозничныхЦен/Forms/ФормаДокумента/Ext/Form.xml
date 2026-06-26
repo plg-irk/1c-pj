@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомерДата" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер дата</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер дата</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ДанныеДокумента" id="9">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ДанныеДокумента</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДанныеДокументаКонтекстноеМеню" id="10"/>
+			<AutoCommandBar name="ДанныеДокументаКоманднаяПанель" id="11"/>
+			<ExtendedTooltip name="ДанныеДокументаРасширеннаяПодсказка" id="12"/>
+			<SearchStringAddition name="ДанныеДокументаСтрокаПоиска" id="13">
+				<AdditionSource>
+					<Item>ДанныеДокумента</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеДокументаСтрокаПоискаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ДанныеДокументаСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДанныеДокументаСостояниеПросмотра" id="16">
+				<AdditionSource>
+					<Item>ДанныеДокумента</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеДокументаСостояниеПросмотраКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ДанныеДокументаСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДанныеДокументаУправлениеПоиском" id="19">
+				<AdditionSource>
+					<Item>ДанныеДокумента</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеДокументаУправлениеПоискомКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="ДанныеДокументаУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДанныеДокументаНомерСтроки" id="22">
+					<DataPath>Объект.ДанныеДокумента.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеДокументаНомерСтрокиКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДанныеДокументаНомерСтрокиРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<InputField name="ДанныеДокументаКрепость" id="25">
+					<DataPath>Объект.ДанныеДокумента.Крепость</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеДокументаКрепостьКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ДанныеДокументаКрепостьРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="ДанныеДокументаУдельнаяЦена_Группа1" id="28">
+					<DataPath>Объект.ДанныеДокумента.УдельнаяЦена_Группа1</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеДокументаУдельнаяЦена_Группа1КонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ДанныеДокументаУдельнаяЦена_Группа1РасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<InputField name="ДанныеДокументаУдельнаяЦена_Группа2" id="31">
+					<DataPath>Объект.ДанныеДокумента.УдельнаяЦена_Группа2</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеДокументаУдельнаяЦена_Группа2КонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ДанныеДокументаУдельнаяЦена_Группа2РасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<InputField name="ДанныеДокументаУдельнаяЦена_Группа3" id="34">
+					<DataPath>Объект.ДанныеДокумента.УдельнаяЦена_Группа3</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеДокументаУдельнаяЦена_Группа3КонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ДанныеДокументаУдельнаяЦена_Группа3РасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="ДанныеДокументаУдельнаяЦена_Группа4" id="37">
+					<DataPath>Объект.ДанныеДокумента.УдельнаяЦена_Группа4</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеДокументаУдельнаяЦена_Группа4КонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ДанныеДокументаУдельнаяЦена_Группа4РасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="ДанныеДокументаУдельнаяЦена_Группа5" id="40">
+					<DataPath>Объект.ДанныеДокумента.УдельнаяЦена_Группа5</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеДокументаУдельнаяЦена_Группа5КонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ДанныеДокументаУдельнаяЦена_Группа5РасширеннаяПодсказка" id="42"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Ответственный" id="43">
+			<DataPath>Объект.Ответственный</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<InputField name="Комментарий" id="46">
+			<DataPath>Объект.Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="48"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.итУстановкаУдельныхРозничныхЦен</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

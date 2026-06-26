@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСформироватьПланПродаж" id="68">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СформироватьПланПродаж</CommandName>
+				<ExtendedTooltip name="ФормаСформироватьПланПродажРасширеннаяПодсказка" id="69"/>
+			</Button>
+			<Button name="ФормаНаСогласование" id="63">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.НаСогласование</CommandName>
+				<ExtendedTooltip name="ФормаНаСогласованиеРасширеннаяПодсказка" id="64"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<InputField name="ПериодПлана" id="1">
+					<DataPath>ПериодПлана</DataPath>
+					<Width>20</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>20</MaxWidth>
+					<ContextMenu name="ПериодПланаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПериодПланаРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="ДокументОкончательныйПланПродаж" id="72">
+					<DataPath>ДокументОкончательныйПланПродаж</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="ДокументОкончательныйПланПродажКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ДокументОкончательныйПланПродажРасширеннаяПодсказка" id="74"/>
+				</InputField>
+				<LabelField name="ДокументОкончательныйПланПродажСтатус" id="65">
+					<DataPath>ДокументОкончательныйПланПродаж.Статус</DataPath>
+					<ContextMenu name="ДокументОкончательныйПланПродажСтатусКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ДокументОкончательныйПланПродажСтатусРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПланПродаж" id="4">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ПланПродаж</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПланПродажКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="ПланПродажКоманднаяПанель" id="6">
+				<ChildItems>
+					<Button name="ПланПродажОбновитьПланПродаж" id="70">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОбновитьПланПродаж</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обновить</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ПланПродажОбновитьПланПродажРасширеннаяПодсказка" id="71"/>
+					</Button>
+					<Button name="ПланПродажОткрытьДокумент" id="37">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьДокумент</CommandName>
+						<ExtendedTooltip name="ПланПродажОткрытьДокументРасширеннаяПодсказка" id="38"/>
+					</Button>
+					<ButtonGroup name="ПланПродажГруппаКомандыСогласования" id="43">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>План продаж группа команды согласования</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>План продаж группа команды согласования</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ПланПродажГруппаКомандыСогласованияРасширеннаяПодсказка" id="44"/>
+						<ChildItems>
+							<Button name="ПланПродажСогласовать" id="41">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Согласовать</CommandName>
+								<ExtendedTooltip name="ПланПродажСогласоватьРасширеннаяПодсказка" id="42"/>
+							</Button>
+							<Button name="ПланПродажНаПодготовку" id="45">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.НаПодготовку</CommandName>
+								<ExtendedTooltip name="ПланПродажНаПодготовкуРасширеннаяПодсказка" id="46"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПланПродажРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="ПланПродажСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>ПланПродаж</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланПродажСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ПланПродажСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПланПродажСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>ПланПродаж</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланПродажСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПланПродажСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПланПродажУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>ПланПродаж</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланПродажУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ПланПродажУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ПланПродажСтаршийМенеджер" id="17">
+					<DataPath>ПланПродаж.СтаршийМенеджер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПродажСтаршийМенеджерКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ПланПродажСтаршийМенеджерРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ПланПродажПредварительнаяСумма" id="20">
+					<DataPath>ПланПродаж.ПредварительнаяСумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПродажПредварительнаяСуммаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПланПродажПредварительнаяСуммаРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ПланПродажОкончательнаяСумма" id="23">
+					<DataPath>ПланПродаж.ОкончательнаяСумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПродажОкончательнаяСуммаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПланПродажОкончательнаяСуммаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ПланПродажОтклонение" id="26">
+					<DataPath>ПланПродаж.Отклонение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПродажОтклонениеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПланПродажОтклонениеРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ПланПродажСтатус" id="34">
+					<DataPath>ПланПродаж.Статус</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПродажСтатусКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ПланПродажСтатусРасширеннаяПодсказка" id="36"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаИтоговыеСуммы" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоговые показатели</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа итоговые суммы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаИтоговыеСуммыРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<InputField name="ИтогоПредварительнаяСумма" id="49">
+					<DataPath>ИтогоПредварительнаяСумма</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предварительная сумма</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИтогоПредварительнаяСуммаКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ИтогоПредварительнаяСуммаРасширеннаяПодсказка" id="51"/>
+				</InputField>
+				<InputField name="ИтогоОкончательнаяСумма" id="52">
+					<DataPath>ИтогоОкончательнаяСумма</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Окончательная сумма</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИтогоОкончательнаяСуммаКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ИтогоОкончательнаяСуммаРасширеннаяПодсказка" id="54"/>
+				</InputField>
+				<InputField name="ИтогоОтклонение" id="55">
+					<DataPath>ИтогоОтклонение</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отклонение</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИтогоОтклонениеКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ИтогоОтклонениеРасширеннаяПодсказка" id="57"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПериодПлана" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период плана</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПланПродаж" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План продаж</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="СтаршийМенеджер" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Старший менеджер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредварительнаяСумма" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предварительная сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОкончательнаяСумма" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Окончательная сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Отклонение" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отклонение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статус" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ИТ_СтатусыПлановПродаж</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Документ" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ИТ_УстановкаПланаПродаж_СтаршийМенеджер</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИтогоПредварительнаяСумма" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого предварительная сумма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоОкончательнаяСумма" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого окончательная сумма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоОтклонение" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого отклонение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДокументОкончательныйПланПродаж" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ окончательный план продаж</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ИТ_УстановкаПланаПродаж_Месяц</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РедактированиеДоступно" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактирование доступно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СлужебныеРеквизитыДоступны" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Служебные реквизиты доступны</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПланПродаж</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПланПродаж.Статус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ИТ_СтатусыПлановПродаж.НаСогласовании</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#DCFFDC</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПланПродаж</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПланПродаж.Статус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ИТ_СтатусыПлановПродаж.Согласован</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#C8FFFF</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПланПродаж</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПланПродаж.Статус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ИТ_СтатусыПлановПродаж.НаПодготовке</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#F0F0F0</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьПланПродаж" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить план продаж</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить план продаж</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьПланПродаж</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОткрытьДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьДокумент</Action>
+		</Command>
+		<Command name="Согласовать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласовать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласовать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Согласовать</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="НаПодготовку" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На подготовку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На подготовку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SwitchActivity</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НаПодготовку</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="НаСогласование" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На согласование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На согласование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НаСогласование</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СформироватьПланПродаж" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать план продаж</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать план продаж</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьПланПродаж</Action>
+		</Command>
+	</Commands>
+</Form>

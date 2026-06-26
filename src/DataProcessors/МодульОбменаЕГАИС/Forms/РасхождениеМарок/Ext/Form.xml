@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Расхождение ТТН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаДа" id="90">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаДа</CommandName>
+				<ExtendedTooltip name="ФормаДаРасширеннаяПодсказка" id="91"/>
+			</Button>
+			<Button name="ФормаНет" id="83">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.No</CommandName>
+				<ExtendedTooltip name="ФормаНетРасширеннаяПодсказка" id="84"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаРасхождения" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа расхождения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа расхождения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРасхожденияРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<Table name="ТаблицаРасхождения" id="1">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<SelectionMode>SingleRow</SelectionMode>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ТаблицаРасхождения</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаРасхожденияКонтекстноеМеню" id="2"/>
+					<AutoCommandBar name="ТаблицаРасхожденияКоманднаяПанель" id="3">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаРасхожденияРасширеннаяПодсказка" id="4"/>
+					<SearchStringAddition name="ТаблицаРасхожденияСтрокаПоиска" id="5">
+						<AdditionSource>
+							<Item>ТаблицаРасхождения</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаРасхожденияСтрокаПоискаКонтекстноеМеню" id="6"/>
+						<ExtendedTooltip name="ТаблицаРасхожденияСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаРасхожденияСостояниеПросмотра" id="8">
+						<AdditionSource>
+							<Item>ТаблицаРасхождения</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаРасхожденияСостояниеПросмотраКонтекстноеМеню" id="9"/>
+						<ExtendedTooltip name="ТаблицаРасхожденияСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаРасхожденияУправлениеПоиском" id="11">
+						<AdditionSource>
+							<Item>ТаблицаРасхождения</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаРасхожденияУправлениеПоискомКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="ТаблицаРасхожденияУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">ТаблицаРасхожденияПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ТаблицаРасхожденияАлкогольнаяПродукция" id="14">
+							<DataPath>ТаблицаРасхождения.АлкогольнаяПродукция</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаРасхожденияАлкогольнаяПродукцияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ТаблицаРасхожденияАлкогольнаяПродукцияРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<InputField name="ТаблицаРасхожденияСправка2" id="17">
+							<DataPath>ТаблицаРасхождения.Справка2</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаРасхожденияСправка2КонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ТаблицаРасхожденияСправка2РасширеннаяПодсказка" id="19"/>
+						</InputField>
+						<InputField name="ТаблицаРасхожденияКоличествоФакт" id="20">
+							<DataPath>ТаблицаРасхождения.КоличествоФакт</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаРасхожденияКоличествоФактКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ТаблицаРасхожденияКоличествоФактРасширеннаяПодсказка" id="22"/>
+						</InputField>
+						<InputField name="ТаблицаРасхожденияКоличествоДок" id="23">
+							<DataPath>ТаблицаРасхождения.КоличествоДок</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаРасхожденияКоличествоДокКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ТаблицаРасхожденияКоличествоДокРасширеннаяПодсказка" id="25"/>
+						</InputField>
+						<InputField name="ТаблицаРасхожденияРасхождение" id="29">
+							<DataPath>ТаблицаРасхождения.Расхождение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаРасхожденияРасхождениеКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ТаблицаРасхожденияРасхождениеРасширеннаяПодсказка" id="31"/>
+						</InputField>
+						<InputField name="ТаблицаРасхожденияИдентификаторСтроки" id="26">
+							<DataPath>ТаблицаРасхождения.ИдентификаторСтроки</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаРасхожденияИдентификаторСтрокиКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ТаблицаРасхожденияИдентификаторСтрокиРасширеннаяПодсказка" id="28"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="МаркиПоТТН" id="34">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<SelectionMode>SingleRow</SelectionMode>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>МаркиПоТТН</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="МаркиПоТТНКонтекстноеМеню" id="35"/>
+					<AutoCommandBar name="МаркиПоТТНКоманднаяПанель" id="36">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="МаркиПоТТНРасширеннаяПодсказка" id="37"/>
+					<SearchStringAddition name="МаркиПоТТНСтрокаПоиска" id="38">
+						<AdditionSource>
+							<Item>МаркиПоТТН</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МаркиПоТТНСтрокаПоискаКонтекстноеМеню" id="39"/>
+						<ExtendedTooltip name="МаркиПоТТНСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="МаркиПоТТНСостояниеПросмотра" id="41">
+						<AdditionSource>
+							<Item>МаркиПоТТН</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МаркиПоТТНСостояниеПросмотраКонтекстноеМеню" id="42"/>
+						<ExtendedTooltip name="МаркиПоТТНСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="МаркиПоТТНУправлениеПоиском" id="44">
+						<AdditionSource>
+							<Item>МаркиПоТТН</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="МаркиПоТТНУправлениеПоискомКонтекстноеМеню" id="45"/>
+						<ExtendedTooltip name="МаркиПоТТНУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="МаркиПоТТНКодМарки" id="50">
+							<DataPath>МаркиПоТТН.КодМарки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МаркиПоТТНКодМаркиКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="МаркиПоТТНКодМаркиРасширеннаяПодсказка" id="52"/>
+						</InputField>
+						<CheckBoxField name="МаркиПоТТНРаскрасить" id="53">
+							<DataPath>МаркиПоТТН.Раскрасить</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="МаркиПоТТНРаскраситьКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="МаркиПоТТНРаскраситьРасширеннаяПодсказка" id="55"/>
+						</CheckBoxField>
+						<InputField name="МаркиПоТТНИдентификаторСтроки" id="56">
+							<DataPath>МаркиПоТТН.ИдентификаторСтроки</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МаркиПоТТНИдентификаторСтрокиКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="МаркиПоТТНИдентификаторСтрокиРасширеннаяПодсказка" id="58"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="МаркиПоФакту" id="59">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<SelectionMode>SingleRow</SelectionMode>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>МаркиПоФакту</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="МаркиПоФактуКонтекстноеМеню" id="60"/>
+					<AutoCommandBar name="МаркиПоФактуКоманднаяПанель" id="61">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="МаркиПоФактуРасширеннаяПодсказка" id="62"/>
+					<SearchStringAddition name="МаркиПоФактуСтрокаПоиска" id="63">
+						<AdditionSource>
+							<Item>МаркиПоФакту</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МаркиПоФактуСтрокаПоискаКонтекстноеМеню" id="64"/>
+						<ExtendedTooltip name="МаркиПоФактуСтрокаПоискаРасширеннаяПодсказка" id="65"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="МаркиПоФактуСостояниеПросмотра" id="66">
+						<AdditionSource>
+							<Item>МаркиПоФакту</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МаркиПоФактуСостояниеПросмотраКонтекстноеМеню" id="67"/>
+						<ExtendedTooltip name="МаркиПоФактуСостояниеПросмотраРасширеннаяПодсказка" id="68"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="МаркиПоФактуУправлениеПоиском" id="69">
+						<AdditionSource>
+							<Item>МаркиПоФакту</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="МаркиПоФактуУправлениеПоискомКонтекстноеМеню" id="70"/>
+						<ExtendedTooltip name="МаркиПоФактуУправлениеПоискомРасширеннаяПодсказка" id="71"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="МаркиПоФактуКодМарки" id="75">
+							<DataPath>МаркиПоФакту.КодМарки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МаркиПоФактуКодМаркиКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="МаркиПоФактуКодМаркиРасширеннаяПодсказка" id="77"/>
+						</InputField>
+						<InputField name="МаркиПоФактуИдентификаторСтроки" id="78">
+							<DataPath>МаркиПоФакту.ИдентификаторСтроки</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МаркиПоФактуИдентификаторСтрокиКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="МаркиПоФактуИдентификаторСтрокиРасширеннаяПодсказка" id="80"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Комментарий" id="85">
+			<DataPath>Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="86"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="87"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.МодульОбменаЕГАИС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаРасхождения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица расхождения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="АлкогольнаяПродукция" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Алкогольная продукция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КлассификаторАлкогольнойПродукцииЕГАИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Справка2" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справка2</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Справки2ЕГАИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КоличествоФакт" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество факт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоДок" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество док</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторСтроки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Расхождение" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расхождение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="МаркиПоТТН" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Марки по ТТН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НомерСтроки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодМарки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код марки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Раскрасить" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Раскрасить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторСтроки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="МаркиПоФакту" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Марки по факту</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НомерСтроки" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодМарки" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код марки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторСтроки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Комментарий" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>МаркиПоТТН</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">МаркиПоТТН.Раскрасить</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаДа" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Да</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда да</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаДа</Action>
+		</Command>
+	</Commands>
+</Form>

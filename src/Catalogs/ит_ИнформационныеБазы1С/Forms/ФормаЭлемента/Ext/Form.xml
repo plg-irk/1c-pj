@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПроверитьСоединениеСБазойДанных" id="22">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверитьСоединениеСБазойДанных</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьСоединениеСБазойДанныхExtendedTooltip" id="48"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="49"/>
+		</InputField>
+		<UsualGroup name="ГруппаИнфБаза" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа инф база</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group info database</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа инф база</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group info database</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИнфБазаExtendedTooltip" id="50"/>
+			<ChildItems>
+				<RadioButtonField name="СерверныйРежим" id="7">
+					<DataPath>Объект.СерверныйРежим</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Серверный режим</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Server mode</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Файловый режим</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>File Mode</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>web</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>File Mode</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>hs</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>File Mode</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="СерверныйРежимКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="СерверныйРежимExtendedTooltip" id="51"/>
+					<Events>
+						<Event name="OnChange">СерверныйРежимПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<InputField name="ТипПлатформы" id="41">
+					<DataPath>Объект.ТипПлатформы</DataPath>
+					<ContextMenu name="ТипПлатформыКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ТипПлатформыExtendedTooltip" id="52"/>
+					<Events>
+						<Event name="OnChange">ТипПлатформыПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ПутьКФайловойБазе" id="9">
+			<DataPath>Объект.ПутьКФайловойБазе</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="ПутьКФайловойБазеКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ПутьКФайловойБазеExtendedTooltip" id="54"/>
+			<Events>
+				<Event name="StartChoice">ПутьКФайловойБазеНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="ИнформационнаяБаза" id="116">
+			<DataPath>Объект.ИнформационнаяБаза</DataPath>
+			<ContextMenu name="ИнформационнаяБазаКонтекстноеМеню" id="117"/>
+			<ExtendedTooltip name="ИнформационнаяБазаРасширеннаяПодсказка" id="118"/>
+		</InputField>
+		<InputField name="ИмяСервера" id="11">
+			<DataPath>Объект.ИмяСервера</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИмяСервераКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ИмяСервераExtendedTooltip" id="55"/>
+		</InputField>
+		<InputField name="ИмяБазыДанных" id="13">
+			<DataPath>Объект.ИмяБазыДанных</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИмяБазыДанныхКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИмяБазыДанныхExtendedTooltip" id="57"/>
+		</InputField>
+		<InputField name="Ресурс" id="113">
+			<DataPath>Объект.Сервис</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="РесурсКонтекстноеМеню" id="114"/>
+			<ExtendedTooltip name="РесурсРасширеннаяПодсказка" id="115"/>
+		</InputField>
+		<InputField name="ВариантАвторизации" id="77">
+			<DataPath>Объект.ВариантАвторизации</DataPath>
+			<ContextMenu name="ВариантАвторизацииКонтекстноеМеню" id="78"/>
+			<ExtendedTooltip name="ВариантАвторизацииРасширеннаяПодсказка" id="79"/>
+			<Events>
+				<Event name="OnChange">ВариантАвторизацииПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаПодключениеПоОбщемуЛогину" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подключение по общему логину</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подключение по общему логину</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодключениеПоОбщемуЛогинуРасширеннаяПодсказка" id="76"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПользователь" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пользователь</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Member Group</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пользователь</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Member Group</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПользовательExtendedTooltip" id="61"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПодключениеОбщееПользователь" id="90">
+							<Width>80</Width>
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При подключении к базе данных используется указанный ниже пользователь</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Connect to the database using the specified login.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодключениеОбщееПользовательКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="ДекорацияПодключениеОбщееПользовательРасширеннаяПодсказка" id="92"/>
+						</LabelDecoration>
+						<InputField name="Пользователь" id="15">
+							<DataPath>Объект.Пользователь</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПользовательКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ПользовательExtendedTooltip" id="63"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПароль" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пароль</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>The group password</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пароль</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>The group password</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПарольExtendedTooltip" id="64"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПодключениеОбщееПароль" id="93">
+							<Width>80</Width>
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При подключении к базе данных используется указанный ниже пароль</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Connect to the database using the specified password.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодключениеОбщееПарольКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="ДекорацияПодключениеОбщееПарольРасширеннаяПодсказка" id="95"/>
+						</LabelDecoration>
+						<InputField name="Пароль" id="17">
+							<DataPath>Объект.Пароль</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>30</Width>
+							<PasswordMode>true</PasswordMode>
+							<ContextMenu name="ПарольКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ПарольExtendedTooltip" id="66"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодключениеОперационнойСистемой" id="82">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подключение операционной системой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подключение операционной системой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодключениеОперационнойСистемойРасширеннаяПодсказка" id="83"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияОписаниеАутентификацииОС" id="39">
+					<Width>80</Width>
+					<TextColor>style:FieldSelectionBackColor</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>При подключении к базе данных используется текущий пользователь операционной системы. В базе данных так же должен быть включен и настроен режим аутентификации пользователей средствами операционной системы.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Connect to the database using the current operating system user. The database must be also enabled and configured for operating system authentication mode.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияОписаниеАутентификацииОСКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ДекорацияОписаниеАутентификацииОСExtendedTooltip" id="60"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодключениеПоЗаданномуЛогинуИПаролю" id="96">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подключение заданному логину и паролю</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подключение по общему логину</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодключениеПоЗаданномуЛогинуИПаролюРасширеннаяПодсказка" id="97"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияПодключениеПоЗаданномуЛогинуИПаролю" id="108">
+					<Width>80</Width>
+					<TextColor>style:FieldSelectionBackColor</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>При подключении использовать дополнительные настройки логинов и паролей</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Connect to the database using the specified settings</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПодключениеПоЗаданномуЛогинуИПаролюКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="ДекорацияПодключениеПоЗаданномуЛогинуИПаролюРасширеннаяПодсказка" id="110"/>
+				</LabelDecoration>
+				<Button name="ОткрытьНастройкиПодключения" id="111">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОткрытьНастройкиПодключения</CommandName>
+					<ExtendedTooltip name="ОткрытьНастройкиПодключенияРасширеннаяПодсказка" id="112"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкаСинхронизации" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка синхронизации справочников</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройка синхронизации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНастройкаСинхронизацииExtendedTooltip" id="68"/>
+			<ChildItems>
+				<CheckBoxField name="СинхронизацияПоComConnector" id="44">
+					<DataPath>Объект.СинхронизацияПоComConnector</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синхронизация через ComConnector</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СинхронизацияПоComConnectorКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="СинхронизацияПоComConnectorExtendedTooltip" id="69"/>
+					<Events>
+						<Event name="OnChange">СинхронизацияПоComConnectorПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<LabelDecoration name="ДекорацияComConnector" id="46">
+					<Width>73</Width>
+					<Height>2</Height>
+					<TextColor>style:FieldSelectionBackColor</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Используется для ускорения обмена данными. Необходимо наличие идентичных версий платформ баз данных. При работе с платформой версии 8.3 в серверном режиме является обязательным.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>This mode is used to accelerate the exchange of data. Must have identical versions of database platforms. When working with the platform version 8.3 in server mode is mandatory.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияComConnectorКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ДекорацияComConnectorExtendedTooltip" id="70"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Родитель" id="5">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="РодительExtendedTooltip" id="71"/>
+		</InputField>
+		<UsualGroup name="ГруппаНиз" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа низ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Bottom group</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа низ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Bottom group</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНизExtendedTooltip" id="72"/>
+			<ChildItems>
+				<InputField name="Комментарий" id="20">
+					<DataPath>Объект.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="КомментарийExtendedTooltip" id="73"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="74"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ит_ИнформационныеБазы1С</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьСоединениеСБазойДанных" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить соединение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check the connection</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить соединение с базой данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check the database connection</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьСоединениеСБазойДанных</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьНастройкиПодключения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки подключения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки подключения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройкиПодключения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

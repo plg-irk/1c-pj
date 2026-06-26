@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗарегистрировать" id="22">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Зарегистрировать</CommandName>
+				<ExtendedTooltip name="ФормаЗарегистрироватьExtendedTooltip" id="109"/>
+			</Button>
+			<Button name="ЭлементыОтбор" id="53">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отбор</CommandName>
+				<ExtendedTooltip name="ЭлементыОтборExtendedTooltip" id="110"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="ОбъектДляКонтроля" id="1">
+			<DataPath>Объект.ОбъектДляКонтроля</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ChoiceParameters>
+				<app:item name="Отбор.ТипОбъекта">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.НСИТипыОбъектов.EnumValue.Справочник</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="ОбъектДляКонтроляКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОбъектДляКонтроляExtendedTooltip" id="111"/>
+			<Events>
+				<Event name="OnChange">ОбъектДляКонтроляПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаПараметры" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметрыExtendedTooltip" id="112"/>
+			<ChildItems>
+				<CheckBoxField name="РегистрироватьКакНовыйОбъект" id="26">
+					<DataPath>Объект.РегистрироватьКакНовыйОбъект</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РегистрироватьКакНовыйОбъектКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="РегистрироватьКакНовыйОбъектExtendedTooltip" id="113"/>
+				</CheckBoxField>
+				<CheckBoxField name="АвтоУтверждение" id="61">
+					<DataPath>Объект.АвтоУтверждение</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АвтоУтверждениеКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="АвтоУтверждениеExtendedTooltip" id="114"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="КомпоновщикНастроекНастройкиОтбор" id="47">
+			<Representation>Tree</Representation>
+			<Visible>false</Visible>
+			<TitleLocation>Top</TitleLocation>
+			<Autofill>true</Autofill>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>КомпоновщикНастроек.Settings.Filter</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ViewMode>All</ViewMode>
+			<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+			<ContextMenu name="КомпоновщикНастроекНастройкиОтборКонтекстноеМеню" id="48"/>
+			<AutoCommandBar name="КомпоновщикНастроекНастройкиОтборКоманднаяПанель" id="49"/>
+			<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборExtendedTooltip" id="115"/>
+			<SearchStringAddition name="КомпоновщикНастроекНастройкиОтборSearchString" id="116">
+				<AdditionSource>
+					<Item>КомпоновщикНастроекНастройкиОтбор</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КомпоновщикНастроекНастройкиОтборSearchStringContextMenu" id="117"/>
+				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборSearchStringExtendedTooltip" id="118"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КомпоновщикНастроекНастройкиОтборViewStatus" id="119">
+				<AdditionSource>
+					<Item>КомпоновщикНастроекНастройкиОтбор</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КомпоновщикНастроекНастройкиОтборViewStatusContextMenu" id="120"/>
+				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборViewStatusExtendedTooltip" id="121"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КомпоновщикНастроекНастройкиОтборSearchControl" id="122">
+				<AdditionSource>
+					<Item>КомпоновщикНастроекНастройкиОтбор</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КомпоновщикНастроекНастройкиОтборSearchControlContextMenu" id="123"/>
+				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборSearchControlExtendedTooltip" id="124"/>
+			</SearchControlAddition>
+		</Table>
+		<UsualGroup name="ГруппаТабЧасти" id="28">
+			<Group>Horizontal</Group>
+			<ChildItemsWidth>LeftNarrowest</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТабЧастиExtendedTooltip" id="125"/>
+			<ChildItems>
+				<Table name="Реквизиты" id="15">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.Реквизиты</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="РеквизитыКонтекстноеМеню" id="16"/>
+					<AutoCommandBar name="РеквизитыКоманднаяПанель" id="17"/>
+					<ExtendedTooltip name="РеквизитыExtendedTooltip" id="126"/>
+					<SearchStringAddition name="РеквизитыSearchString" id="127">
+						<AdditionSource>
+							<Item>Реквизиты</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РеквизитыSearchStringContextMenu" id="128"/>
+						<ExtendedTooltip name="РеквизитыSearchStringExtendedTooltip" id="129"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="РеквизитыViewStatus" id="130">
+						<AdditionSource>
+							<Item>Реквизиты</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РеквизитыViewStatusContextMenu" id="131"/>
+						<ExtendedTooltip name="РеквизитыViewStatusExtendedTooltip" id="132"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="РеквизитыSearchControl" id="133">
+						<AdditionSource>
+							<Item>Реквизиты</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="РеквизитыSearchControlContextMenu" id="134"/>
+						<ExtendedTooltip name="РеквизитыSearchControlExtendedTooltip" id="135"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="РеквизитыНомерСтроки" id="18">
+							<DataPath>Объект.Реквизиты.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РеквизитыНомерСтрокиКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="РеквизитыНомерСтрокиExtendedTooltip" id="136"/>
+						</LabelField>
+						<InputField name="РеквизитыРеквизитДляКонтроля" id="20">
+							<DataPath>Объект.Реквизиты.РеквизитДляКонтроля</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Объект.ОбъектДляКонтроля</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="РеквизитыРеквизитДляКонтроляКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="РеквизитыРеквизитДляКонтроляExtendedTooltip" id="137"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ГруппаЭлементы" id="45">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЭлементыExtendedTooltip" id="138"/>
+					<ChildItems>
+						<Table name="Элементы" id="5">
+							<Representation>List</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<CommandBarLocation>Top</CommandBarLocation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Элементы</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЭлементыКонтекстноеМеню" id="6"/>
+							<AutoCommandBar name="ЭлементыКоманднаяПанель" id="7">
+								<ChildItems>
+									<Button name="ЭлементыЗаполнить" id="55">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Заполнить</CommandName>
+										<ExtendedTooltip name="ЭлементыЗаполнитьExtendedTooltip" id="139"/>
+									</Button>
+									<Button name="ЭлементыОчистить" id="57">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Очистить</CommandName>
+										<ExtendedTooltip name="ЭлементыОчиститьExtendedTooltip" id="140"/>
+									</Button>
+									<Button name="ЭлементыкнЗаполнитьПоЗапросу" id="108">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.кнЗаполнитьПоЗапросу</CommandName>
+										<ExtendedTooltip name="ЭлементыкнЗаполнитьПоЗапросуExtendedTooltip" id="141"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЭлементыExtendedTooltip" id="142"/>
+							<SearchStringAddition name="ЭлементыSearchString" id="143">
+								<AdditionSource>
+									<Item>Элементы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭлементыSearchStringContextMenu" id="144"/>
+								<ExtendedTooltip name="ЭлементыSearchStringExtendedTooltip" id="145"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЭлементыViewStatus" id="146">
+								<AdditionSource>
+									<Item>Элементы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭлементыViewStatusContextMenu" id="147"/>
+								<ExtendedTooltip name="ЭлементыViewStatusExtendedTooltip" id="148"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЭлементыSearchControl" id="149">
+								<AdditionSource>
+									<Item>Элементы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭлементыSearchControlContextMenu" id="150"/>
+								<ExtendedTooltip name="ЭлементыSearchControlExtendedTooltip" id="151"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЭлементыНомерСтроки" id="8">
+									<DataPath>Объект.Элементы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭлементыНомерСтрокиКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="ЭлементыНомерСтрокиExtendedTooltip" id="152"/>
+								</LabelField>
+								<InputField name="ЭлементыЭлемент" id="10">
+									<DataPath>Объект.Элементы.Элемент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceFoldersAndItems>FoldersAndItems</ChoiceFoldersAndItems>
+									<ContextMenu name="ЭлементыЭлементКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ЭлементыЭлементExtendedTooltip" id="153"/>
+									<Events>
+										<Event name="OnChange">ЭлементыЭлементПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЭлементыGUID" id="12">
+									<DataPath>Объект.Элементы.GUID</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭлементыGUIDКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="ЭлементыGUIDExtendedTooltip" id="154"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.НСИГрупповаяРегистрацияИзменений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КомпоновщикНастроек" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компоновщик настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СхемаКомпоновкиДанных" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Схема компоновки данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Зарегистрировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Зарегистрировать</Action>
+		</Command>
+		<Command name="Заполнить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+		</Command>
+		<Command name="Очистить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Очистить</Action>
+		</Command>
+		<Command name="Отбор" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отбор</Action>
+		</Command>
+		<Command name="кнЗаполнитьПоЗапросу" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по запросу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн заполнить по запросу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнЗаполнитьПоЗапросу</Action>
+		</Command>
+	</Commands>
+</Form>

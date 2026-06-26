@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ТекстЗапроса</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеКомпании</dataPath>
+			<field>ПодразделениеКомпании</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентНаценки</dataPath>
+			<field>ПроцентНаценки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БазовыйАссортимент</dataPath>
+			<field>БазовыйАссортимент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВведенных</dataPath>
+			<field>КоличествоВведенных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаРозничная</dataPath>
+			<field>ЦенаРозничная</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоГруппа</dataPath>
+			<field>ЭтоГруппа</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаборСостояний</dataPath>
+			<field>НаборСостояний</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор состояний</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ОграничениеАссортиментаПодразделенияСрезПоследних.Цена КАК Цена,
+	ОграничениеАссортиментаПодразделенияСрезПоследних.ПроцентНаценки КАК ПроцентНаценки,
+	ОграничениеАссортиментаПодразделенияСрезПоследних.ЦенаРозничная КАК ЦенаРозничная,
+	ОграничениеАссортиментаПодразделенияСрезПоследних.ПодразделениеКомпании КАК ПодразделениеКомпании,
+	ОграничениеАссортиментаПодразделенияСрезПоследних.Номенклатура КАК Номенклатура,
+	ОграничениеАссортиментаПодразделенияСрезПоследних.Номенклатура.ЭтоГруппа КАК ЭтоГруппа,
+	ОграничениеАссортиментаПодразделенияСрезПоследних.СтавкаНДС КАК СтавкаНДС,
+	1 КАК КоличествоВведенных,
+	ОграничениеАссортиментаПодразделенияСрезПоследних.БазовыйАссортимент КАК БазовыйАссортимент,
+	ВЫБОР
+		КОГДА НоменклатураНаправленияТовародвижений.НаборСостояний ЕСТЬ NULL
+			ТОГДА ОграничениеАссортиментаПодразделенияСрезПоследних.Номенклатура.итСостояние
+		КОГДА НоменклатураНаправленияТовародвижений.НаборСостояний = ЗНАЧЕНИЕ(Справочник.итСостояниеНоменклатурыНСИ.ПустаяСсылка)
+			ТОГДА ОграничениеАссортиментаПодразделенияСрезПоследних.Номенклатура.итСостояние
+		КОГДА НоменклатураНаправленияТовародвижений.НаборСостояний = НЕОПРЕДЕЛЕНО
+			ТОГДА ОграничениеАссортиментаПодразделенияСрезПоследних.Номенклатура.итСостояние
+
+		ИНАЧЕ НоменклатураНаправленияТовародвижений.НаборСостояний
+	КОНЕЦ КАК НаборСостояний
+ИЗ
+	РегистрСведений.ОграничениеАссортиментаПодразделения.СрезПоследних(&amp;КонецПериода, ) КАК ОграничениеАссортиментаПодразделенияСрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Номенклатура.НаправленияТовародвижений КАК НоменклатураНаправленияТовародвижений
+		ПО ОграничениеАссортиментаПодразделенияСрезПоследних.Номенклатура = НоменклатураНаправленияТовародвижений.Ссылка
+			И ОграничениеАссортиментаПодразделенияСрезПоследних.ПодразделениеКомпании.ФорматыАссортимента = НоменклатураНаправленияТовародвижений.Направление
+ГДЕ
+	ОграничениеАссортиментаПодразделенияСрезПоследних.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияТовараВАссортименте.Введен)</query>
+	</dataSet>
+	<totalField>
+		<dataPath>БазовыйАссортимент</dataPath>
+		<expression>ВЫБОР
+		КОГДА ЭтоГруппа
+			ТОГДА 0
+		ИНАЧЕ МАКСИМУМ(БазовыйАссортимент)
+	КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоВведенных</dataPath>
+		<expression>КОЛИЧЕСТВО(РАЗЛИЧНЫЕ Номенклатура)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентНаценки</dataPath>
+		<expression>ВЫБОР
+		КОГДА ЭтоГруппа
+			ТОГДА 0
+		ИНАЧЕ СРЕДНЕЕ(ПроцентНаценки)
+	КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтавкаНДС</dataPath>
+		<expression>ВЫБОР
+		КОГДА ЭтоГруппа
+			ТОГДА 0
+		ИНАЧЕ МАКСИМУМ(СтавкаНДС)
+	КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Цена</dataPath>
+		<expression>	ВЫБОР
+		КОГДА ЭтоГруппа
+			ТОГДА 0
+		ИНАЧЕ СРЕДНЕЕ(Цена)
+	КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЦенаРозничная</dataPath>
+		<expression>ВЫБОР
+		КОГДА ЭтоГруппа
+			ТОГДА 0
+		ИНАЧЕ СРЕДНЕЕ(ЦенаРозничная)
+	КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НаборСостояний</dataPath>
+		<expression>ВЫБОР
+		КОГДА ЭтоГруппа
+			ТОГДА 0
+		ИНАЧЕ МАКСИМУМ(НаборСостояний)
+	КОНЕЦ</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПодразделениеКомпании</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НаборСостояний</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоВведенных</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>БазовыйАссортимент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Цена</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ЦенаРозничная</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПроцентНаценки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>СтавкаНДС</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>InHierarchy</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПодразделениеКомпании</dcsset:left>
+					<dcsset:comparisonType>InListByHierarchy</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПодразделениеКомпании.Наименование</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Номенклатура.Наименование</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ФиксацияСлева</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionFixation">Auto</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ФиксацияСверху</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionFixation">Auto</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПодразделениеКомпании</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Номенклатура</dcsset:field>
+								<dcsset:groupType>Hierarchy</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

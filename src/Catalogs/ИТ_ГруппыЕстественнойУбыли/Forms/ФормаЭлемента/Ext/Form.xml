@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Родитель" id="7">
+			<DataPath>Объект.Parent</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="ГруппаНаименованиеКод" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеКодРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Процент" id="10">
+			<DataPath>Объект.Процент</DataPath>
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент естественной убыли</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПроцентКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПроцентРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<UsualGroup name="ГруппаНУ" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа НУ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа НУ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНУРасширеннаяПодсказка" id="53"/>
+			<ChildItems>
+				<InputField name="НормаЕстественнойУбыли" id="15">
+					<DataPath>Объект.НормаЕстественнойУбыли</DataPath>
+					<ContextMenu name="НормаЕстественнойУбылиКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="НормаЕстественнойУбылиРасширеннаяПодсказка" id="17"/>
+				</InputField>
+				<InputField name="НормаЕстественнойУбылиНУ" id="54">
+					<DataPath>Объект.НормаЕстественнойУбылиНУ</DataPath>
+					<ContextMenu name="НормаЕстественнойУбылиНУКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="НормаЕстественнойУбылиНУРасширеннаяПодсказка" id="56"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="НормаПоСрокуГодности" id="18">
+			<DataPath>Объект.НормаПоСрокуГодности</DataPath>
+			<ContextMenu name="НормаПоСрокуГодностиКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="НормаПоСрокуГодностиРасширеннаяПодсказка" id="20"/>
+		</InputField>
+		<Table name="итНормыСписания" id="21">
+			<TitleLocation>Top</TitleLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>итНормыСписания</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нормы предпродажной подготовки</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="итНормыСписанияКонтекстноеМеню" id="22"/>
+			<AutoCommandBar name="итНормыСписанияКоманднаяПанель" id="23"/>
+			<ExtendedTooltip name="итНормыСписанияРасширеннаяПодсказка" id="24"/>
+			<SearchStringAddition name="итНормыСписанияСтрокаПоиска" id="25">
+				<AdditionSource>
+					<Item>итНормыСписания</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="итНормыСписанияСтрокаПоискаКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="итНормыСписанияСтрокаПоискаРасширеннаяПодсказка" id="27"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="итНормыСписанияСостояниеПросмотра" id="28">
+				<AdditionSource>
+					<Item>итНормыСписания</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="итНормыСписанияСостояниеПросмотраКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="итНормыСписанияСостояниеПросмотраРасширеннаяПодсказка" id="30"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="итНормыСписанияУправлениеПоиском" id="31">
+				<AdditionSource>
+					<Item>итНормыСписания</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="итНормыСписанияУправлениеПоискомКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="итНормыСписанияУправлениеПоискомРасширеннаяПодсказка" id="33"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">НормыСписанияПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="итНормыСписанияПериод" id="34">
+					<DataPath>итНормыСписания.Period</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="итНормыСписанияПериодКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="итНормыСписанияПериодРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="итНормыСписанияГруппа" id="37">
+					<DataPath>итНормыСписания.Группа</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="итНормыСписанияГруппаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="итНормыСписанияГруппаРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="итНормыСписанияИнтервал" id="40">
+					<DataPath>итНормыСписания.Интервал</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="итНормыСписанияИнтервалКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="итНормыСписанияИнтервалРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="итНормыСписанияНормаЕстественнойУбыли" id="43">
+					<DataPath>итНормыСписания.НормаЕстественнойУбыли</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="итНормыСписанияНормаЕстественнойУбылиКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="итНормыСписанияНормаЕстественнойУбылиРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="итНормыСписанияНормаПредпродажнойПодготовки" id="46">
+					<DataPath>итНормыСписания.НормаПредпродажнойПодготовки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="итНормыСписанияНормаПредпродажнойПодготовкиКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="итНормыСписанияНормаПредпродажнойПодготовкиРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<InputField name="итНормыСписанияНормаПоСрокуГодности" id="49">
+					<DataPath>итНормыСписания.НормаПоСрокуГодности</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="итНормыСписанияНормаПоСрокуГодностиКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="итНормыСписанияНормаПоСрокуГодностиРасширеннаяПодсказка" id="51"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ИТ_ГруппыЕстественнойУбыли</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="итНормыСписания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нормы списания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.итНормыСписания</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

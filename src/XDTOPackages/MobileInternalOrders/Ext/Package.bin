@@ -1,0 +1,73 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.rarus.ru/TC/MobileInternalOrders">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<import namespace="http://v8.1c.ru/8.3/data/ext"/>
+	<property xmlns:d2p1="http://www.rarus.ru/TC/MobileInternalOrders" name="MobileInternalOrders" type="d2p1:MobileInternalOrders"/>
+	<valueType name="ВерсияСхемы" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">1.01</enumeration>
+	</valueType>
+	<objectType name="СправочникОбъект">
+		<property name="Наименование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Код" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Ссылка" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="ДокументОбъект">
+		<property name="Номер" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="Ссылка" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.rarus.ru/TC/MobileInternalOrders" name="Организация" base="d2p1:СправочникОбъект">
+		<property name="ИНН" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="КПП" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="НаименованиеПолное" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="GLN" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Префикс" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.rarus.ru/TC/MobileInternalOrders" name="Номенклатура" base="d2p1:СправочникОбъект">
+		<property name="НаименованиеПолное" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ЭтоГруппа" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Родитель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Артикул" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Весовой" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="КратностьПоставок" type="xs:double" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.rarus.ru/TC/MobileInternalOrders" name="ПодразделениеКомпании" base="d2p1:СправочникОбъект">
+		<property name="НаименованиеПолное" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="КПП" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="GLN" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Префикс" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Организация" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.rarus.ru/TC/MobileInternalOrders" name="Пользователи" base="d2p1:СправочникОбъект">
+		<property name="ИдентификаторПользователяИБ" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Организация" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Подразделение" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.rarus.ru/TC/MobileInternalOrders" name="Карточки" base="d2p1:СправочникОбъект">
+		<property name="ВидКарточки" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Объект" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПолноеНаименование" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.rarus.ru/TC/MobileInternalOrders" name="ЗаказПоставщику" base="d2p1:ДокументОбъект">
+		<property name="Товары" type="d2p1:СтрокаТЧТовары" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="СтрокаТЧТовары">
+		<property name="Номенклатура" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Количество" type="xs:double" lowerBound="0" nillable="true"/>
+		<property name="ТребуемоеКоличество" type="xs:double" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="MobileInternalOrders">
+		<property xmlns:d3p1="http://www.rarus.ru/TC/MobileInternalOrders" name="ВерсияФормата" type="d3p1:MobileInternalOrders"/>
+	</objectType>
+	<objectType name="НастройкиУведомлений">
+		<property name="ПолучаетPushУведомления" type="xs:boolean" lowerBound="0"/>
+		<property name="НомерПриложенияGoogleCloud" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.3/data/ext" name="ИдентификаторПодписчикаУведомлений" type="d3p1:DeliverableNotificationSubscriberID" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Штрихкоды">
+		<property name="Номенклатура" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Штрихкод" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+</package>

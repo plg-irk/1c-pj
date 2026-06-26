@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Subsystem uuid="01b49575-6163-406d-9163-919fff8c9e7f">
+		<Properties>
+			<Name>УправлениеНСИ</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление НСИ</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЕРПМаппингДляЗагрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЕРПНастрокиПодключенияTPI</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НСИИспользуемыеСистемы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НСИИсторияИзмененияОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НСИОбъектыДляКонтроля</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НСИРеквизитыОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НСИТипыСистем</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.НСИРежимыКонтроля</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.НСИТипыЗначений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.НСИТипыОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.НСИТипыРеквизитовОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.НСИФорматыОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.НСИСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.НСИКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЕРПЗагрузкаНСИ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЕРПЗагрузкаНСИПерсональный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НСИГрупповаяРегистрацияИзменений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЕРПИсторияЛогированияЗагрузкиНСИ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НСИАрхив</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НСИОчередьРегистрации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НСИСоответствиеОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НСИТекущаяСистема</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НСИРегистрационныйНомер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НСИПериодОтправкиИзменений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НСИПараметрСеансаПользователь</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НСИЛицензия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НСИЛицензиат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НСИКоличествоДнейХраненияИстории</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НСИИспользоватьФоновыеЗадания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ЕРПОбменНСИ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.НСИАрхивацияСправочникаИзмененийРеквизитов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.рздВыполнитьЗагрузкуИЗЕРП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.рздВыгрузкаВЕРП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ит_ЛогНСИ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.итТочкиДляЗагрузкиИзНСИ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.итМатрицаСостояний</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.итОбменКСО</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="40">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="53"/>
+					<Events>
+						<Event name="StartChoice">НаименованиеНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="54"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаВкладки" id="41">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вкладки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаВкладкиРасширеннаяПодсказка" id="55"/>
+			<ChildItems>
+				<Page name="ГруппаОсновное" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основное</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОсновноеРасширеннаяПодсказка" id="56"/>
+					<ChildItems>
+						<InputField name="ОбъектДляКонтроляРодитель" id="50">
+							<DataPath>Объект.ОбъектДляКонтроляРодитель</DataPath>
+							<ContextMenu name="ОбъектДляКонтроляРодительКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ОбъектДляКонтроляРодительРасширеннаяПодсказка" id="57"/>
+							<Events>
+								<Event name="OnChange">ОбъектДляКонтроляРодительПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="НаименованиеВСистемеКонтролере" id="5">
+							<DataPath>Объект.НаименованиеВСистемеКонтролере</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаименованиеВСистемеКонтролереКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="НаименованиеВСистемеКонтролереРасширеннаяПодсказка" id="58"/>
+						</InputField>
+						<InputField name="ТипОбъекта" id="11">
+							<DataPath>Объект.ТипОбъекта</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТипОбъектаКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ТипОбъектаРасширеннаяПодсказка" id="59"/>
+							<Events>
+								<Event name="OnChange">ТипОбъектаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаЭлементыСправочника" id="47">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЭлементыСправочникаРасширеннаяПодсказка" id="60"/>
+							<ChildItems>
+								<InputField name="СистемаКонтролер" id="7">
+									<DataPath>Объект.СистемаКонтролер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СистемаКонтролерКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="СистемаКонтролерРасширеннаяПодсказка" id="61"/>
+								</InputField>
+								<InputField name="РежимКонтроля" id="9">
+									<DataPath>Объект.РежимКонтроля</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РежимКонтроляКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="РежимКонтроляРасширеннаяПодсказка" id="62"/>
+								</InputField>
+								<CheckBoxField name="ПолучатьGUIDЗаписьюЭлемента" id="15">
+									<DataPath>Объект.ПолучатьGUIDЗаписьюЭлемента</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПолучатьGUIDЗаписьюЭлементаКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="ПолучатьGUIDЗаписьюЭлементаРасширеннаяПодсказка" id="63"/>
+								</CheckBoxField>
+								<Table name="СистемыПользователи" id="19">
+									<Representation>List</Representation>
+									<SelectionMode>SingleRow</SelectionMode>
+									<RowSelectionMode>Row</RowSelectionMode>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.СистемыПользователи</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Системы-пользователи</v8:content>
+										</v8:item>
+									</Title>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СистемыПользователиКонтекстноеМеню" id="20"/>
+									<AutoCommandBar name="СистемыПользователиКоманднаяПанель" id="21">
+										<ChildItems>
+											<Button name="СистемыПользователиОтборВСистемахПользователях" id="48">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОтборВСистемахПользователях</CommandName>
+												<ExtendedTooltip name="СистемыПользователиОтборВСистемахПользователяхРасширеннаяПодсказка" id="64"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СистемыПользователиРасширеннаяПодсказка" id="65"/>
+									<SearchStringAddition name="СистемыПользователиСтрокаПоиска" id="66">
+										<AdditionSource>
+											<Item>СистемыПользователи</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СистемыПользователиСтрокаПоискаКонтекстноеМеню" id="67"/>
+										<ExtendedTooltip name="СистемыПользователиСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СистемыПользователиСостояниеПросмотра" id="69">
+										<AdditionSource>
+											<Item>СистемыПользователи</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СистемыПользователиСостояниеПросмотраКонтекстноеМеню" id="70"/>
+										<ExtendedTooltip name="СистемыПользователиСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СистемыПользователиУправлениеПоиском" id="72">
+										<AdditionSource>
+											<Item>СистемыПользователи</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СистемыПользователиУправлениеПоискомКонтекстноеМеню" id="73"/>
+										<ExtendedTooltip name="СистемыПользователиУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="СистемыПользователиНомерСтроки" id="22">
+											<DataPath>Объект.СистемыПользователи.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СистемыПользователиНомерСтрокиКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="СистемыПользователиНомерСтрокиРасширеннаяПодсказка" id="75"/>
+										</LabelField>
+										<InputField name="СистемыПользователиСистема" id="24">
+											<DataPath>Объект.СистемыПользователи.Система</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СистемыПользователиСистемаКонтекстноеМеню" id="25"/>
+											<ExtendedTooltip name="СистемыПользователиСистемаРасширеннаяПодсказка" id="76"/>
+										</InputField>
+										<InputField name="СистемыПользователиОтбор" id="26">
+											<DataPath>Объект.СистемыПользователи.Отбор</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СистемыПользователиОтборКонтекстноеМеню" id="27"/>
+											<ExtendedTooltip name="СистемыПользователиОтборРасширеннаяПодсказка" id="77"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСоставКлючаПоиска" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состав ключа поиска</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСоставКлючаПоискаРасширеннаяПодсказка" id="78"/>
+					<ChildItems>
+						<Table name="СоставКлючаПоиска" id="29">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.СоставКлючаПоиска</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СоставКлючаПоискаКонтекстноеМеню" id="30"/>
+							<AutoCommandBar name="СоставКлючаПоискаКоманднаяПанель" id="31">
+								<ChildItems>
+									<Button name="ЗаполнитьСКПЗначениямиПоумолчанию" id="49">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьСКПЗначениямиПоумолчанию</CommandName>
+										<ExtendedTooltip name="ЗаполнитьСКПЗначениямиПоумолчаниюРасширеннаяПодсказка" id="79"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СоставКлючаПоискаРасширеннаяПодсказка" id="80"/>
+							<SearchStringAddition name="СоставКлючаПоискаСтрокаПоиска" id="81">
+								<AdditionSource>
+									<Item>СоставКлючаПоиска</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставКлючаПоискаСтрокаПоискаКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="СоставКлючаПоискаСтрокаПоискаРасширеннаяПодсказка" id="83"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СоставКлючаПоискаСостояниеПросмотра" id="84">
+								<AdditionSource>
+									<Item>СоставКлючаПоиска</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставКлючаПоискаСостояниеПросмотраКонтекстноеМеню" id="85"/>
+								<ExtendedTooltip name="СоставКлючаПоискаСостояниеПросмотраРасширеннаяПодсказка" id="86"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СоставКлючаПоискаУправлениеПоиском" id="87">
+								<AdditionSource>
+									<Item>СоставКлючаПоиска</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставКлючаПоискаУправлениеПоискомКонтекстноеМеню" id="88"/>
+								<ExtendedTooltip name="СоставКлючаПоискаУправлениеПоискомРасширеннаяПодсказка" id="89"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СоставКлючаПоискаНомерСтроки" id="32">
+									<DataPath>Объект.СоставКлючаПоиска.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоставКлючаПоискаНомерСтрокиКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="СоставКлючаПоискаНомерСтрокиРасширеннаяПодсказка" id="90"/>
+								</LabelField>
+								<InputField name="СоставКлючаПоискаИмяПоля" id="34">
+									<DataPath>Объект.СоставКлючаПоиска.ИмяПоля</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="СоставКлючаПоискаИмяПоляКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="СоставКлючаПоискаИмяПоляРасширеннаяПодсказка" id="91"/>
+									<Events>
+										<Event name="OnChange">СоставКлючаПоискаИмяПоляПриИзменении</Event>
+										<Event name="StartListChoice">СоставКлючаПоискаИмяПоляНачалоВыбораИзСписка</Event>
+									</Events>
+								</InputField>
+								<InputField name="СоставКлючаПоискаИмяПоляВКонтролере" id="36">
+									<DataPath>Объект.СоставКлючаПоиска.ИмяПоляВКонтролере</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоставКлючаПоискаИмяПоляВКонтролереКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="СоставКлючаПоискаИмяПоляВКонтролереРасширеннаяПодсказка" id="92"/>
+								</InputField>
+								<CheckBoxField name="СоставКлючаПоискаGUID" id="38">
+									<DataPath>Объект.СоставКлючаПоиска.GUID</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СоставКлючаПоискаGUIDКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="СоставКлючаПоискаGUIDРасширеннаяПодсказка" id="93"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОтбор" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отбор</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<Table name="ПостроительНастройкиОтбор" id="44">
+							<Representation>Tree</Representation>
+							<Autofill>true</Autofill>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>КомпоновщикНастроекКомпоновкиДанных.Settings.Filter</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ViewMode>All</ViewMode>
+							<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+							<ContextMenu name="ПостроительНастройкиОтборКонтекстноеМеню" id="45"/>
+							<AutoCommandBar name="ПостроительНастройкиОтборКоманднаяПанель" id="46"/>
+							<ExtendedTooltip name="ПостроительНастройкиОтборРасширеннаяПодсказка" id="95"/>
+							<SearchStringAddition name="ПостроительНастройкиОтборСтрокаПоиска" id="96">
+								<AdditionSource>
+									<Item>ПостроительНастройкиОтбор</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПостроительНастройкиОтборСтрокаПоискаКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="ПостроительНастройкиОтборСтрокаПоискаРасширеннаяПодсказка" id="98"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПостроительНастройкиОтборСостояниеПросмотра" id="99">
+								<AdditionSource>
+									<Item>ПостроительНастройкиОтбор</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПостроительНастройкиОтборСостояниеПросмотраКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="ПостроительНастройкиОтборСостояниеПросмотраРасширеннаяПодсказка" id="101"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПостроительНастройкиОтборУправлениеПоиском" id="102">
+								<AdditionSource>
+									<Item>ПостроительНастройкиОтбор</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПостроительНастройкиОтборУправлениеПоискомКонтекстноеМеню" id="103"/>
+								<ExtendedTooltip name="ПостроительНастройкиОтборУправлениеПоискомРасширеннаяПодсказка" id="104"/>
+							</SearchControlAddition>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НСИОбъектыДляКонтроля</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КомпоновщикНастроекКомпоновкиДанных" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компоновщик настроек компоновки данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СистемыПользователиОтбор</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.СистемыПользователи.Отбор</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string"/>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">Установлен</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОтборВСистемахПользователях" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор в системах пользователях</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтборВСистемахПользователях</Action>
+		</Command>
+		<Command name="ЗаполнитьСКПЗначениямиПоумолчанию" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить значениями по-умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить СКПЗначениями поумолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьСКПЗначениямиПоумолчанию</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+</Form>

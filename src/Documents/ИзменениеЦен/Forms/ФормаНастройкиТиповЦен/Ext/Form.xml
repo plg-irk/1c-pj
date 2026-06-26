@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка типов цен</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаПрименить" id="16">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Применить</CommandName>
+				<ExtendedTooltip name="ФормаПрименитьРасширеннаяПодсказка" id="17"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="18">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="19"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаТипыЦенВидимостьКолонок" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы цен видимость колонок</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТипыЦенВидимостьКолонокРасширеннаяПодсказка" id="21"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаТипыЦен" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состав типов цен</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список типов цен</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТипыЦенРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<Table name="ДеревоТиповЦен" id="97">
+							<Representation>Tree</Representation>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ДеревоТиповЦен</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дерево типов цен</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДеревоТиповЦенКонтекстноеМеню" id="98"/>
+							<AutoCommandBar name="ДеревоТиповЦенКоманднаяПанель" id="99">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ДеревоТиповЦенРазвернуть" id="132">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ДеревоРазвернуть</CommandName>
+										<ExtendedTooltip name="ДеревоТиповЦенРазвернутьРасширеннаяПодсказка" id="133"/>
+									</Button>
+									<Button name="ДеревоТиповЦенСвернуть" id="134">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ДеревоСвернуть</CommandName>
+										<ExtendedTooltip name="ДеревоТиповЦенСвернутьРасширеннаяПодсказка" id="135"/>
+									</Button>
+									<Button name="ДеревоТиповЦенУстановитьФлажки" id="128">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ДеревоУстановитьФлажки</CommandName>
+										<ExtendedTooltip name="ДеревоТиповЦенУстановитьФлажкиРасширеннаяПодсказка" id="129"/>
+									</Button>
+									<Button name="ДеревоТиповЦенСнятьФлажки" id="130">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ДеревоСнятьФлажки</CommandName>
+										<ExtendedTooltip name="ДеревоТиповЦенСнятьФлажкиРасширеннаяПодсказка" id="131"/>
+									</Button>
+									<Button name="ДеревоТиповЦенПереместитьВниз" id="124">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<CommandName>Form.Item.ДеревоТиповЦен.StandardCommand.MoveDown</CommandName>
+										<ExtendedTooltip name="ДеревоТиповЦенПереместитьВнизРасширеннаяПодсказка" id="125"/>
+									</Button>
+									<Button name="ДеревоТиповЦенПереместитьВверх" id="126">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<CommandName>Form.Item.ДеревоТиповЦен.StandardCommand.MoveUp</CommandName>
+										<ExtendedTooltip name="ДеревоТиповЦенПереместитьВверхРасширеннаяПодсказка" id="127"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоТиповЦенРасширеннаяПодсказка" id="100"/>
+							<SearchStringAddition name="ДеревоТиповЦенСтрокаПоиска" id="101">
+								<AdditionSource>
+									<Item>ДеревоТиповЦен</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоТиповЦенСтрокаПоискаКонтекстноеМеню" id="102"/>
+								<ExtendedTooltip name="ДеревоТиповЦенСтрокаПоискаРасширеннаяПодсказка" id="103"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоТиповЦенСостояниеПросмотра" id="104">
+								<AdditionSource>
+									<Item>ДеревоТиповЦен</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоТиповЦенСостояниеПросмотраКонтекстноеМеню" id="105"/>
+								<ExtendedTooltip name="ДеревоТиповЦенСостояниеПросмотраРасширеннаяПодсказка" id="106"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоТиповЦенУправлениеПоиском" id="107">
+								<AdditionSource>
+									<Item>ДеревоТиповЦен</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоТиповЦенУправлениеПоискомКонтекстноеМеню" id="108"/>
+								<ExtendedTooltip name="ДеревоТиповЦенУправлениеПоискомРасширеннаяПодсказка" id="109"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ДеревоТиповЦенВыбор</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ДеревоТиповЦенГруппа" id="122">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево типов цен группа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ДеревоТиповЦенГруппаРасширеннаяПодсказка" id="123"/>
+									<ChildItems>
+										<CheckBoxField name="ДеревоТиповЦенПометка" id="110">
+											<DataPath>ДеревоТиповЦен.Пометка</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДеревоТиповЦенПометкаКонтекстноеМеню" id="111"/>
+											<ExtendedTooltip name="ДеревоТиповЦенПометкаРасширеннаяПодсказка" id="112"/>
+											<Events>
+												<Event name="OnChange">ДеревоТиповЦенПометкаПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ДеревоТиповЦенТипЦен" id="113">
+											<DataPath>ДеревоТиповЦен.ТипЦен</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>12</Width>
+											<ContextMenu name="ДеревоТиповЦенТипЦенКонтекстноеМеню" id="114"/>
+											<ExtendedTooltip name="ДеревоТиповЦенТипЦенРасширеннаяПодсказка" id="115"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ДеревоТиповЦенВалюта" id="116">
+									<DataPath>ДеревоТиповЦен.Валюта</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>14</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ДеревоТиповЦенВалютаКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ДеревоТиповЦенВалютаРасширеннаяПодсказка" id="118"/>
+								</InputField>
+								<CheckBoxField name="ДеревоТиповЦенВключаетНДС" id="119">
+									<DataPath>ДеревоТиповЦен.ВключаетНДС</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Признак указывает, что цена включает НДС</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДеревоТиповЦенВключаетНДСКонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="ДеревоТиповЦенВключаетНДСРасширеннаяПодсказка" id="121"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВидимостьКолонок" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использование колонок</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаВидимостьКолонокРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<CheckBoxField name="ЕдиницаИзмерения" id="81">
+							<DataPath>ЕдиницаИзмерения</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="83"/>
+						</CheckBoxField>
+						<CheckBoxField name="СтараяЦена" id="1">
+							<DataPath>СтараяЦена</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СтараяЦенаКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="СтараяЦенаРасширеннаяПодсказка" id="3"/>
+						</CheckBoxField>
+						<CheckBoxField name="БазоваяЦена" id="4">
+							<DataPath>БазоваяЦена</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="БазоваяЦенаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="БазоваяЦенаРасширеннаяПодсказка" id="6"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПроцентНаценки" id="7">
+							<DataPath>ПроцентНаценки</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПроцентНаценкиКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПроцентНаценкиРасширеннаяПодсказка" id="9"/>
+						</CheckBoxField>
+						<CheckBoxField name="РекомендуемыйПроцентНаценки" id="84">
+							<DataPath>РекомендуемыйПроцентНаценки</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РекомендуемыйПроцентНаценкиКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="РекомендуемыйПроцентНаценкиРасширеннаяПодсказка" id="86"/>
+						</CheckBoxField>
+						<CheckBoxField name="СуммаНаценки" id="10">
+							<DataPath>СуммаНаценки</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СуммаНаценкиКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="СуммаНаценкиРасширеннаяПодсказка" id="12"/>
+						</CheckBoxField>
+						<CheckBoxField name="ЦенаКонкурента" id="87">
+							<DataPath>ЦенаКонкурента</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЦенаКонкурентаКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ЦенаКонкурентаРасширеннаяПодсказка" id="89"/>
+						</CheckBoxField>
+						<CheckBoxField name="СтарыйПроцентНаценки" id="90">
+							<DataPath>СтарыйПроцентНаценки</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СтарыйПроцентНаценкиКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="СтарыйПроцентНаценкиРасширеннаяПодсказка" id="92"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НоваяЦена" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новая цена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтараяЦена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старая цена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроцентНаценки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент наценки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаНаценки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма наценки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="БазоваяЦена" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Базовая цена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимВыбораТиповЦен" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим выбора типов цен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕдиницаИзмерения" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Единица измерения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РекомендуемыйПроцентНаценки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рекомендуемый процент наценки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦенаКонкурента" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена конкурента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтарыйПроцентНаценки" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старый процент наценки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоОдинТипЦен" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только один тип цен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоТиповЦен" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево типов цен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пометка" id="1">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипЦен" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип цен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТипыЦен</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Валюта" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВключаетНДС" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включает НДС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЭтоГруппа" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Применить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Применить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДеревоУстановитьФлажки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДеревоТиповЦенУстановитьФлажки</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ДеревоСнятьФлажки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДеревоТиповЦенСнятьФлажки</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ДеревоРазвернуть" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево развернуть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево развернуть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExpandAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДеревоРазвернуть</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ДеревоСвернуть" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево свернуть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево свернуть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CollapseAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДеревоСвернуть</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>

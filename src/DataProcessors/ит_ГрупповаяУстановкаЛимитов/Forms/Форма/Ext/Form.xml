@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаполнить" id="81">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Заполнить</CommandName>
+				<ExtendedTooltip name="ФормаЗаполнитьРасширеннаяПодсказка" id="82"/>
+			</Button>
+			<Button name="ФормаУстановитьЛимиты" id="36">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УстановитьЛимиты</CommandName>
+				<ExtendedTooltip name="ФормаУстановитьЛимитыРасширеннаяПодсказка" id="37"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="79">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="80"/>
+			<ChildItems>
+				<InputField name="ДатаУстановки" id="1">
+					<DataPath>Объект.ДатаУстановки</DataPath>
+					<ContextMenu name="ДатаУстановкиКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ДатаУстановкиРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Вариант" id="76">
+					<DataPath>Объект.Вариант</DataPath>
+					<ListChoiceMode>true</ListChoiceMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>День</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ДоступныеПериодыОтчета.EnumValue.День</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Месяц</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ДоступныеПериодыОтчета.EnumValue.Месяц</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВариантКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ВариантРасширеннаяПодсказка" id="78"/>
+					<Events>
+						<Event name="OnChange">ВариантПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ПериодАнализаВыручки" id="33">
+			<DataPath>ПериодАнализаВыручки</DataPath>
+			<ContextMenu name="ПериодАнализаВыручкиКонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="ПериодАнализаВыручкиРасширеннаяПодсказка" id="35"/>
+		</InputField>
+		<UsualGroup name="ГруппаНастройки" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Collapsible</Behavior>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<Table name="Настройки" id="40">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.Настройки</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="НастройкиКонтекстноеМеню" id="41"/>
+					<AutoCommandBar name="НастройкиКоманднаяПанель" id="42">
+						<ChildItems>
+							<Button name="НастройкиСохранитьНастройку" id="86">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СохранитьНастройку</CommandName>
+								<ExtendedTooltip name="НастройкиСохранитьНастройкуРасширеннаяПодсказка" id="87"/>
+							</Button>
+							<Button name="НастройкиПоказатьСкрытыеКолонки" id="88">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПоказатьСкрытыеКолонки</CommandName>
+								<ExtendedTooltip name="НастройкиПоказатьСкрытыеКолонкиРасширеннаяПодсказка" id="89"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="43"/>
+					<SearchStringAddition name="НастройкиСтрокаПоиска" id="44">
+						<AdditionSource>
+							<Item>Настройки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиСтрокаПоискаКонтекстноеМеню" id="45"/>
+						<ExtendedTooltip name="НастройкиСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="НастройкиСостояниеПросмотра" id="47">
+						<AdditionSource>
+							<Item>Настройки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиСостояниеПросмотраКонтекстноеМеню" id="48"/>
+						<ExtendedTooltip name="НастройкиСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="НастройкиУправлениеПоиском" id="50">
+						<AdditionSource>
+							<Item>Настройки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиУправлениеПоискомКонтекстноеМеню" id="51"/>
+						<ExtendedTooltip name="НастройкиУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnEditEnd">НастройкиПриОкончанииРедактирования</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="НастройкиНомерСтроки" id="53">
+							<DataPath>Объект.Настройки.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НастройкиНомерСтрокиКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="НастройкиНомерСтрокиРасширеннаяПодсказка" id="55"/>
+						</LabelField>
+						<ColumnGroup name="НастройкиГруппа1" id="74">
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="НастройкиГруппа1РасширеннаяПодсказка" id="75"/>
+							<ChildItems>
+								<CheckBoxField name="НастройкиВключаяМинимум" id="62">
+									<DataPath>Объект.Настройки.ВключаяМинимум</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вкл.</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НастройкиВключаяМинимумКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="НастройкиВключаяМинимумРасширеннаяПодсказка" id="64"/>
+								</CheckBoxField>
+								<InputField name="НастройкиМинимум" id="56">
+									<DataPath>Объект.Настройки.Минимум</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>12</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НастройкиМинимумКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="НастройкиМинимумРасширеннаяПодсказка" id="58"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<CheckBoxField name="НастройкиВключаяМаксимум" id="65">
+							<DataPath>Объект.Настройки.ВключаяМаксимум</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вкл.</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НастройкиВключаяМаксимумКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="НастройкиВключаяМаксимумРасширеннаяПодсказка" id="67"/>
+						</CheckBoxField>
+						<InputField name="НастройкиМаксимум" id="59">
+							<DataPath>Объект.Настройки.Максимум</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>до</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>12</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="НастройкиМаксимумКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="НастройкиМаксимумРасширеннаяПодсказка" id="61"/>
+						</InputField>
+						<InputField name="НастройкиИнтервал" id="83">
+							<DataPath>Объект.Настройки.Интервал</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НастройкиИнтервалКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="НастройкиИнтервалРасширеннаяПодсказка" id="85"/>
+						</InputField>
+						<InputField name="НастройкиЕдиницаИзмерения" id="68">
+							<DataPath>Объект.Настройки.ЕдиницаИзмерения</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НастройкиЕдиницаИзмеренияКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="НастройкиЕдиницаИзмеренияРасширеннаяПодсказка" id="70"/>
+						</InputField>
+						<InputField name="НастройкиЛимит" id="71">
+							<DataPath>Объект.Настройки.Лимит</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>12</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="НастройкиЛимитКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="НастройкиЛимитРасширеннаяПодсказка" id="73"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Магазины" id="4">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Магазины</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="МагазиныКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="МагазиныКоманднаяПанель" id="6">
+				<ChildItems>
+					<Button name="МагазиныУстановитьПометки" id="29">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьПометки</CommandName>
+						<ExtendedTooltip name="МагазиныУстановитьПометкиРасширеннаяПодсказка" id="30"/>
+					</Button>
+					<Button name="МагазиныСнятьФлажки" id="31">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СнятьФлажки</CommandName>
+						<ExtendedTooltip name="МагазиныСнятьФлажкиРасширеннаяПодсказка" id="32"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="МагазиныРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="МагазиныСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>Магазины</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МагазиныСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="МагазиныСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="МагазиныСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>Магазины</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МагазиныСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="МагазиныСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="МагазиныУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>Магазины</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="МагазиныУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="МагазиныУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="МагазиныПометка" id="20">
+					<DataPath>Объект.Магазины.Пометка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="МагазиныПометкаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="МагазиныПометкаРасширеннаяПодсказка" id="22"/>
+				</CheckBoxField>
+				<LabelField name="МагазиныНомерСтроки" id="17">
+					<DataPath>Объект.Магазины.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МагазиныНомерСтрокиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="МагазиныНомерСтрокиРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<InputField name="МагазиныМагазин" id="23">
+					<DataPath>Объект.Магазины.Магазин</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МагазиныМагазинКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="МагазиныМагазинРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="МагазиныСумма" id="26">
+					<DataPath>Объект.Магазины.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="МагазиныСуммаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="МагазиныСуммаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ит_ГрупповаяУстановкаЛимитов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодАнализаВыручки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период анализа выручки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ЕдиницаИзмерения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Единица измерения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьПометки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьПометки</Action>
+		</Command>
+		<Command name="СнятьФлажки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажки</Action>
+		</Command>
+		<Command name="УстановитьЛимиты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить лимиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить лимиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьЛимиты</Action>
+		</Command>
+		<Command name="Заполнить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+		</Command>
+		<Command name="СохранитьНастройку" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьНастройку</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПоказатьСкрытыеКолонки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать скрытые колонки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать скрытые колонки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоказатьСкрытыеКолонки</Action>
+		</Command>
+	</Commands>
+</Form>
