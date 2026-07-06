@@ -4,10 +4,7 @@
 *.cfe
 *.epf
 *.erf
-!dist/**/*.cf
-!dist/**/*.cfe
-!dist/**/*.epf
-!dist/**/*.erf
+
 
 # Local secrets and machine-specific files
 .env
@@ -34,6 +31,12 @@ node_modules/
 venv/
 __pycache__/
 tools/mcp/
+
+# Source and build artifacts
+src/
+external/
+ext/
+dist/
 
 # Keep directory placeholders
 !.gitkeep
